@@ -37,14 +37,31 @@
   var SAFE_FEATHER = 80;     // px over which the art returns to full strength
   var GRID = 80;             // EPDM grid-line spacing
 
-  var PALETTES = [
-    { id: "paper",    name: "Paper",       bg: "#ffffff", ink: "#18181b", accent: "#a51d3a" },
-    { id: "inkgold",  name: "Ink & Gold",  bg: "#f7f6f2", ink: "#233b52", accent: "#e8a020" },
-    { id: "sage",     name: "Cambridge",   bg: "#f3f6f4", ink: "#1f3d35", accent: "#4f9a78" },
-    { id: "midnight", name: "Midnight",    bg: "#0d1117", ink: "#c7d2e0", accent: "#e3b04b" },
-    { id: "violet",   name: "Ultraviolet", bg: "#15122c", ink: "#adadfb", accent: "#ff8a5c" },
-    { id: "claret",   name: "Claret",      bg: "#3a0b16", ink: "#f1d6dc", accent: "#ffffff" }
+  // Brand colours. Each carries a recommended accent, used for the hero accent and site --accent.
+  var BRANDS = [
+    { id: "1a635f", name: "Teal",        primary: "#1a635f", accent: "#e07a5f", accentName: "Terracotta",
+      why: "Warm near-complement to the teal; reads on white and on deep teal." },
+    { id: "043230", name: "Deep teal",   primary: "#043230", accent: "#e3b341", accentName: "Brass",
+      why: "Deep teal is almost black-green; brass gives it a quiet, academic glint." },
+    { id: "4225ff", name: "Ultramarine", primary: "#4225ff", accent: "#ff8a4c", accentName: "Tangerine",
+      why: "Opposite the blue-violet; keeps the electric feel without clashing." },
+    { id: "861618", name: "Oxblood",     primary: "#861618", accent: "#e4be7c", accentName: "Champagne",
+      why: "A soft metallic against oxblood; classic and calm rather than loud." },
+    { id: "5c5d27", name: "Olive",       primary: "#5c5d27", accent: "#c9663b", accentName: "Clay",
+      why: "Earthy, warm partner to the olive; stays natural and understated." }
   ];
+  var TONES = { light: "Light", tint: "Tint", dark: "Dark" };
+
+  // Type options (loaded from Google Fonts only when picked)
+  var FONTS = {
+    "Spectral":         { stack: '"Spectral", "Times New Roman", serif', css: null },
+    "Brawler":          { stack: '"Brawler", Georgia, serif', css: "Brawler:wght@400;700" },
+    "Tinos":            { stack: '"Tinos", "Times New Roman", serif', css: "Tinos:ital,wght@0,400;0,700;1,400;1,700" },
+    "Strichpunkt Sans": { stack: '"Strichpunkt Sans", "Inter", sans-serif', css: "Strichpunkt+Sans:wdth,wght@100..200,400..900" },
+    "Inter":            { stack: '"Inter", "Helvetica Neue", sans-serif', css: null }
+  };
+  var HEAD_FONTS = ["Spectral", "Brawler", "Tinos", "Strichpunkt Sans"];
+  var BODY_FONTS = ["Inter", "Strichpunkt Sans", "Tinos", "Brawler"];
 
   // ---------- Helpers ----------
   var TAU = Math.PI * 2;
@@ -66,6 +83,9 @@
   function breathe(s, el) {
     return PACE.pulseFloor + (1 - PACE.pulseFloor) * 0.5 * (1 + Math.sin(s * el.pulseSpeed + el.pulsePhase));
   }
+  function hexToRgb(hex) { var n = parseInt(hex.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+  function rgbToHex(c) { return "#" + c.map(function (v) { return ("0" + Math.round(v).toString(16)).slice(-2); }).join(""); }
+  function mix(a, b, t) { var x = hexToRgb(a), y = hexToRgb(b); return rgbToHex(x.map(function (v, i) { return v + (y[i] - v) * t; })); }
   function luminance(hex) {
     var n = parseInt(hex.slice(1), 16);
     var c = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map(function (v) {
@@ -305,11 +325,27 @@
   var params = new URLSearchParams(location.search);
   function hexParam(k, fallback) { var v = params.get(k); return v && /^[0-9a-f]{6}$/i.test(v) ? "#" + v.toLowerCase() : fallback; }
   function numParam(k, fallback, lo, hi) { var v = parseFloat(params.get(k)); return isFinite(v) ? Math.min(hi, Math.max(lo, v)) : fallback; }
-  var basePal = PALETTES.filter(function (p) { return p.id === params.get("pal"); })[0] || PALETTES[0];
+  function brandById(id) { return BRANDS.filter(function (b) { return b.id === id; })[0] || BRANDS[0]; }
+  // Hero colours derived from a brand + tone
+  function toneColors(brand, tone) {
+    if (tone === "dark") {
+      var bg = luminance(brand.primary) < 0.02 ? brand.primary : mix(brand.primary, "#000000", 0.72);
+      return { bg: bg, ink: mix(brand.primary, "#ffffff", 0.78), accent: brand.accent };
+    }
+    if (tone === "tint") return { bg: mix(brand.primary, "#ffffff", 0.93), ink: brand.primary, accent: brand.accent };
+    return { bg: "#ffffff", ink: brand.primary, accent: brand.accent };
+  }
+  function pick(list, v, fallback) { return list.indexOf(v) >= 0 ? v : fallback; }
+
+  var brand0 = brandById(params.get("brand"));
+  var tone0 = TONES[params.get("tone")] ? params.get("tone") : "light";
+  var derived0 = toneColors(brand0, tone0);
   var opts = {
     style: STYLES[params.get("art")] ? params.get("art") : "threads",
-    palette: basePal.id,
-    bg: hexParam("bg", basePal.bg), ink: hexParam("ink", basePal.ink), accent: hexParam("ac", basePal.accent),
+    brand: brand0.id, tone: tone0,
+    bg: hexParam("bg", derived0.bg), ink: hexParam("ink", derived0.ink), accent: hexParam("ac", derived0.accent),
+    headFont: pick(HEAD_FONTS, params.get("hf"), "Spectral"),
+    bodyFont: pick(BODY_FONTS, params.get("bf"), "Inter"),
     density: numParam("d", 1, 0.5, 1.6),
     speed: numParam("s", 1, 0.25, 2),
     grid: params.get("grid") === "1",
@@ -323,10 +359,12 @@
   function writeUrlNow() {
     clearTimeout(urlTimer);
     var q = new URLSearchParams(location.search);
-      q.set("art", opts.style); q.set("pal", opts.palette);
-      q.set("bg", opts.bg.slice(1)); q.set("ink", opts.ink.slice(1)); q.set("ac", opts.accent.slice(1));
-      q.set("d", String(opts.density)); q.set("s", String(opts.speed));
-      q.set("grid", opts.grid ? "1" : "0"); q.set("seed", String(opts.seed));
+    q.delete("pal");
+    q.set("art", opts.style); q.set("brand", opts.brand); q.set("tone", opts.tone);
+    q.set("bg", opts.bg.slice(1)); q.set("ink", opts.ink.slice(1)); q.set("ac", opts.accent.slice(1));
+    q.set("hf", opts.headFont); q.set("bf", opts.bodyFont);
+    q.set("d", String(opts.density)); q.set("s", String(opts.speed));
+    q.set("grid", opts.grid ? "1" : "0"); q.set("seed", String(opts.seed));
     history.replaceState(null, "", location.pathname + "?" + q.toString() + location.hash);
   }
 
@@ -335,9 +373,29 @@
   // simTime runs at opts.speed; each build gets its own clock origin (t0)
   var L = null, S = null, mask = null, simTime = 0, t0 = 0, last = 0, raf = 0, visible = true;
 
+  var root = document.documentElement, loadedFonts = {};
+  function loadFont(name) {
+    var f = FONTS[name];
+    if (!f.css || loadedFonts[name]) return;
+    loadedFonts[name] = true;
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://fonts.googleapis.com/css2?family=" + f.css + "&display=swap";
+    // New metrics move the copy, so recut the text-safe mask once the font is in
+    link.onload = function () { document.fonts.ready.then(function () { if (L) { mask = buildMask(); if (!raf) draw(0); } }); };
+    document.head.appendChild(link);
+  }
   function applyColors() {
+    var b = brandById(opts.brand);
+    root.style.setProperty("--primary", b.primary);
+    root.style.setProperty("--accent", b.accent);
     band.style.setProperty("--hero-bg", opts.bg);
     band.classList.toggle("is-dark", luminance(opts.bg) < 0.18);
+  }
+  function applyFonts() {
+    loadFont(opts.headFont); loadFont(opts.bodyFont);
+    root.style.setProperty("--font-serif", FONTS[opts.headFont].stack);
+    root.style.setProperty("--font-sans", FONTS[opts.bodyFont].stack);
   }
 
   // Soft cut-out behind the copy so text always sits on a quiet patch
@@ -421,6 +479,7 @@
   }
 
   applyColors();
+  applyFonts();
   lastW = band.clientWidth; lastH = band.clientHeight;
   rebuild(true);
   start();
@@ -441,8 +500,14 @@
   panel.innerHTML =
     '<div class="art-panel-body" id="art-panel-body">' +
       '<section><h4>Style</h4><div class="art-styles" role="group" aria-label="Style"></div><p class="art-blurb"></p></section>' +
-      '<section><h4>Palette</h4><div class="art-swatches" role="group" aria-label="Palette"></div></section>' +
-      '<section><h4>Colours</h4><div class="art-colors">' +
+      '<section><h4>Brand colour</h4><div class="art-swatches" role="group" aria-label="Brand colour"></div>' +
+        '<p class="art-brand-note"></p>' +
+        '<div class="art-tones" role="group" aria-label="Hero tone"></div></section>' +
+      '<section><h4>Type</h4>' +
+        '<label class="art-select"><span>Headings</span><select data-key="headFont"></select></label>' +
+        '<label class="art-select"><span>Body</span><select data-key="bodyFont"></select></label>' +
+      '</section>' +
+      '<section><h4>Hero colours <span class="art-sub">fine-tune</span></h4><div class="art-colors">' +
         '<label>Background<input type="color" data-key="bg"></label>' +
         '<label>Marks<input type="color" data-key="ink"></label>' +
         '<label>Accent<input type="color" data-key="accent"></label>' +
@@ -455,7 +520,7 @@
       '</section>' +
       '<section><div class="art-actions"><button type="button" data-act="seed">New layout</button><button type="button" data-act="copy">Copy link</button></div></section>' +
     '</div>' +
-    '<button type="button" class="art-panel-toggle" aria-expanded="false" aria-controls="art-panel-body"><span class="dot"></span>Hero art</button>';
+    '<button type="button" class="art-panel-toggle" aria-expanded="false" aria-controls="art-panel-body"><span class="dot"></span>Design</button>';
   document.body.appendChild(panel);
 
   var stylesEl = panel.querySelector(".art-styles"), blurbEl = panel.querySelector(".art-blurb");
@@ -466,15 +531,31 @@
     stylesEl.appendChild(b);
   });
   var swatchesEl = panel.querySelector(".art-swatches");
-  PALETTES.forEach(function (p) {
+  function useDerived() { var c = toneColors(brandById(opts.brand), opts.tone); opts.bg = c.bg; opts.ink = c.ink; opts.accent = c.accent; }
+  BRANDS.forEach(function (br) {
     var b = document.createElement("button");
-    b.type = "button"; b.title = p.name; b.setAttribute("aria-label", p.name + " palette"); b.dataset.pal = p.id;
-    b.style.background = p.bg; b.style.setProperty("--sw-ink", p.ink); b.style.setProperty("--sw-accent", p.accent);
-    b.addEventListener("click", function () { opts.palette = p.id; opts.bg = p.bg; opts.ink = p.ink; opts.accent = p.accent; changed(false); });
+    b.type = "button"; b.dataset.brand = br.id;
+    b.title = br.name + " #" + br.id.toUpperCase() + " · accent " + br.accentName + " " + br.accent.toUpperCase();
+    b.setAttribute("aria-label", br.name + " brand colour");
+    b.style.background = br.primary; b.style.setProperty("--sw-accent", br.accent);
+    b.addEventListener("click", function () { opts.brand = br.id; useDerived(); changed(false); });
     swatchesEl.appendChild(b);
   });
+  var tonesEl = panel.querySelector(".art-tones"), noteEl = panel.querySelector(".art-brand-note");
+  Object.keys(TONES).forEach(function (id) {
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = TONES[id]; b.dataset.tone = id;
+    b.addEventListener("click", function () { opts.tone = id; useDerived(); changed(false); });
+    tonesEl.appendChild(b);
+  });
+  panel.querySelectorAll("select").forEach(function (sel) {
+    (sel.dataset.key === "headFont" ? HEAD_FONTS : BODY_FONTS).forEach(function (name) {
+      var o = document.createElement("option"); o.value = o.textContent = name; sel.appendChild(o);
+    });
+    sel.addEventListener("change", function () { opts[sel.dataset.key] = sel.value; applyFonts(); changed(false); });
+  });
   panel.querySelectorAll("input[type=color]").forEach(function (inp) {
-    inp.addEventListener("input", function () { opts[inp.dataset.key] = inp.value; opts.palette = "custom"; changed(false); });
+    inp.addEventListener("input", function () { opts[inp.dataset.key] = inp.value; changed(false); });
   });
   panel.querySelectorAll("input[type=range]").forEach(function (inp) {
     inp.addEventListener("input", function () {
@@ -501,7 +582,12 @@
   function syncPanel() {
     stylesEl.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.style === opts.style)); });
     blurbEl.textContent = STYLES[opts.style].blurb;
-    swatchesEl.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.pal === opts.palette)); });
+    swatchesEl.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.brand === opts.brand)); });
+    tonesEl.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.tone === opts.tone)); });
+    var br = brandById(opts.brand);
+    noteEl.innerHTML = "<strong>" + br.name + "</strong> #" + br.id.toUpperCase() +
+      '<span class="acc"><i style="background:' + br.accent + '"></i>Accent: ' + br.accentName + " " + br.accent.toUpperCase() + "</span>" + br.why;
+    panel.querySelectorAll("select").forEach(function (sel) { sel.value = opts[sel.dataset.key]; });
     panel.querySelectorAll("input[type=color]").forEach(function (inp) { inp.value = opts[inp.dataset.key]; });
     panel.querySelectorAll("input[type=range]").forEach(function (inp) {
       inp.value = String(opts[inp.dataset.key]);
