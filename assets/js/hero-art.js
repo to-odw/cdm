@@ -42,6 +42,7 @@
     { id: "1a635f", name: "Teal",        primary: "#1a635f", accent: "#e07a5f", accentName: "Terracotta",
       why: "Warm near-complement to the teal; reads on white and on deep teal." },
     { id: "043230", name: "Deep teal",   primary: "#043230", accent: "#e3b341", accentName: "Brass",
+      buttons: "accent",
       why: "Deep teal is almost black-green; brass gives it a quiet, academic glint." },
     { id: "4225ff", name: "Ultramarine", primary: "#4225ff", accent: "#ff8a4c", accentName: "Tangerine",
       why: "Opposite the blue-violet; keeps the electric feel without clashing." },
@@ -96,18 +97,22 @@
 
   // The band everything is drawn along (EPDM: the piecewise curve the squares cluster on).
   // It runs low beneath the copy, then sweeps up through the open space on the right.
+  // Mark weight grows with viewport width so strokes keep pace with the type:
+  // 1× on phones, ~1.5× at 1440, 1.6× at 1536 (the export viewport), capped at 2×
+  function markWeight(w) { return w <= MOBILE_BP ? 1 : Math.min(2, 1 + (w - MOBILE_BP) / 1280); }
+
   function makeLayout(w, h) {
     var mobile = w <= MOBILE_BP;
     if (mobile) {
       // Phones: a gentle rise across the strip reserved below the copy
       var thick = 34;
       return {
-        w: w, h: h, mobile: true, thick: thick,
+        w: w, h: h, mobile: true, thick: thick, wt: 1,
         center: function (x) { return h - thick * 2.2 - 40 * smoothstep(0, 1, x / w); }
       };
     }
     return {
-      w: w, h: h, mobile: false,
+      w: w, h: h, mobile: false, wt: markWeight(w),
       thick: h * 0.12,
       center: function (x) { return h * (0.88 - 0.58 * smoothstep(0.35, 1.1, x / w)); }
     };
@@ -170,7 +175,7 @@
         if (th.glowStart >= 0) a *= 1 + 0.9 * Math.sin(Math.PI * clamp01((t - th.glowStart) / th.glowDur));
         ctx.globalAlpha = Math.min(1, a);
         ctx.strokeStyle = th.accent ? pal.accent : pal.ink;
-        ctx.lineWidth = th.accent ? 1.25 : 1;
+        ctx.lineWidth = (th.accent ? 1.25 : 1) * L.wt;
         strokeThread(th, S.tw, L, s, -10, L.w * p);
       });
     }
@@ -192,7 +197,7 @@
     frame: function (S, L, t, dt, pal) {
       var s = t / 1000;
       ctx.lineCap = "round";
-      ctx.lineWidth = 1;
+      ctx.lineWidth = L.wt;
       ctx.strokeStyle = pal.ink;
       S.threads.forEach(function (th) {
         var p = fadeIn(t, th.start, th.dur);
@@ -216,11 +221,11 @@
         // fading tail
         var g = ctx.createLinearGradient(x - q.len, 0, x, 0);
         g.addColorStop(0, hexA(col, 0)); g.addColorStop(1, hexA(col, 0.9));
-        ctx.globalAlpha = a; ctx.strokeStyle = g; ctx.lineWidth = 1.25;
+        ctx.globalAlpha = a; ctx.strokeStyle = g; ctx.lineWidth = 1.25 * L.wt;
         strokeThread(q.th, S.tw, L, s, x - q.len, x);
         // head
         ctx.fillStyle = col;
-        ctx.beginPath(); ctx.arc(x, threadY(q.th, S.tw, L, x, s), q.accent ? 2.8 : 2.2, 0, TAU); ctx.fill();
+        ctx.beginPath(); ctx.arc(x, threadY(q.th, S.tw, L, x, s), (q.accent ? 2.8 : 2.2) * L.wt, 0, TAU); ctx.fill();
       });
     }
   };
@@ -260,7 +265,7 @@
         if (S.links.some(function (l) { return (l.a === p && l.b === q) || (l.a === q && l.b === p); })) return;
         S.links.push({ a: p, b: q, start: t, grow: 1600, hold: range(S.r, 2500, 6000), fade: 1800, accent: p.accent || q.accent });
       });
-      ctx.lineWidth = 1;
+      ctx.lineWidth = L.wt;
       S.links = S.links.filter(function (l) { return t - l.start < l.grow + l.hold + l.fade; });
       S.links.forEach(function (l) {
         var e = t - l.start, frac = fadeIn(e, 0, l.grow), a = 0.45;
@@ -275,7 +280,7 @@
         if (a <= 0) return;
         ctx.globalAlpha = a * breathe(s, p) * (p.accent ? 1 : 0.85);
         ctx.fillStyle = p.accent ? pal.accent : pal.ink;
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.accent ? p.rad + 1 : p.rad, 0, TAU); ctx.fill();
+        ctx.beginPath(); ctx.arc(p.x, p.y, (p.accent ? p.rad + 1 : p.rad) * L.wt, 0, TAU); ctx.fill();
       });
     }
   };
@@ -307,10 +312,10 @@
           var I = Math.exp(-d * d) * (0.35 + 0.65 * env) * reveal;
           if (I < 0.05) continue;
           var accent = I > 0.5 && hash(ix + S.seed, iy) < PACE.accentChance * 2;
-          var size = 1 + 2.4 * I;
+          var size = (1 + 2.4 * I) * L.wt;
           ctx.globalAlpha = Math.min(1, 0.12 + 0.88 * I);
           ctx.fillStyle = accent ? pal.accent : pal.ink;
-          ctx.fillRect(Math.round(x - size / 2), Math.round(y - size / 2), size, size);
+          ctx.fillRect(x - size / 2, y - size / 2, size, size);
         }
       }
     }
@@ -387,8 +392,11 @@
   }
   function applyColors() {
     var b = brandById(opts.brand);
+    var btn = b.buttons === "accent" ? b.accent : b.primary;
     root.style.setProperty("--primary", b.primary);
     root.style.setProperty("--accent", b.accent);
+    root.style.setProperty("--btn", btn);
+    root.style.setProperty("--btn-ink", luminance(btn) > 0.18 ? "#09090b" : "#ffffff");
     band.style.setProperty("--hero-bg", opts.bg);
     band.classList.toggle("is-dark", luminance(opts.bg) < 0.18);
   }
@@ -426,7 +434,7 @@
   function rebuild(resetTime) {
     var w = band.clientWidth, h = band.clientHeight;
     if (w < 2 || h < 2) return;
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var dpr = Math.min(window.devicePixelRatio || 1, 3);
     canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     L = makeLayout(w, h);

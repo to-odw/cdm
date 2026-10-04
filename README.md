@@ -40,11 +40,11 @@ URL parameters: `art`, `brand`, `tone`, `bg`, `ink`, `ac`, `hf`, `bf`, `d` (dens
 
 Before launch, fix the chosen values as defaults (`opts` in `hero-art.js`, `--primary`/`--accent` and the font link in the CSS/HTML) and turn the explorer off with `data-controls="off"` on `.hero-band`.
 
-## Hero renders (4096×4096)
+## Hero renders (2048×2048)
 
 ```
 node tools/render-hero-shots.mjs                 # all sets → renders/
 node tools/render-hero-shots.mjs --only=colours  # or fonts | styles
 ```
 
-This writes one image per brand colour, per heading font and per hero style into `renders/<set>/`. Each image changes only its own variable; everything else stays on the defaults (Threads, teal, light, Spectral/Inter, seed 42). Every shot is a 1536px desktop viewport at 2.667×, captured 12s into the animation with the explorer hidden. Needs Node 18+ and Chrome or Edge (`BROWSER=/path/to/chrome` to override). To add a variation, add a line to `SETS` in the script. `renders/` is git-ignored.
+This writes one image per brand colour, per heading font and per hero style into `renders/<set>/`. Each image changes only its own variable; everything else stays on the defaults (Threads, teal, light, Spectral/Inter, seed 42). Every shot is a 1536px desktop viewport at 1.333× (`--size=4096` for 4K), captured 12s into the animation with the explorer hidden. Needs Node 18+ and Chrome or Edge (`BROWSER=/path/to/chrome` to override). To add a variation, add a line to `SETS` in the script. `renders/` is git-ignored.

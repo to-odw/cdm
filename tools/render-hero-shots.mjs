@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /*
- * Renders 4096×4096 PNGs of the hero (plus a little below the fold), one image per
+ * Renders 2048×2048 PNGs of the hero (plus a little below the fold), one image per
  * brand colour, per heading font and per hero-art style. Each set changes only its
  * own variable; everything else stays on the defaults below.
  *
  *   node tools/render-hero-shots.mjs              # all sets → renders/
  *   node tools/render-hero-shots.mjs --only=fonts # one set: colours | fonts | styles
- *   node tools/render-hero-shots.mjs --out=some/dir --size=4096
+ *   node tools/render-hero-shots.mjs --out=some/dir --size=4096   # e.g. back to 4K
  *
  * Needs only Node 18+ and Chrome or Edge (override the path with BROWSER=...).
  * Uses the page's own URL parameters (see README › Hero art), so new options
@@ -21,9 +21,9 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const args = Object.fromEntries(process.argv.slice(2).map((a) => a.replace(/^--/, "").split("=")));
 
-const SIZE = Number(args.size || 4096);   // output pixels, square
+const SIZE = Number(args.size || 2048);   // output pixels, square
 const VIEWPORT = 1536;                    // CSS px: desktop layout, hero plus a little below the fold
-const SCALE = SIZE / VIEWPORT;            // 4096 / 1536 = 2.667× for crisp type
+const SCALE = SIZE / VIEWPORT;            // 2048 / 1536 = 1.333×
 const OUT = resolve(ROOT, args.out || "renders");
 const CONCURRENCY = 3;
 
