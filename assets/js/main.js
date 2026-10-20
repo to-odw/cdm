@@ -31,7 +31,7 @@
 
   // Highlight the nav link for the section in view
   var links = document.querySelectorAll(".nav-links a, .mobile-nav a");
-  var ids = ["our-work", "research", "programmes", "newsletter", "about"];
+  var ids = ["our-work", "research", "programmes"];
   var sections = ids.map(function (id) { return document.getElementById(id); });
   var pageNav = document.body.getAttribute("data-nav");
   function setActive() {

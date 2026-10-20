@@ -157,6 +157,11 @@ a { color: inherit; text-decoration: none; }
 
 main { padding-top: var(--header-h); }
 
+/* ---------- Photo hero ---------- */
+.page-hero { background: var(--zinc-100); }
+.page-hero img { display: block; width: 100%; height: 16rem; object-fit: cover; }
+@media (min-width: 48rem) { .page-hero img { height: 28rem; } }
+
 /* ---------- Page header (hero) ---------- */
 
 .page { padding-top: var(--space-16); padding-bottom: var(--space-16); }
@@ -304,6 +309,7 @@ main { padding-top: var(--header-h); }
 /* ---------- Entry list (CASP publications list) ---------- */
 
 .entries { border-top: var(--line) solid var(--zinc-200); }
+.entries + p { margin-top: var(--space-8); }
 .entries > li { border-bottom: var(--line) solid var(--zinc-200); }
 .entry { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-6); padding: var(--space-5) 0; }
 .entry-main { flex: 1; min-width: 0; }
@@ -386,7 +392,7 @@ main { padding-top: var(--header-h); }
 .footer-main { display: flex; flex-direction: column; gap: var(--space-12); padding: var(--space-12) 0; }
 .footer-about { max-width: 36rem; }
 .footer-logos { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-5) var(--space-6); }
-.footer-logos .cdm { height: 2.75rem; width: auto; max-width: 100%; }
+.footer-logos .cdm { height: auto; width: auto; max-height: var(--space-9); max-width: 100%; }
 .footer-about p { margin-top: var(--space-8); color: var(--footer-muted); font-size: var(--text-fine); line-height: 1.65; font-weight: 300; }
 .footer-cols { display: grid; grid-template-columns: 1fr; gap: var(--space-10); }
 .footer-cols h4 {
@@ -499,7 +505,6 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
 }
 .art-styles button:hover { background: var(--zinc-50); }
 .art-styles button[aria-pressed="true"] { background: var(--zinc-900); color: #fff; }
-.art-blurb { margin-top: var(--space-3); font-size: var(--text-xs); line-height: 1.5; color: var(--zinc-600); font-weight: 300; }
 .art-swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-2); }
 .art-swatches button {
   aspect-ratio: 1; padding: 0; cursor: pointer; position: relative;
@@ -510,28 +515,12 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
   border-radius: 50%; background: var(--sw-accent); box-shadow: 0 0 0 var(--line-md) rgb(255 255 255 / .6);
 }
 .art-swatches button[aria-pressed="true"] { outline: var(--line-md) solid var(--zinc-900); }
-.art-colors { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
-.art-colors label { display: flex; flex-direction: column; gap: var(--space-1); font-size: var(--text-2xs); color: var(--zinc-600); }
-.art-colors input[type=color] { width: 100%; height: var(--space-8); padding: 0; border: var(--line) solid var(--zinc-300); background: none; cursor: pointer; }
 .art-range { display: grid; grid-template-columns: 4.5rem 1fr var(--space-10); align-items: center; gap: var(--space-2); font-size: var(--text-xs); color: var(--zinc-700); }
 .art-range + .art-range { margin-top: var(--space-2); }
 .art-range input { width: 100%; accent-color: var(--primary); }
 .art-range output { text-align: right; font-variant-numeric: tabular-nums; color: var(--zinc-500); }
 .art-check { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-xs); color: var(--zinc-700); margin-top: var(--space-3); }
 .art-check input { accent-color: var(--primary); }
-.art-actions { display: flex; gap: var(--space-2); }
-.art-actions button {
-  flex: 1; font: inherit; font-size: var(--text-fine); font-weight: 500; padding: var(--space-2);
-  border: var(--line) solid var(--zinc-900); background: #fff; color: var(--zinc-900); cursor: pointer;
-}
-.art-actions button:hover { background: var(--zinc-900); color: #fff; }
-.art-note { margin-top: var(--space-2); font-size: var(--text-2xs); color: var(--zinc-500); line-height: 1.5; }
-
-.art-sub { font-weight: 400; color: var(--zinc-400); margin-left: var(--space-1); }
-.art-brand-note { margin-top: var(--space-3); font-size: var(--text-xs); line-height: 1.5; color: var(--zinc-600); font-weight: 300; }
-.art-brand-note strong { font-weight: 600; color: var(--zinc-900); }
-.art-brand-note .acc { display: flex; align-items: center; gap: var(--space-2); margin: var(--space-1) 0; color: var(--zinc-900); font-weight: 400; }
-.art-brand-note .acc i { width: var(--space-2); height: var(--space-2); border-radius: 50%; display: inline-block; }
 .art-tones { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: var(--space-3); border-top: var(--line) solid var(--zinc-200); border-left: var(--line) solid var(--zinc-200); }
 .art-tones button {
   font: inherit; font-size: var(--text-xs); padding: var(--space-2); background: #fff; color: var(--zinc-700); cursor: pointer;
@@ -588,3 +577,44 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
 .gallery figure { background: var(--zinc-100); }
 .gallery img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .gallery figcaption { padding: var(--space-3) 0; font-size: var(--text-sm); color: var(--zinc-600); }
+
+/* Light and dark from the customize menu cover the whole page. */
+html[data-tone="dark"] {
+  --fg: #f4f4f5;
+  --zinc-50: rgb(255 255 255 / .04);
+  --zinc-100: rgb(255 255 255 / .07);
+  --zinc-200: rgb(255 255 255 / .14);
+  --zinc-300: rgb(255 255 255 / .22);
+  --zinc-400: #a1a1aa;
+  --zinc-500: #c4c4cc;
+  --zinc-600: #d4d4d8;
+  --zinc-700: #e4e4e7;
+  --zinc-800: #f4f4f5;
+  --zinc-900: #fafafa;
+  --zinc-950: #fff;
+  color-scheme: dark;
+}
+html[data-tone="dark"] .site-header {
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  border-bottom-color: var(--zinc-200);
+}
+html[data-tone="dark"] .mobile-nav { background: var(--bg); }
+html[data-tone="dark"] .grid-cards,
+html[data-tone="dark"] .paper-grid > .paper-card,
+html[data-tone="dark"] .paper-search input,
+html[data-tone="dark"] .media-card .thumb.contain img { background: transparent; }
+html[data-tone="dark"] .subscribe button { color: #18181b; }
+html[data-tone="dark"] .art-panel {
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-400: #a1a1aa;
+  --zinc-500: #71717a;
+  --zinc-600: #52525b;
+  --zinc-700: #3f3f46;
+  --zinc-800: #27272a;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  color: var(--zinc-900);
+}

@@ -51,7 +51,7 @@
     { id: "5c5d27", name: "Olive",       primary: "#5c5d27", accent: "#c9663b", accentName: "Clay",
       why: "Earthy, warm partner to the olive; stays natural and understated." }
   ];
-  var TONES = { light: "Light", dark: "Dark" };
+  var TONES = { light: "Light mode", dark: "Dark mode" };
 
   // Type options (loaded from Google Fonts only when picked)
   var FONTS = {
@@ -207,7 +207,7 @@
         if (t >= th.next) {
           S.pulses.push({
             th: th, x: range(S.r, -0.05, 0.85) * L.w, d: 0,
-            life: range(S.r, 320, 900), v: range(S.r, 40, 75), len: range(S.r, 80, 200),
+            life: range(S.r, 320, 900), v: range(S.r, 18, 34), len: range(S.r, 80, 200),
             accent: S.r() < 0.1
           });
           th.next = t + range(S.r, 1500, 8000);
@@ -232,7 +232,7 @@
 
   STYLES.constellation = {
     label: "Constellation",
-    blurb: "Still particles that breathe in and out. Faint links draw between neighbours, hold, and dissolve.",
+    blurb: "Still particles that breathe in and out. Faint links draw between neighbors, hold, and dissolve.",
     build: function (L, r, o) {
       var n = Math.round((L.mobile ? 34 : 90) * o.density), pts = [], tries = 0;
       while (pts.length < n && tries++ < n * 40) {
@@ -392,12 +392,20 @@
   function applyColors() {
     var b = brandById(opts.brand);
     var btn = b.buttons === "accent" ? b.accent : b.primary;
+    var dark = opts.tone === "dark";
     root.style.setProperty("--primary", b.primary);
     root.style.setProperty("--accent", b.accent);
     root.style.setProperty("--btn", btn);
     root.style.setProperty("--btn-ink", luminance(btn) > 0.18 ? "#09090b" : "#ffffff");
+    root.style.setProperty("--bg", opts.bg);
+    root.dataset.tone = opts.tone;
     band.style.setProperty("--hero-bg", opts.bg);
-    band.classList.toggle("is-dark", luminance(opts.bg) < 0.18);
+    band.classList.toggle("is-dark", dark);
+    var brandImg = document.querySelector(".brand img");
+    if (brandImg) {
+      var next = "assets/img/CDM-Logo-" + (dark ? "Negative" : "Positive") + ".svg";
+      if (brandImg.getAttribute("src") !== next) brandImg.setAttribute("src", next);
+    }
   }
   function applyFonts() {
     loadFont(opts.headFont); loadFont(opts.bodyFont);
@@ -506,32 +514,23 @@
   panel.className = "art-panel";
   panel.innerHTML =
     '<div class="art-panel-body" id="art-panel-body">' +
-      '<section><h4>Style</h4><div class="art-styles" role="group" aria-label="Style"></div><p class="art-blurb"></p></section>' +
-      '<section><h4>Brand colour</h4><div class="art-swatches" role="group" aria-label="Brand colour"></div>' +
-        '<p class="art-brand-note"></p>' +
-        '<div class="art-tones" role="group" aria-label="Hero tone"></div></section>' +
+      '<section><h4>Brand color</h4><div class="art-swatches" role="group" aria-label="Brand color"></div>' +
+        '<div class="art-tones" role="group" aria-label="Color mode"></div></section>' +
+      '<section><h4>Style</h4><div class="art-styles" role="group" aria-label="Style"></div></section>' +
       '<section><h4>Type</h4>' +
         '<label class="art-select"><span>Headings</span><select data-key="headFont"></select></label>' +
         '<label class="art-select"><span>Body</span><select data-key="bodyFont"></select></label>' +
       '</section>' +
-      '<section><h4>Hero colours <span class="art-sub">fine-tune</span></h4><div class="art-colors">' +
-        '<label>Background<input type="color" data-key="bg"></label>' +
-        '<label>Marks<input type="color" data-key="ink"></label>' +
-        '<label>Accent<input type="color" data-key="accent"></label>' +
-      '</div></section>' +
       '<section><h4>Feel</h4>' +
-        '<label class="art-range"><span>Density</span><input type="range" min="0.5" max="1.6" step="0.1" data-key="density"><output></output></label>' +
-        '<label class="art-range"><span>Speed</span><input type="range" min="0.25" max="2" step="0.25" data-key="speed"><output></output></label>' +
         '<label class="art-check"><input type="checkbox" data-key="grid"> Grid lines (as on EPDM)</label>' +
-        '<p class="art-note">Speed 1× matches the EPDM hero pacing.</p>' +
       '</section>' +
-      '<section><div class="art-actions"><button type="button" data-act="seed">New layout</button><button type="button" data-act="copy">Copy link</button></div></section>' +
     '</div>' +
     '<button type="button" class="art-panel-toggle" aria-expanded="false" aria-controls="art-panel-body">Aa</button>';
   document.body.appendChild(panel);
 
-  var stylesEl = panel.querySelector(".art-styles"), blurbEl = panel.querySelector(".art-blurb");
+  var stylesEl = panel.querySelector(".art-styles");
   Object.keys(STYLES).forEach(function (id) {
+    if (id === "constellation") return;
     var b = document.createElement("button");
     b.type = "button"; b.textContent = STYLES[id].label; b.dataset.style = id;
     b.addEventListener("click", function () { opts.style = id; changed(true); });
@@ -543,12 +542,12 @@
     var b = document.createElement("button");
     b.type = "button"; b.dataset.brand = br.id;
     b.title = br.name + " #" + br.id.toUpperCase() + " · accent " + br.accentName + " " + br.accent.toUpperCase();
-    b.setAttribute("aria-label", br.name + " brand colour");
+    b.setAttribute("aria-label", br.name + " brand color");
     b.style.background = br.primary; b.style.setProperty("--sw-accent", br.accent);
     b.addEventListener("click", function () { opts.brand = br.id; useDerived(); changed(false); });
     swatchesEl.appendChild(b);
   });
-  var tonesEl = panel.querySelector(".art-tones"), noteEl = panel.querySelector(".art-brand-note");
+  var tonesEl = panel.querySelector(".art-tones");
   Object.keys(TONES).forEach(function (id) {
     var b = document.createElement("button");
     b.type = "button"; b.textContent = TONES[id]; b.dataset.tone = id;
@@ -561,9 +560,6 @@
     });
     sel.addEventListener("change", function () { opts[sel.dataset.key] = sel.value; applyFonts(); changed(false); });
   });
-  panel.querySelectorAll("input[type=color]").forEach(function (inp) {
-    inp.addEventListener("input", function () { opts[inp.dataset.key] = inp.value; changed(false); });
-  });
   panel.querySelectorAll("input[type=range]").forEach(function (inp) {
     inp.addEventListener("input", function () {
       opts[inp.dataset.key] = parseFloat(inp.value);
@@ -572,14 +568,6 @@
     });
   });
   panel.querySelector("input[type=checkbox]").addEventListener("change", function (e) { opts.grid = e.target.checked; changed(false); });
-  panel.querySelector('[data-act="seed"]').addEventListener("click", function () { opts.seed = (Math.random() * 2147483647) | 0; changed(true); });
-  panel.querySelector('[data-act="copy"]').addEventListener("click", function (e) {
-    var btn = e.currentTarget;
-    writeUrlNow();
-    var done = function () { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy link"; }, 1600); };
-    if (navigator.clipboard) navigator.clipboard.writeText(location.href).then(done, function () { prompt("Copy this link:", location.href); });
-    else prompt("Copy this link:", location.href);
-  });
   var toggle = panel.querySelector(".art-panel-toggle");
   toggle.addEventListener("click", function () {
     var open = panel.classList.toggle("open");
@@ -588,14 +576,9 @@
 
   function syncPanel() {
     stylesEl.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.style === opts.style)); });
-    blurbEl.textContent = STYLES[opts.style].blurb;
     swatchesEl.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.brand === opts.brand)); });
     tonesEl.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.tone === opts.tone)); });
-    var br = brandById(opts.brand);
-    noteEl.innerHTML = "<strong>" + br.name + "</strong> #" + br.id.toUpperCase() +
-      '<span class="acc"><i style="background:' + br.accent + '"></i>Accent: ' + br.accentName + " " + br.accent.toUpperCase() + "</span>" + br.why;
     panel.querySelectorAll("select").forEach(function (sel) { sel.value = opts[sel.dataset.key]; });
-    panel.querySelectorAll("input[type=color]").forEach(function (inp) { inp.value = opts[inp.dataset.key]; });
     panel.querySelectorAll("input[type=range]").forEach(function (inp) {
       inp.value = String(opts[inp.dataset.key]);
       inp.nextElementSibling.textContent = +opts[inp.dataset.key].toFixed(2) + "×";
