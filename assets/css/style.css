@@ -119,7 +119,7 @@ a { color: inherit; text-decoration: none; }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) 0; }
 
 .brand { display: flex; align-items: center; min-width: 0; }
-.brand img { height: auto; width: auto; max-height: 50px; max-width: 100%; }
+.brand img { height: auto; width: auto; max-height: var(--space-9); max-width: 100%; }
 @media (max-width: 63.9375rem) { .brand { max-width: calc(100% - 3rem); } }
 
 .nav-links { display: none; align-items: center; gap: var(--space-8); }
@@ -239,7 +239,7 @@ main { padding-top: var(--header-h); }
 
 .label h2 {
   font-family: var(--font-sans); letter-spacing: 0;
-  font-size: var(--text-lg); font-weight: 600; color: var(--zinc-900);
+  font-size: var(--text-xl); font-weight: 600; color: var(--zinc-900); line-height: 1.3;
 }
 .label .meta { margin-top: var(--space-4); font-size: var(--text-sm); color: var(--zinc-500); line-height: 1.7; }
 .label .meta strong { display: block; color: var(--primary); font-weight: 600; font-size: var(--text-sm); }
@@ -468,18 +468,18 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
 /* ---------- Hero art explorer (temporary, for choosing a direction) ---------- */
 
 .art-panel {
-  position: fixed; right: var(--space-4); bottom: var(--space-4); z-index: 60;
-  width: min(20rem, calc(100vw - var(--space-8)));
+  position: fixed; z-index: 60;
+  right: var(--space-2); bottom: var(--space-2);
+  width: min(20rem, calc(100% - var(--space-4)));
   font-family: var(--font-sans); color: var(--zinc-900);
 }
 .art-panel-toggle {
-  display: flex; align-items: center; gap: var(--space-2); margin-left: auto;
+  display: flex; align-items: center; justify-content: center; margin-left: auto;
   padding: var(--space-3) var(--space-4); border: var(--line) solid var(--zinc-900); background: var(--zinc-900); color: #fff;
-  font: inherit; font-size: var(--text-sm); font-weight: 600; cursor: pointer;
+  font: inherit; font-size: var(--text-sm); font-weight: 600; line-height: 1; cursor: pointer;
   box-shadow: 0 var(--space-2) var(--space-6) rgb(0 0 0 / .18);
 }
 .art-panel-toggle:hover { background: var(--primary); border-color: var(--primary); }
-.art-panel-toggle .dot { width: var(--space-2); height: var(--space-2); border-radius: 50%; background: var(--accent); }
 .art-panel-body {
   display: none; margin-bottom: var(--space-2); max-height: calc(100svh - var(--space-28)); overflow-y: auto;
   background: #fff; border: var(--line) solid var(--zinc-200); border-top: var(--line-lg) solid var(--primary);
@@ -549,6 +549,7 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
 /* ---------- Event photo slider ---------- */
 
 .photo-slider { border-top: var(--line) solid var(--zinc-200); padding-top: var(--space-10); }
+.split .photo-slider { border-top: 0; padding-top: 0; }
 .slider-frame { position: relative; aspect-ratio: 3 / 2; background: var(--zinc-100); overflow: hidden; }
 @media (min-width: 48rem) { .slider-frame { aspect-ratio: 16 / 9; } }
 .slide { position: absolute; inset: 0; }

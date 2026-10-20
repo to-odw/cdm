@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/hero-art.js" defer></script>
+  <script src="assets/js/hero-art.js?v=3" defer></script>
 </head>
 <body>
 
@@ -236,39 +236,6 @@
         </div>
       </section>
 
-      <!-- ===== Event photos ===== -->
-      <section class="photo-slider" aria-roledescription="carousel" aria-label="Photos from the fellowship and strategy workshop">
-        <div class="slider-frame">
-          <figure class="slide" data-caption="Fellows outside Jesus College. <a href=&quot;fellowship.html&quot;>Digital Minds Fellowship</a>">
-            <a href="fellowship.html"><img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-015.jpg" alt="The fellowship group outside a brick building at Jesus College"></a>
-          </figure>
-          <figure class="slide" data-caption="Conversation during the fellowship. <a href=&quot;fellowship.html&quot;>Digital Minds Fellowship</a>" hidden>
-            <a href="fellowship.html"><img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-030.jpg" alt="Three people talking during the fellowship"></a>
-          </figure>
-          <figure class="slide" data-caption="West Court, Jesus College. <a href=&quot;fellowship.html&quot;>Digital Minds Fellowship</a>" hidden>
-            <a href="fellowship.html"><img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-007.jpg" alt="West Court at Jesus College, Cambridge"></a>
-          </figure>
-          <figure class="slide" data-caption="A session at the strategy workshop. <a href=&quot;workshop.html&quot;>Strategy workshop</a>" hidden>
-            <a href="workshop.html"><img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-100.jpg" alt="A speaker presenting to a seated audience"></a>
-          </figure>
-          <figure class="slide" data-caption="Discussion at the strategy workshop. <a href=&quot;workshop.html&quot;>Strategy workshop</a>" hidden>
-            <a href="workshop.html"><img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-250.jpg" alt="A speaker at a lectern during a workshop session"></a>
-          </figure>
-          <button class="slider-btn slider-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <button class="slider-btn slider-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
-        </div>
-        <div class="slider-meta">
-          <div class="slider-caption"></div>
-          <div class="slider-dots" role="tablist" aria-label="Choose a photo">
-            <button type="button" aria-label="Photo 1"></button>
-            <button type="button" aria-label="Photo 2"></button>
-            <button type="button" aria-label="Photo 3"></button>
-            <button type="button" aria-label="Photo 4"></button>
-            <button type="button" aria-label="Photo 5"></button>
-          </div>
-        </div>
-      </section>
-
       <!-- ===== Programs ===== -->
       <section class="split" id="programmes">
         <div class="label">
@@ -276,6 +243,33 @@
           <p class="meta"><strong>3–9 August 2026</strong>Cambridge University<br>15 Fellows</p>
         </div>
         <div class="body prose">
+          <div class="photo-slider" aria-roledescription="carousel" aria-label="Photos from the Digital Minds Fellowship">
+            <div class="slider-frame">
+              <figure class="slide" data-caption="Fellows at Jesus College.">
+                <a href="fellowship.html"><img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-015.jpg" alt="The fellowship group outside a brick building at Jesus College"></a>
+              </figure>
+              <figure class="slide" data-caption="West Court, Jesus College." hidden>
+                <a href="fellowship.html"><img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-007.jpg" alt="West Court at Jesus College, Cambridge"></a>
+              </figure>
+              <figure class="slide" data-caption="Conversation between sessions." hidden>
+                <a href="fellowship.html"><img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-030.jpg" alt="Three people talking during the fellowship"></a>
+              </figure>
+              <figure class="slide" data-caption="Fellows between sessions." hidden>
+                <a href="fellowship.html"><img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-040.jpg" alt="Fellows talking together indoors"></a>
+              </figure>
+              <button class="slider-btn slider-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+              <button class="slider-btn slider-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+            </div>
+            <div class="slider-meta">
+              <div class="slider-caption"></div>
+              <div class="slider-dots" role="tablist" aria-label="Choose a fellowship photo">
+                <button type="button" aria-label="Photo 1"></button>
+                <button type="button" aria-label="Photo 2"></button>
+                <button type="button" aria-label="Photo 3"></button>
+                <button type="button" aria-label="Photo 4"></button>
+              </div>
+            </div>
+          </div>
           <p class="notice">Applications are now closed.</p>
           <p>A selective residential fellowship for early- and mid-career researchers working on digital minds, AI consciousness, and AI welfare. We selected 15 fellows from over 3,600 applicants for our inaugural cohort.</p>
           <p>A 5-day intensive residential programme hosted at Cambridge University, followed by the Digital Minds Strategy Workshop. The fellowship enables deep, cross-disciplinary engagement across philosophy, social science, technical research, policy, and governance, building shared norms, judgment, and coordination capacity.</p>
@@ -299,6 +293,33 @@
           <p class="meta"><strong>8–9 August 2026</strong>Cambridge University</p>
         </div>
         <div class="body prose">
+          <div class="photo-slider" aria-roledescription="carousel" aria-label="Photos from the strategy workshop">
+            <div class="slider-frame">
+              <figure class="slide" data-caption="Arriving at Jesus College.">
+                <a href="workshop.html"><img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-001.jpg" alt="A sign for the Digital Minds Strategy Workshop at Jesus College"></a>
+              </figure>
+              <figure class="slide" data-caption="A session on digital minds." hidden>
+                <a href="workshop.html"><img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-100.jpg" alt="A speaker presenting to a seated audience"></a>
+              </figure>
+              <figure class="slide" data-caption="Discussion in the seminar room." hidden>
+                <a href="workshop.html"><img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-250.jpg" alt="A speaker at a lectern during a workshop session"></a>
+              </figure>
+              <figure class="slide" data-caption="West Court, Jesus College." hidden>
+                <a href="workshop.html"><img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-007.jpg" alt="West Court at Jesus College, Cambridge"></a>
+              </figure>
+              <button class="slider-btn slider-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+              <button class="slider-btn slider-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+            </div>
+            <div class="slider-meta">
+              <div class="slider-caption"></div>
+              <div class="slider-dots" role="tablist" aria-label="Choose a workshop photo">
+                <button type="button" aria-label="Photo 1"></button>
+                <button type="button" aria-label="Photo 2"></button>
+                <button type="button" aria-label="Photo 3"></button>
+                <button type="button" aria-label="Photo 4"></button>
+              </div>
+            </div>
+          </div>
           <p>A two-day, output-oriented workshop bringing together fellows, mentors, and invited experts for structured, collaborative research on neglected strategic questions about how society should prepare for the emergence of digital minds.</p>
           <p>We have a very limited number of spaces available for this workshop and intend to bring together a small cross-disciplinary group drawn from digital minds, AI policy and governance, and macrostrategy.</p>
           <div class="two-col">

@@ -527,7 +527,7 @@
       '</section>' +
       '<section><div class="art-actions"><button type="button" data-act="seed">New layout</button><button type="button" data-act="copy">Copy link</button></div></section>' +
     '</div>' +
-    '<button type="button" class="art-panel-toggle" aria-expanded="false" aria-controls="art-panel-body"><span class="dot"></span>Design</button>';
+    '<button type="button" class="art-panel-toggle" aria-expanded="false" aria-controls="art-panel-body">Aa</button>';
   document.body.appendChild(panel);
 
   var stylesEl = panel.querySelector(".art-styles"), blurbEl = panel.querySelector(".art-blurb");
