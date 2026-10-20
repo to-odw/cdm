@@ -30,7 +30,7 @@ The **Design** button (bottom-right) opens an explorer with these controls:
   | `#861618` | Oxblood | Champagne `#E4BE7C` |
   | `#5C5D27` | Olive | Clay `#C9663B` |
 
-- **Hero tone**: Light, Tint or Dark. The hero background is derived from the brand colour.
+- **Hero tone**: Light or Dark. The hero background is derived from the brand colour.
 - **Type**: headings in Spectral, Brawler, Tinos or Strichpunkt Sans; body in Inter, Strichpunkt Sans, Tinos or Brawler. Fonts load only when picked.
 - **Fine-tuning**: hero colour pickers, density, speed and grid lines.
 

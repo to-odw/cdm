@@ -51,7 +51,7 @@
     { id: "5c5d27", name: "Olive",       primary: "#5c5d27", accent: "#c9663b", accentName: "Clay",
       why: "Earthy, warm partner to the olive; stays natural and understated." }
   ];
-  var TONES = { light: "Light", tint: "Tint", dark: "Dark" };
+  var TONES = { light: "Light", dark: "Dark" };
 
   // Type options (loaded from Google Fonts only when picked)
   var FONTS = {
@@ -337,7 +337,6 @@
       var bg = luminance(brand.primary) < 0.02 ? brand.primary : mix(brand.primary, "#000000", 0.72);
       return { bg: bg, ink: mix(brand.primary, "#ffffff", 0.78), accent: brand.accent };
     }
-    if (tone === "tint") return { bg: mix(brand.primary, "#ffffff", 0.93), ink: brand.primary, accent: brand.accent };
     return { bg: "#ffffff", ink: brand.primary, accent: brand.accent };
   }
   function pick(list, v, fallback) { return list.indexOf(v) >= 0 ? v : fallback; }
