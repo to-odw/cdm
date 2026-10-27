@@ -1,0 +1,1854 @@
+{
+ "url": "http://127.0.0.1:8877/",
+ "at": "2026-10-26T03:11:01.099Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.96,
+    1,
+    1,
+    0.45,
+    0.39,
+    0.34,
+    0.39,
+    0.35,
+    0.76
+   ],
+   "motion": {
+    "elements": 14,
+    "css": 10,
+    "transitions": 4,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7961,
+     "screens": 8.8,
+     "words": 1024,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 22,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 12,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "digital-minds-strategy-workshop-2026-127.jpg",
+      "digital-minds-strategy-workshop-2026-123.jpg",
+      "digital-minds-strategy-workshop-2026-310.jpg",
+      "digital-minds-strategy-workshop-2026-015.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg",
+      "digital-minds-strategy-workshop-2026-030.jpg",
+      "digital-minds-strategy-workshop-2026-007.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Preparing for digital minds",
+     "words": 4,
+     "chars": 27,
+     "lines": 2,
+     "size": 56.2,
+     "vw": 3.9,
+     "font": "Schibsted Grotesk",
+     "weight": 800,
+     "tracking": -0.05,
+     "leading": 0.9,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.4,
+     "top": 342,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Preparing for digital minds",
+     "words": 4,
+     "lines": 2,
+     "size": 56.2,
+     "font": "Schibsted Grotesk"
+    },
+    "headings": [
+     {
+      "text": "Preparing for digital minds",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 56.2,
+      "vw": 3.9,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 342,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Our work",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 1040,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Recent writing on digital minds",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 64,
+      "vw": 4.4,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 1775,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Schibsted Grotesk",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20,
+      24,
+      26,
+      56,
+      64
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Schibsted Grotesk",
+      "size": 19,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.01,
+      "contrast": 16.6
+     },
+     "measureChars": 59,
+     "max": {
+      "size": 64,
+      "vw": 4.4,
+      "font": "Schibsted Grotesk",
+      "text": "Our work"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 2
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#131108",
+       "top": 0,
+       "hsl": {
+        "h": 49,
+        "s": 0.41,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#eff0f1",
+       "top": 900,
+       "hsl": {
+        "h": 210,
+        "s": 0.07,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 5726,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0f2726",
+       "top": 7449,
+       "hsl": {
+        "h": 177,
+        "s": 0.44,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#131108",
+       "share": 0.42
+      },
+      {
+       "color": "#27272a",
+       "share": 0.22
+      },
+      {
+       "color": "#52525b",
+       "share": 0.1
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#18181b",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#d42820",
+      "hsl": {
+       "h": 3,
+       "s": 0.74,
+       "l": 0.48
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 3,
+     "inHero": 1,
+     "radius": 0,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Research"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 25,
+     "hairlineSamples": [
+      "section#workshop.split 1088px",
+      "section#course.split 1088px",
+      "section#featured.split 1088px",
+      "div.grid-cards.cols-3 1088px",
+      "article.card.media-card 362px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 13,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 3872
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": true,
+     "height": 79,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "schibsted grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7961,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "section#hero.opening",
+      "tag": "section",
+      "top": 0,
+      "height": 900,
+      "words": 12,
+      "media": 2,
+      "middle": 603,
+      "heading": {
+       "text": "Preparing for",
+       "size": 56,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 153,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#our-work.essay",
+      "tag": "section",
+      "top": 900,
+      "height": 735,
+      "words": 143,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Our work",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#research.papers",
+      "tag": "section",
+      "top": 1635,
+      "height": 1044,
+      "words": 66,
+      "media": 1,
+      "middle": 229,
+      "heading": {
+       "text": "Recent writing",
+       "size": 64,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 54,
+      "textLeft": 32,
+      "textRight": 54,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.container.page",
+      "tag": "div",
+      "top": 2679,
+      "height": 4770,
+      "words": 798,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "Digital Minds Fellowship",
+       "size": 20,
+       "tag": "h2"
+      },
+      "left": 176,
+      "right": 177,
+      "textLeft": 176,
+      "textRight": 210,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 7449,
+      "height": 512,
+      "words": 94,
+      "media": 0,
+      "middle": 225,
+      "heading": {
+       "text": "Subscribe to the Digital Minds newsletter for the ",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 144,
+      "right": 144,
+      "textLeft": 144,
+      "textRight": 144,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Preparing for digital minds",
+      "size": 56,
+      "top": 342,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 460,
+      "n": 9
+     },
+     {
+      "x": 32,
+      "n": 7
+     },
+     {
+      "x": 176,
+      "n": 5
+     },
+     {
+      "x": 209,
+      "n": 4
+     },
+     {
+      "x": 571,
+      "n": 4
+     },
+     {
+      "x": 852,
+      "n": 4
+     },
+     {
+      "x": 864,
+      "n": 3
+     },
+     {
+      "x": 934,
+      "n": 3
+     },
+     {
+      "x": 736,
+      "n": 2
+     },
+     {
+      "x": 75,
+      "n": 1
+     },
+     {
+      "x": 478,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 43,
+    "bodySize": 19,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.97,
+    1,
+    0.99,
+    0.49,
+    0.56,
+    0.33,
+    0.54,
+    0.4,
+    0.7,
+    0.88
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 10,
+    "transitions": 2,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9378,
+     "screens": 9.2,
+     "words": 1018,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 22,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 12,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "digital-minds-strategy-workshop-2026-127.jpg",
+      "digital-minds-strategy-workshop-2026-123.jpg",
+      "digital-minds-strategy-workshop-2026-310.jpg",
+      "digital-minds-strategy-workshop-2026-015.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg",
+      "digital-minds-strategy-workshop-2026-030.jpg",
+      "digital-minds-strategy-workshop-2026-007.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Preparing for digital minds",
+     "words": 4,
+     "chars": 27,
+     "lines": 2,
+     "size": 44,
+     "vw": 5.7,
+     "font": "Schibsted Grotesk",
+     "weight": 800,
+     "tracking": -0.05,
+     "leading": 0.9,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.42,
+     "top": 415,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Preparing for digital minds",
+     "words": 4,
+     "lines": 2,
+     "size": 44,
+     "font": "Schibsted Grotesk"
+    },
+    "headings": [
+     {
+      "text": "Preparing for digital minds",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 44,
+      "vw": 5.7,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 415,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Our work",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 45.4,
+      "vw": 5.9,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 1124,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Recent writing on digital minds",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 73,
+      "vw": 9.5,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 1750,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 3,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Schibsted Grotesk",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      24,
+      44,
+      45,
+      73
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Schibsted Grotesk",
+      "size": 17.9,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.01,
+      "contrast": 16.6
+     },
+     "measureChars": 82,
+     "max": {
+      "size": 73,
+      "vw": 9.5,
+      "font": "Schibsted Grotesk",
+      "text": "on digital minds"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 2
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#131108",
+       "top": 0,
+       "hsl": {
+        "h": 49,
+        "s": 0.41,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#eff0f1",
+       "top": 1024,
+       "hsl": {
+        "h": 210,
+        "s": 0.07,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 6340,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0f2726",
+       "top": 8656,
+       "hsl": {
+        "h": 177,
+        "s": 0.44,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#131108",
+       "share": 0.42
+      },
+      {
+       "color": "#27272a",
+       "share": 0.22
+      },
+      {
+       "color": "#52525b",
+       "share": 0.1
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#18181b",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#d42820",
+      "hsl": {
+       "h": 3,
+       "s": 0.74,
+       "l": 0.48
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Research"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 25,
+     "hairlineSamples": [
+      "section#workshop.split 720px",
+      "section#course.split 720px",
+      "section#featured.split 720px",
+      "div.grid-cards.cols-3 720px",
+      "article.card.media-card 360px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 11,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 79,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "schibsted grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 9378,
+    "margins": {
+     "left": 0,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "section#hero.opening",
+      "tag": "section",
+      "top": 0,
+      "height": 1024,
+      "words": 12,
+      "media": 2,
+      "middle": 104,
+      "heading": {
+       "text": "Preparing for",
+       "size": 44,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 103,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#our-work.essay",
+      "tag": "section",
+      "top": 1024,
+      "height": 626,
+      "words": 143,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Our work",
+       "size": 45,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 23,
+      "textLeft": 16,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#research.papers",
+      "tag": "section",
+      "top": 1650,
+      "height": 1466,
+      "words": 694,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Recent writing",
+       "size": 73,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.container.page",
+      "tag": "div",
+      "top": 3116,
+      "height": 5540,
+      "words": 798,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "Digital Minds Fellowship",
+       "size": 20,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 8656,
+      "height": 722,
+      "words": 94,
+      "media": 0,
+      "middle": 8,
+      "heading": {
+       "text": "Subscribe to the Digital Minds newsletter for the ",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 0,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Preparing for digital minds",
+      "size": 44,
+      "top": 415,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Subscribe to the Digital Minds newsletter for the ",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Cambridge Digital Minds is a research initiative a",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Navigate",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Our work",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Research",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Fellowship",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Workshop",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Online course",
+      "side": "left",
+      "px": 0
+     }
+    ],
+    "edges": [
+     {
+      "x": 16,
+      "n": 14
+     },
+     {
+      "x": 216,
+      "n": 9
+     },
+     {
+      "x": 57,
+      "n": 6
+     },
+     {
+      "x": 417,
+      "n": 5
+     },
+     {
+      "x": 504,
+      "n": 4
+     },
+     {
+      "x": 36,
+      "n": 3
+     },
+     {
+      "x": 137,
+      "n": 1
+     },
+     {
+      "x": 234,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 43,
+    "bodySize": 18,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.99,
+    1,
+    1,
+    0.92,
+    0.76,
+    0.56,
+    0.57,
+    0.51,
+    0.51,
+    0.61,
+    0.62,
+    0.32
+   ],
+   "motion": {
+    "elements": 12,
+    "css": 10,
+    "transitions": 2,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 12093,
+     "screens": 14.3,
+     "words": 1018,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 22,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 12,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "digital-minds-strategy-workshop-2026-127.jpg",
+      "digital-minds-strategy-workshop-2026-123.jpg",
+      "digital-minds-strategy-workshop-2026-310.jpg",
+      "digital-minds-strategy-workshop-2026-015.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg",
+      "digital-minds-strategy-workshop-2026-030.jpg",
+      "digital-minds-strategy-workshop-2026-007.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Preparing for digital minds",
+     "words": 4,
+     "chars": 27,
+     "lines": 2,
+     "size": 35.1,
+     "vw": 9,
+     "font": "Schibsted Grotesk",
+     "weight": 800,
+     "tracking": -0.05,
+     "leading": 0.9,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 371,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Preparing for digital minds",
+     "words": 4,
+     "lines": 2,
+     "size": 35.1,
+     "font": "Schibsted Grotesk"
+    },
+    "headings": [
+     {
+      "text": "Preparing for digital minds",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 35.1,
+      "vw": 9,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 371,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Our work",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 33.3,
+      "vw": 8.5,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 944,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Recent writing on digital minds",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 37.1,
+      "vw": 9.5,
+      "font": "Schibsted Grotesk",
+      "weight": 800,
+      "tracking": -0.05,
+      "leading": 0.98,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 1910,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Subscribe to the Digital Minds newsletter for the latest news and research.",
+      "words": 12,
+      "chars": 75,
+      "lines": 3,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Schibsted Grotesk",
+      "weight": 300,
+      "tracking": -0.03,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 11051,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Schibsted Grotesk",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      24,
+      33,
+      35,
+      37
+     ],
+     "sizeCount": 11,
+     "notLoaded": [],
+     "body": {
+      "font": "Schibsted Grotesk",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": -0.01,
+      "contrast": 16.6
+     },
+     "measureChars": 42,
+     "max": {
+      "size": 37.1,
+      "vw": 9.5,
+      "font": "Schibsted Grotesk",
+      "text": "on digital minds"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 2
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#131108",
+       "top": 0,
+       "hsl": {
+        "h": 49,
+        "s": 0.41,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#eff0f1",
+       "top": 844,
+       "hsl": {
+        "h": 210,
+        "s": 0.07,
+        "l": 0.94
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 7027,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0f2726",
+       "top": 11008,
+       "hsl": {
+        "h": 177,
+        "s": 0.44,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#131108",
+       "share": 0.42
+      },
+      {
+       "color": "#27272a",
+       "share": 0.22
+      },
+      {
+       "color": "#52525b",
+       "share": 0.1
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      },
+      {
+       "color": "#18181b",
+       "share": 0.04
+      }
+     ],
+     "button": {
+      "bg": "#d42820",
+      "hsl": {
+       "h": 3,
+       "s": 0.74,
+       "l": 0.48
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 42,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Research"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 1,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 25,
+     "hairlineSamples": [
+      "section#workshop.split 358px",
+      "section#course.split 358px",
+      "section#featured.split 358px",
+      "div.grid-cards.cols-3 358px",
+      "article.card.media-card 357px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 11,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 1
+     },
+     {
+      "type": "img",
+      "ratio": 1
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 79,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "schibsted grotesk"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 12093,
+    "margins": {
+     "left": 0,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "section#hero.opening",
+      "tag": "section",
+      "top": 0,
+      "height": 844,
+      "words": 12,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "Preparing for",
+       "size": 35,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 98,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#our-work.essay",
+      "tag": "section",
+      "top": 844,
+      "height": 966,
+      "words": 143,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Our work",
+       "size": 33,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 18,
+      "textLeft": 16,
+      "textRight": 18,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#research.papers",
+      "tag": "section",
+      "top": 1810,
+      "height": 1123,
+      "words": 65,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Recent writing",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 18,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.container.page",
+      "tag": "div",
+      "top": 2932,
+      "height": 8076,
+      "words": 798,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "Digital Minds Fellowship",
+       "size": 20,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 18,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 11008,
+      "height": 1085,
+      "words": 94,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Subscribe to the Digital Minds newsletter for the ",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 0,
+      "textRight": 10,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Preparing for digital minds",
+      "size": 35,
+      "top": 371,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Subscribe to the Digital Minds newsletter for the ",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Cambridge Digital Minds is a research initiative a",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Navigate",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Our work",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Research",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Fellowship",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Workshop",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Online course",
+      "side": "left",
+      "px": 0
+     }
+    ],
+    "edges": [
+     {
+      "x": 16,
+      "n": 28
+     },
+     {
+      "x": 49,
+      "n": 11
+     },
+     {
+      "x": 34,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 43,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "25 thin rule(s)/divider line(s): section#workshop.split 1088px | section#course.split 1088px | section#featured.split 1088px | div.grid-cards.cols-3 1088px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "12 different font sizes (12, 13, 14, 15, 16, 17, 19, 20, 24, 26, 56, 64).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "small-text",
+   "width": 1440,
+   "message": "2 text block(s) under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 11 different lines (460px, 32px, 176px, 209px, 571px, 852px, 864px); the three most used hold only 49% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  },
+  {
+   "level": "WARN",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Little motion: 14 element(s) moved while the page loaded and scrolled.",
+   "fix": "Give every section an entrance for its parts (not one fade of the whole block) and add one moving picture: a looping clip or a slow move on a photograph."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 768,
+   "message": "The margins differ: 0px on the left, 16px on the right, at 768px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 768,
+   "message": "8 text block(s) sit within 16px of the screen edge: \"Subscribe to the Digital Minds\" (0px from the left); \"Cambridge Digital Minds is a r\" (0px from the left); \"Navigate\" (0px from the left); \"Our work\" (0px from the left)",
+   "fix": "Keep text inside the page margin (16–32px or more). Only display type deliberately bled past the edge may touch it.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "1 headline(s) wrap past two lines at 390px: \"Subscribe to the Digital Minds newsletter for th\" → 3 lines (12 words, 24px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\desktop-page-01.jpg",
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\desktop-page-02.jpg",
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\tablet-page-01.jpg",
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\mobile-page-01.jpg",
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\after\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

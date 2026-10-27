@@ -12,26 +12,28 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&family=Source+Sans+3:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home.css?v=4">
   <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/hero-art.js?v=7" defer></script>
+  <script src="assets/js/home.js" defer></script>
+  <script src="assets/js/constellation.js?v=9" defer></script>
 </head>
-<body>
+<body class="home">
 
 <header class="site-header" id="top">
   <div class="bar"></div>
   <nav class="container" aria-label="Main">
     <div class="nav">
       <a href="#top" class="brand" aria-label="Cambridge Digital Minds — home">
-        <img src="assets/img/CDM-Logo-Positive.svg" alt="Cambridge Digital Minds" width="389" height="59">
+        <img src="assets/img/CDM-Logo-Negative.svg" alt="Cambridge Digital Minds" width="389" height="59">
       </a>
       <div class="nav-links">
         <a href="#our-work">Our work</a>
-        <a href="research.html">Research</a>
         <a href="#programmes">Programs</a>
         <a href="newsletter.html">Newsletter</a>
         <a href="about.html">About</a>
+        <a href="#research">Research</a>
       </div>
       <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -42,7 +44,7 @@
   <div class="mobile-nav" id="mobile-nav">
     <div class="container">
       <a href="#our-work">Our work</a>
-      <a href="research.html">Research</a>
+      <a href="#research">Research</a>
       <a href="#programmes">Programs</a>
       <a href="newsletter.html">Newsletter</a>
       <a href="about.html">About</a>
@@ -51,95 +53,71 @@
 </header>
 
 <main>
-  <!-- ===== Hero ===== -->
-  <section class="hero-band" id="hero">
-    <canvas class="hero-art" aria-hidden="true"></canvas>
-    <header class="container hero">
-      <div class="hero-copy">
-        <div class="eyebrow">Cambridge Digital Minds</div>
-        <h1>Preparing society for AI systems with real or perceived minds.</h1>
-        <p class="lede">Cambridge Digital Minds is a research initiative at the University of Cambridge focused on societal preparedness for digital minds, whether perceived or real.</p>
+  <section class="stage" id="hero" aria-labelledby="title">
+    <canvas class="constellation" aria-hidden="true"></canvas>
+    <div class="stage-copy">
+      <h1 id="title">Preparing for<br>digital minds</h1>
+      <p class="stand">A Cambridge research initiative. <a href="#research">View recent research</a></p>
+    </div>
+  </section>
+
+  <section class="work" id="our-work">
+    <h2>Our work</h2>
+    <div class="prose">
+      <p>Cambridge Digital Minds studies whether AI systems could one day have minds with feelings and a capacity for welfare that warrants moral consideration. Experts are divided, and a growing number of people will come to believe they do. Whatever the truth, these perceptions will have profound implications for society and policy.</p>
+      <p>Research here is interdisciplinary and rigorous, aimed at anticipating societal responses to potential digital minds and at developing governance strategies. Capacity building strengthens the field through fellowships, training programs, and an online course anchored in academic rigour. Engagement builds expert coordination with policymakers, industry, and the public, to reduce confusion and polarisation before high-stakes conflicts emerge.</p>
+    </div>
+  </section>
+
+  <section class="papers" id="research">
+    <h2><span class="indent">Recent writing</span><br>on digital minds</h2>
+    <div class="papers-layout">
+      <div class="papers-photo">
+        <img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-030.jpg" width="2000" height="3000" alt="Three people talking between sessions at the fellowship" loading="lazy">
       </div>
-      <div class="hero-foot">
-        <a href="#our-work" class="btn btn-solid">Explore our work</a>
+      <p class="papers-name">Papers</p>
+      <div class="papers-rows">
+        <article class="paper">
+          <a class="paper-row" href="https://osf.io/preprints/psyarxiv/sntva" target="_blank" rel="noopener">
+            <span class="paper-kind">Book chapter</span>
+            <span class="paper-title">AI Consciousness Will Divide Society<span class="paper-by">Caviola, L.</span></span>
+            <span class="paper-when">17 Jun 2026 <svg class="paper-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+          <details>
+            <summary><span class="open">Read abstract</span><span class="close">Close</span></summary>
+            <p>As AI systems grow more sophisticated and human-like, societies will confront a question with no easy answer: are these systems conscious, and if so, what do we owe them? I argue that we should not expect convergence. Instead, society is headed toward a period marked by confusion, uncertainty, and sharp disagreement. Drawing on recent empirical data, I show that both experts and the public are already split on whether AI systems could be conscious and whether digital minds deserve moral consideration. I trace this division to structural features of the problem: consciousness remains difficult to define and impossible to measure directly, economic and political incentives cut in opposing directions, and the gap between how AI systems behave outwardly and how they work internally invites conflicting interpretations. Left unmanaged, such disagreement raises the prospect of political polarization, unstable regulation, geopolitical friction, and a greater risk that we get the moral question wrong—in one direction or the other. I close by outlining four strategies: strengthening expert coordination, building a more informed public conversation, designing AI systems that do not needlessly amplify moral confusion, and developing decision-making frameworks that do not hinge entirely on unresolved questions about consciousness.</p>
+          </details>
+        </article>
+        <article class="paper">
+          <a class="paper-row" href="https://philpapers.org/rec/CAVHCQ" target="_blank" rel="noopener">
+            <span class="paper-kind">Paper</span>
+            <span class="paper-title">Human-AI Coexistence<span class="paper-by">Caviola, L., Keeling, G., Street, W. &amp; Shevlin, H.</span></span>
+            <span class="paper-when">15 Jun 2026 <svg class="paper-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+          <details>
+            <summary><span class="open">Read abstract</span><span class="close">Close</span></summary>
+            <p>AI systems are increasingly becoming social actors that teach, assist, persuade, comfort, and coordinate with humans. But how will and should humans coexist with social AIs across different stages of technological development? This paper proposes an interdisciplinary framework for studying human-AI coexistence. We currently inhabit a formative period during which social AIs are beginning to affect everyday life. In a transitional period, more advanced systems may assume major social and economic roles, changing how institutions operate and how important decisions are made. Over longer time horizons, we may share the world with AI systems that possess capabilities far beyond those of today and perhaps even minds of their own, which would transform society and raise difficult questions about moral status and governance. The framework presented here aims to help researchers anticipate these developments and better understand their implications for individuals, institutions, and society.</p>
+          </details>
+        </article>
+        <article class="paper">
+          <a class="paper-row" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6829981" target="_blank" rel="noopener">
+            <span class="paper-kind">Paper</span>
+            <span class="paper-title">Denying Personhood to AI: An Analysis of U.S. State Legislation on AI Legal Status<span class="paper-by">Smith, A., Caviola, L. &amp; Alexander, H.</span></span>
+            <span class="paper-when">4 Jun 2026 <svg class="paper-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </a>
+          <details>
+            <summary><span class="open">Read abstract</span><span class="close">Close</span></summary>
+            <p>Amid growing public anxiety about the societal impacts of artificial intelligence, 23 bills have been introduced across 12 U.S. states since 2022 seeking to restrict the legal rights and responsibilities that AI systems can hold. These “Exclusion Bills” typically deny legal personhood to AI systems and in some cases declare them non-sentient, representing the first-ever meaningful legislative engagement with AI legal status. Most of the Exclusion Bills follow three common templates, pointing to coordinated legislative diffusion rather than independent development. The stated motivations driving these bills include: (1) religious conceptions of human exceptionalism, (2) concerns about liability for harms from AI systems, and (3) child safety. Opposition to the Exclusion Bills has primarily come from a few environmental groups, along with sporadic objections from industry groups, experts, and federal Republicans. The bills reflect a brewing divide on AI, driven by populist anti-AI sentiment. In one case, a bill has drawn criticism from the tech industry and its allies, who are opposed to overregulation and what they claim is an emerging, fragmented landscape of state bills. We suggest these legislative efforts to ban AI personhood may be premature, eliminating policy options, risking unforeseen consequences and eroding public trust, all before the full implications of advanced AI capabilities have been carefully considered.</p>
+          </details>
+        </article>
+        <p class="papers-more"><a href="research.html">Browse research</a></p>
       </div>
-    </header>
+    </div>
   </section>
 
   <div class="container page">
 
     <div class="sections">
-
-      <!-- ===== Our Work ===== -->
-      <section class="split" id="our-work">
-        <div class="label"><h2>Our work</h2></div>
-        <div class="body prose">
-          <p>As AI systems become more sophisticated, questions arise about whether they could one day have minds with feelings and capacity for welfare that warrant moral consideration. Experts are divided, and a growing number of people will come to believe they do. Whatever the truth, these perceptions will have profound implications for society and policy.</p>
-          <p>We address these challenges through research, field-building, education, and engagement with policymakers and industry to support well-informed public debate.</p>
-        </div>
-      </section>
-
-      <div class="grid-cards cols-3">
-        <div class="card">
-          <div class="num">I</div>
-          <h3>Research</h3>
-          <div class="hr"></div>
-          <p>Interdisciplinary, rigorous research aimed at anticipating societal responses to potential digital minds, and to develop governance strategies.</p>
-        </div>
-        <div class="card">
-          <div class="num">II</div>
-          <h3>Capacity building</h3>
-          <div class="hr"></div>
-          <p>Strengthening the digital minds field through fellowships, training programs, and an online course anchored in academic rigour.</p>
-        </div>
-        <div class="card">
-          <div class="num">III</div>
-          <h3>Engagement</h3>
-          <div class="hr"></div>
-          <p>Building expert coordination and working with policymakers, industry, and the public to reduce confusion and polarisation before high-stakes conflicts emerge.</p>
-        </div>
-      </div>
-
-      <!-- ===== Research ===== -->
-      <section class="split" id="research">
-        <div class="label"><h2>Research</h2></div>
-        <div class="body prose">
-          <p>Our recent publications on digital minds, AI consciousness, and AI welfare.</p>
-          <ul class="entries">
-            <li>
-              <div class="entry"><div class="entry-main">
-                <p class="type">Forthcoming book chapter (Jun 17, 2026)</p>
-                <p class="title"><a href="https://osf.io/preprints/psyarxiv/sntva" target="_blank" rel="noopener">AI Consciousness Will Divide Society</a></p>
-                <p class="byline">Caviola, L.</p>
-                <details class="abstract"><summary><span class="open">Read abstract</span><span class="close">Close</span></summary>
-                  <p>As AI systems grow more sophisticated and human-like, societies will confront a question with no easy answer: are these systems conscious, and if so, what do we owe them? I argue that we should not expect convergence. Instead, society is headed toward a period marked by confusion, uncertainty, and sharp disagreement. Drawing on recent empirical data, I show that both experts and the public are already split on whether AI systems could be conscious and whether digital minds deserve moral consideration. I trace this division to structural features of the problem: consciousness remains difficult to define and impossible to measure directly, economic and political incentives cut in opposing directions, and the gap between how AI systems behave outwardly and how they work internally invites conflicting interpretations. Left unmanaged, such disagreement raises the prospect of political polarization, unstable regulation, geopolitical friction, and a greater risk that we get the moral question wrong—in one direction or the other. I close by outlining four strategies: strengthening expert coordination, building a more informed public conversation, designing AI systems that do not needlessly amplify moral confusion, and developing decision-making frameworks that do not hinge entirely on unresolved questions about consciousness.</p>
-                </details>
-              </div></div>
-            </li>
-            <li>
-              <div class="entry"><div class="entry-main">
-                <p class="type">Paper (Jun 15, 2026)</p>
-                <p class="title"><a href="https://philpapers.org/rec/CAVHCQ" target="_blank" rel="noopener">Human-AI Coexistence</a></p>
-                <p class="byline">Caviola, L., Keeling, G., Street, W. &amp; Shevlin, H.</p>
-                <details class="abstract"><summary><span class="open">Read abstract</span><span class="close">Close</span></summary>
-                  <p>AI systems are increasingly becoming social actors that teach, assist, persuade, comfort, and coordinate with humans. But how will and should humans coexist with social AIs across different stages of technological development? This paper proposes an interdisciplinary framework for studying human-AI coexistence. We currently inhabit a formative period during which social AIs are beginning to affect everyday life. In a transitional period, more advanced systems may assume major social and economic roles, changing how institutions operate and how important decisions are made. Over longer time horizons, we may share the world with AI systems that possess capabilities far beyond those of today and perhaps even minds of their own, which would transform society and raise difficult questions about moral status and governance. The framework presented here aims to help researchers anticipate these developments and better understand their implications for individuals, institutions, and society.</p>
-                </details>
-              </div></div>
-            </li>
-            <li>
-              <div class="entry"><div class="entry-main">
-                <p class="type">Paper (Jun 4, 2026)</p>
-                <p class="title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6829981" target="_blank" rel="noopener">Denying Personhood to AI: An Analysis of U.S. State Legislation on AI Legal Status</a></p>
-                <p class="byline">Smith, A., Caviola, L. &amp; Alexander, H.</p>
-                <details class="abstract"><summary><span class="open">Read abstract</span><span class="close">Close</span></summary>
-                  <p>Amid growing public anxiety about the societal impacts of artificial intelligence, 23 bills have been introduced across 12 U.S. states since 2022 seeking to restrict the legal rights and responsibilities that AI systems can hold. These “Exclusion Bills” typically deny legal personhood to AI systems and in some cases declare them non-sentient, representing the first-ever meaningful legislative engagement with AI legal status. Most of the Exclusion Bills follow three common templates, pointing to coordinated legislative diffusion rather than independent development. The stated motivations driving these bills include: (1) religious conceptions of human exceptionalism, (2) concerns about liability for harms from AI systems, and (3) child safety. Opposition to the Exclusion Bills has primarily come from a few environmental groups, along with sporadic objections from industry groups, experts, and federal Republicans. The bills reflect a brewing divide on AI, driven by populist anti-AI sentiment. In one case, a bill has drawn criticism from the tech industry and its allies, who are opposed to overregulation and what they claim is an emerging, fragmented landscape of state bills. We suggest these legislative efforts to ban AI personhood may be premature, eliminating policy options, risking unforeseen consequences and eroding public trust, all before the full implications of advanced AI capabilities have been carefully considered.</p>
-                </details>
-              </div></div>
-            </li>
-          </ul>
-          <p><a class="btn" href="research.html">Browse research</a></p>
-        </div>
-      </section>
 
       <!-- ===== Programs ===== -->
       <section class="split" id="programmes">

@@ -1,0 +1,1741 @@
+{
+ "url": "http://127.0.0.1:8877/",
+ "at": "2026-10-26T03:00:33.009Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.41,
+    0.23,
+    0.51,
+    0.25,
+    0.41,
+    0.21,
+    0.49,
+    0.27,
+    0.71
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 0,
+    "transitions": 3,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7675,
+     "screens": 8.5,
+     "words": 1075,
+     "img": 15,
+     "video": 0,
+     "canvas": 1,
+     "svg": 17,
+     "sections": 12,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "digital-minds-strategy-workshop-2026-007.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg",
+      "digitalminds-guide.jpg",
+      "seems-conscious.jpg",
+      "essay-strategic-questions.jpg",
+      "essay-governance-scoping.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Preparing society for AI systems with real or perceived minds.",
+     "words": 10,
+     "chars": 62,
+     "lines": 3,
+     "size": 72,
+     "vw": 5,
+     "font": "Spectral",
+     "weight": 300,
+     "tracking": -0.025,
+     "leading": 1.05,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.6,
+     "top": 305,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Preparing society for AI systems with real or perceived minds.",
+     "words": 10,
+     "lines": 3,
+     "size": 72,
+     "font": "Spectral"
+    },
+    "headings": [
+     {
+      "text": "Preparing society for AI systems with real or perceived minds.",
+      "words": 10,
+      "chars": 62,
+      "lines": 3,
+      "size": 72,
+      "vw": 5,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": -0.025,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.6,
+      "top": 305,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "I",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 1284,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "II",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.21,
+      "top": 1284,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "III",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 40,
+      "vw": 2.8,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.21,
+      "top": 1284,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.58,
+       "mono": false
+      },
+      {
+       "family": "Spectral",
+       "share": 0.42,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      24,
+      40,
+      72
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Spectral",
+      "size": 16,
+      "leading": 1.7,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 10.4
+     },
+     "measureChars": 88,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "Spectral",
+      "text": "Preparing society for AI systems with re"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 2
+    },
+    "eyebrows": [
+     {
+      "text": "Cambridge Digital Minds",
+      "above": "Preparing society for AI systems with re",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 15,
+      "top": 251
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 92,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0f2726",
+       "top": 7133,
+       "hsl": {
+        "h": 177,
+        "s": 0.44,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#3f3f46",
+       "share": 0.38
+      },
+      {
+       "color": "#27272a",
+       "share": 0.27
+      },
+      {
+       "color": "#52525b",
+       "share": 0.14
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.06
+      },
+      {
+       "color": "#18181b",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#1a635f",
+      "hsl": {
+       "h": 177,
+       "s": 0.58,
+       "l": 0.25
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Explore our work"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 40,
+     "hairlineSamples": [
+      "header#top.site-header 1440px",
+      "section#hero.hero-band 1440px",
+      "div.grid-cards.cols-3 1088px",
+      "div.card 362px",
+      "div.card 362px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 7,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1251
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.9
+     }
+    ],
+    "nav": {
+     "links": 6,
+     "fixed": true,
+     "height": 83,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "spectral"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7675,
+    "margins": {
+     "left": 176,
+     "right": 166
+    },
+    "sections": [
+     {
+      "sel": "section#hero.hero-band",
+      "tag": "section",
+      "top": 92,
+      "height": 809,
+      "words": 43,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Preparing society for AI systems with real or perc",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 176,
+      "right": 500,
+      "textLeft": 176,
+      "textRight": 500,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.container.page",
+      "tag": "div",
+      "top": 901,
+      "height": 6232,
+      "words": 1658,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "II",
+       "size": 40,
+       "tag": "div"
+      },
+      "left": 176,
+      "right": 177,
+      "textLeft": 176,
+      "textRight": 212,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 7133,
+      "height": 542,
+      "words": 94,
+      "media": 0,
+      "middle": 222,
+      "heading": {
+       "text": "Subscribe to the Digital Minds newsletter for the ",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 144,
+      "right": 144,
+      "textLeft": 144,
+      "textRight": 144,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Preparing society for AI systems with real or perceived minds.",
+      "size": 72,
+      "top": 305,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 460,
+      "n": 12
+     },
+     {
+      "x": 176,
+      "n": 9
+     },
+     {
+      "x": 209,
+      "n": 6
+     },
+     {
+      "x": 571,
+      "n": 6
+     },
+     {
+      "x": 934,
+      "n": 5
+     },
+     {
+      "x": 852,
+      "n": 4
+     },
+     {
+      "x": 478,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 43,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.29,
+    0.29,
+    0.59,
+    0.35,
+    0.51,
+    0.25,
+    0.56,
+    0.4,
+    0.86
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 0,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9098,
+     "screens": 8.9,
+     "words": 1069,
+     "img": 15,
+     "video": 0,
+     "canvas": 1,
+     "svg": 17,
+     "sections": 12,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "digital-minds-strategy-workshop-2026-007.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg",
+      "digitalminds-guide.jpg",
+      "seems-conscious.jpg",
+      "essay-strategic-questions.jpg",
+      "essay-governance-scoping.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Preparing society for AI systems with real or perceived minds.",
+     "words": 10,
+     "chars": 62,
+     "lines": 3,
+     "size": 60,
+     "vw": 7.8,
+     "font": "Spectral",
+     "weight": 300,
+     "tracking": -0.025,
+     "leading": 1.05,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.94,
+     "top": 360,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Preparing society for AI systems with real or perceived minds.",
+     "words": 10,
+     "lines": 3,
+     "size": 60,
+     "font": "Spectral"
+    },
+    "headings": [
+     {
+      "text": "Preparing society for AI systems with real or perceived minds.",
+      "words": 10,
+      "chars": 62,
+      "lines": 3,
+      "size": 60,
+      "vw": 7.8,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": -0.025,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 360,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "I",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 1439,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "II",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.38,
+      "top": 1439,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "III",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 40,
+      "vw": 5.2,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 1729,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 4,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.58,
+       "mono": false
+      },
+      {
+       "family": "Spectral",
+       "share": 0.42,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      24,
+      40,
+      60
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Spectral",
+      "size": 16,
+      "leading": 1.7,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 10.4
+     },
+     "measureChars": 66,
+     "max": {
+      "size": 60,
+      "vw": 7.8,
+      "font": "Spectral",
+      "text": "Preparing society for AI systems with re"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 2
+    },
+    "eyebrows": [
+     {
+      "text": "Cambridge Digital Minds",
+      "above": "Preparing society for AI systems with re",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 15,
+      "top": 306
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 92,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0f2726",
+       "top": 8376,
+       "hsl": {
+        "h": 177,
+        "s": 0.44,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#3f3f46",
+       "share": 0.38
+      },
+      {
+       "color": "#27272a",
+       "share": 0.27
+      },
+      {
+       "color": "#52525b",
+       "share": 0.14
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.06
+      },
+      {
+       "color": "#18181b",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#1a635f",
+      "hsl": {
+       "h": 177,
+       "s": 0.58,
+       "l": 0.25
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Explore our work"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 40,
+     "hairlineSamples": [
+      "header#top.site-header 768px",
+      "section#hero.hero-band 768px",
+      "div.grid-cards.cols-3 720px",
+      "div.card 360px",
+      "div.card 360px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.86
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 84,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "spectral"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 9098,
+    "margins": {
+     "left": 0,
+     "right": 24
+    },
+    "sections": [
+     {
+      "sel": "section#hero.hero-band",
+      "tag": "section",
+      "top": 92,
+      "height": 881,
+      "words": 43,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Preparing society for AI systems with real or perc",
+       "size": 60,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 52,
+      "textLeft": 24,
+      "textRight": 52,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.container.page",
+      "tag": "div",
+      "top": 973,
+      "height": 7403,
+      "words": 1658,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "II",
+       "size": 40,
+       "tag": "div"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 8376,
+      "height": 722,
+      "words": 94,
+      "media": 0,
+      "middle": 7,
+      "heading": {
+       "text": "Subscribe to the Digital Minds newsletter for the ",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 0,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Preparing society for AI systems with real or perceived minds.",
+      "size": 60,
+      "top": 360,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Subscribe to the Digital Minds newsletter for the ",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Cambridge Digital Minds is a research initiative a",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Navigate",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Our work",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Research",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Fellowship",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Workshop",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Online course",
+      "side": "left",
+      "px": 0
+     }
+    ],
+    "edges": [
+     {
+      "x": 216,
+      "n": 12
+     },
+     {
+      "x": 57,
+      "n": 10
+     },
+     {
+      "x": 24,
+      "n": 9
+     },
+     {
+      "x": 417,
+      "n": 7
+     },
+     {
+      "x": 504,
+      "n": 4
+     },
+     {
+      "x": 234,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 43,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.51,
+    0.58,
+    0.36,
+    0.81,
+    0.79,
+    0.54,
+    0.68,
+    0.49,
+    0.52,
+    0.58,
+    0.58,
+    0.55
+   ],
+   "motion": {
+    "elements": 1,
+    "css": 0,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 12333,
+     "screens": 14.6,
+     "words": 1069,
+     "img": 15,
+     "video": 0,
+     "canvas": 1,
+     "svg": 17,
+     "sections": 12,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 6,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "digital-minds-strategy-workshop-2026-007.jpg",
+      "digital-minds-strategy-workshop-2026-100.jpg",
+      "digitalminds-guide.jpg",
+      "seems-conscious.jpg",
+      "essay-strategic-questions.jpg",
+      "essay-governance-scoping.jpg"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Preparing society for AI systems with real or perceived minds.",
+     "words": 10,
+     "chars": 62,
+     "lines": 4,
+     "size": 48,
+     "vw": 12.3,
+     "font": "Spectral",
+     "weight": 300,
+     "tracking": -0.025,
+     "leading": 1.05,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 211,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Preparing society for AI systems with real or perceived minds.",
+     "words": 10,
+     "lines": 4,
+     "size": 48,
+     "font": "Spectral"
+    },
+    "headings": [
+     {
+      "text": "Preparing society for AI systems with real or perceived minds.",
+      "words": 10,
+      "chars": 62,
+      "lines": 4,
+      "size": 48,
+      "vw": 12.3,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": -0.025,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 211,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "I",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 1466,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "II",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 1756,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "III",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 40,
+      "vw": 10.3,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 2023,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Subscribe to the Digital Minds newsletter for the latest news and research.",
+      "words": 12,
+      "chars": 75,
+      "lines": 3,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Spectral",
+      "weight": 300,
+      "tracking": 0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 1,
+      "top": 11291,
+      "tag": "h3",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 5,
+     "maxLines": 4,
+     "over2Lines": 2,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Inter",
+       "share": 0.58,
+       "mono": false
+      },
+      {
+       "family": "Spectral",
+       "share": 0.42,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      20,
+      24,
+      40,
+      48
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Spectral",
+      "size": 16,
+      "leading": 1.7,
+      "weight": 300,
+      "tracking": 0,
+      "contrast": 10.4
+     },
+     "measureChars": 45,
+     "max": {
+      "size": 48,
+      "vw": 12.3,
+      "font": "Spectral",
+      "text": "Preparing society for AI systems with re"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 2
+    },
+    "eyebrows": [
+     {
+      "text": "Cambridge Digital Minds",
+      "above": "Preparing society for AI systems with re",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 15,
+      "top": 156
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 92,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0f2726",
+       "top": 11248,
+       "hsl": {
+        "h": 177,
+        "s": 0.44,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#3f3f46",
+       "share": 0.38
+      },
+      {
+       "color": "#27272a",
+       "share": 0.27
+      },
+      {
+       "color": "#52525b",
+       "share": 0.14
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.06
+      },
+      {
+       "color": "#18181b",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#1a635f",
+      "hsl": {
+       "h": 177,
+       "s": 0.58,
+       "l": 0.25
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 1,
+     "radius": 0,
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Explore our work"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 40,
+     "hairlineSamples": [
+      "header#top.site-header 390px",
+      "section#hero.hero-band 390px",
+      "div.grid-cards.cols-3 358px",
+      "div.card 357px",
+      "div.card 357px"
+     ],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 1,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 8,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.89
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 84,
+     "floatingPill": false,
+     "blur": true
+    },
+    "fontsLoaded": [
+     "inter",
+     "spectral"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 12333,
+    "margins": {
+     "left": 0,
+     "right": 16
+    },
+    "sections": [
+     {
+      "sel": "section#hero.hero-band",
+      "tag": "section",
+      "top": 92,
+      "height": 772,
+      "words": 43,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Preparing society for AI systems with real or perc",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 16,
+      "right": 23,
+      "textLeft": 16,
+      "textRight": 23,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.container.page",
+      "tag": "div",
+      "top": 864,
+      "height": 10384,
+      "words": 1658,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "II",
+       "size": 40,
+       "tag": "div"
+      },
+      "left": 16,
+      "right": 16,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 11248,
+      "height": 1085,
+      "words": 94,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Subscribe to the Digital Minds newsletter for the ",
+       "size": 24,
+       "tag": "h3"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 0,
+      "textRight": 6,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Preparing society for AI systems with real or perceived minds.",
+      "size": 48,
+      "top": 211,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Subscribe to the Digital Minds newsletter for the ",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Cambridge Digital Minds is a research initiative a",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Navigate",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Our work",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Research",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Fellowship",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Workshop",
+      "side": "left",
+      "px": 0
+     },
+     {
+      "text": "Online course",
+      "side": "left",
+      "px": 0
+     }
+    ],
+    "edges": [
+     {
+      "x": 16,
+      "n": 25
+     },
+     {
+      "x": 49,
+      "n": 17
+     },
+     {
+      "x": 34,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 43,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "1 headline(s) wrap past two lines at 1440px: \"Preparing society for AI systems with real or pe\" → 3 lines (10 words, 72px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "1 eyebrow/kicker label(s) above headings: \"Cambridge Digital Minds\" above \"Preparing society for AI systems with re\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "40 thin rule(s)/divider line(s): header#top.site-header 1440px | section#hero.hero-band 1440px | div.grid-cards.cols-3 1088px | div.card 362px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "10 different font sizes (12, 13, 14, 15, 16, 17, 20, 24, 40, 72).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "small-text",
+   "width": 1440,
+   "message": "2 text block(s) under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "font-not-dealt",
+   "width": 1440,
+   "message": "The sheet dealt Schibsted Grotesk and Schibsted Grotesk, but the page renders Inter, Spectral.",
+   "fix": "Load the dealt face (the link on the sheet) and put it first in font-family. A build that falls back to a default face lands on the default look."
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 3 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "1 headline(s) wrap past two lines at 768px: \"Preparing society for AI systems with real or pe\" → 3 lines (10 words, 60px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 768,
+   "message": "The margins differ: 0px on the left, 24px on the right, at 768px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 768,
+   "message": "8 text block(s) sit within 16px of the screen edge: \"Subscribe to the Digital Minds\" (0px from the left); \"Cambridge Digital Minds is a r\" (0px from the left); \"Navigate\" (0px from the left); \"Our work\" (0px from the left)",
+   "fix": "Keep text inside the page margin (16–32px or more). Only display type deliberately bled past the edge may touch it.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "2 headline(s) wrap past two lines at 390px: \"Preparing society for AI systems with real or pe\" → 4 lines (10 words, 48px); \"Subscribe to the Digital Minds newsletter for th\" → 3 lines (12 words, 24px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\desktop-page-01.jpg",
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\desktop-page-02.jpg",
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\tablet-page-01.jpg",
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\mobile-page-01.jpg",
+    "C:\\Users\\Taylor\\Documents\\ODW\\cdm\\.taste-skill\\before\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
