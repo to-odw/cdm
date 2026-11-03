@@ -12,12 +12,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&family=Source+Sans+3:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/home.css?v=5">
+  <link rel="stylesheet" href="assets/css/home.css?v=14">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/home.js" defer></script>
-  <script src="assets/js/constellation.js?v=9" defer></script>
 </head>
 <body class="home">
 
@@ -26,14 +25,15 @@
   <nav class="container" aria-label="Main">
     <div class="nav">
       <a href="#top" class="brand" aria-label="Cambridge Digital Minds — home">
-        <img src="assets/img/CDM-Logo-Negative.svg" alt="Cambridge Digital Minds" width="389" height="59">
+        <img class="logo-on-photo" src="assets/img/CDM-Logo-Negative.svg" alt="Cambridge Digital Minds" width="387" height="59">
+        <img class="logo-on-bar" src="assets/img/CDM-Logo-Positive.svg" alt="" aria-hidden="true" width="387" height="59">
       </a>
       <div class="nav-links">
         <a href="#our-work">Our work</a>
         <a href="#programmes">Programs</a>
         <a href="newsletter.html">Newsletter</a>
         <a href="about.html">About</a>
-        <a href="#research">Research</a>
+        <a class="nav-action" href="#research">Research</a>
       </div>
       <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -53,24 +53,42 @@
 </header>
 
 <main>
-  <section class="stage" id="hero" aria-labelledby="title">
-    <canvas class="constellation" aria-hidden="true"></canvas>
-    <div class="stage-copy">
-      <h1 id="title">Preparing for<br>digital minds</h1>
-      <p class="stand">A Cambridge research initiative. <a href="#research">View recent research</a></p>
+  <section class="opening" id="hero">
+    <div class="opening-media">
+      <img class="is-shown" src="assets/img/hero/cdm-hero-01.webp" width="1920" height="1280" alt="The fellowship group outside a brick college building.">
+      <img src="assets/img/hero/cdm-hero-02.webp" width="1920" height="1280" alt="" aria-hidden="true">
+      <img src="assets/img/hero/cdm-hero-03.webp" width="1920" height="1280" alt="" aria-hidden="true">
+      <img src="assets/img/hero/cdm-hero-04.webp" width="1920" height="1280" alt="" aria-hidden="true">
+    </div>
+    <div class="opening-scrim" aria-hidden="true"></div>
+    <div class="opening-copy">
+      <h1>Preparing for<br>digital minds</h1>
+      <p class="stand">A Cambridge research initiative.</p>
+      <p class="opening-fact"><span class="dot" aria-hidden="true"></span>August 2026</p>
+    </div>
+    <div class="opening-cards">
+      <a class="corner-card" href="fellowship.html">
+        <img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-015.jpg" width="3000" height="2000" alt="The fellowship group outside Jesus College">
+        <span class="corner-card-bar">Fellowship <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="corner-card" href="workshop.html">
+        <img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-100.jpg" width="3000" height="2000" alt="A speaker presenting to the strategy workshop">
+        <span class="corner-card-bar">Workshop <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
     </div>
   </section>
 
-  <section class="work" id="our-work">
+  <section class="essay" id="our-work">
     <h2>Our work</h2>
-    <div class="prose">
-      <p>Cambridge Digital Minds studies whether AI systems could one day have minds with feelings and a capacity for welfare that warrants moral consideration. Experts are divided, and a growing number of people will come to believe they do. Whatever the truth, these perceptions will have profound implications for society and policy.</p>
-      <p>Research here is interdisciplinary and rigorous, aimed at anticipating societal responses to potential digital minds and at developing governance strategies. Capacity building strengthens the field through fellowships, training programs, and an online course anchored in academic rigour. Engagement builds expert coordination with policymakers, industry, and the public, to reduce confusion and polarisation before high-stakes conflicts emerge.</p>
+    <div class="essay-flow">
+      <p><span class="who">Cambridge Digital Minds</span> studies whether AI systems could one day have <span class="mark ink">minds with feelings</span> and a capacity for welfare that warrants moral consideration. <span class="mark hot">Experts are divided</span>, and a growing number of people will come to believe they do. Whatever the truth, these perceptions will have profound implications for society and policy.</p>
+      <p><span class="mark ink">Research</span> here is interdisciplinary and rigorous, aimed at anticipating societal responses to potential digital minds and at developing governance strategies. Capacity building strengthens the field through <span class="mark hot">fellowships</span>, training programs, and an online course anchored in academic rigour. Engagement builds expert coordination with <span class="mark ink">policymakers</span>, industry, and the public, to reduce confusion and polarisation before high-stakes conflicts emerge.</p>
+      <a class="essay-next" href="#research">We address these challenges so the public debate is well informed.</a>
     </div>
   </section>
 
   <section class="papers" id="research">
-    <h2><span class="indent">Recent writing</span><br>on digital minds</h2>
+    <h2>Recent writing<br>on digital minds</h2>
     <div class="papers-layout">
       <div class="papers-photo">
         <img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-030.jpg" width="2000" height="3000" alt="Three people talking between sessions at the fellowship" loading="lazy">
