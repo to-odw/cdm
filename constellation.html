@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/constellation.css?v=8">
+  <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body class="field">
 
@@ -98,8 +99,54 @@
   </section>
 </main>
 
-<footer class="close">
-  <p>Cambridge<br>Digital Minds</p>
+<footer class="site-footer">
+  <div class="band">
+    <div class="container subscribe">
+      <h3>Subscribe to the Digital Minds newsletter for the latest news and research.</h3>
+      <form action="https://digitalminds.substack.com/subscribe" method="get" target="_blank">
+        <input id="sub-email" aria-label="Email address" type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="container footer-main">
+    <div class="footer-about">
+      <div class="footer-logos">
+        <img class="cdm" src="assets/img/CDM-Logo-Negative.svg" alt="Cambridge Digital Minds" width="381" height="59">
+      </div>
+      <p>Cambridge Digital Minds is a research initiative at the University of Cambridge focused on societal preparedness for digital minds, whether perceived or real. It is housed within the Leverhulme Centre for the Future of Intelligence at the Institute for Technology and Humanity.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Navigate</h4>
+        <ul class="nav-list">
+          <li><a href="index.html#our-work">Our work</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="fellowship.html">Fellowship</a></li>
+          <li><a href="workshop.html">Workshop</a></li>
+          <li><a href="index.html#course">Online course</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <address>
+          Cambridge Digital Minds<br>
+          Level 1, 16 Mill Lane<br>
+          Cambridge, Cambridgeshire<br>
+          CB2 1SB<br>
+          United Kingdom<br>
+          <a href="mailto:info@digitalminds.cam">info@digitalminds.cam</a>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© <span data-year>2026</span> Cambridge Digital Minds. All rights reserved.</p>
+      <a href="https://digitalminds.cam/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+    </div>
+  </div>
 </footer>
 
 <script src="assets/js/constellation.js?v=10"></script>

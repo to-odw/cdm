@@ -14,7 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/home.css?v=14">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/home.css?v=23">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/home.js" defer></script>
 </head>
@@ -22,7 +23,7 @@
 
 <header class="site-header" id="top">
   <div class="bar"></div>
-  <nav class="container" aria-label="Main">
+  <nav class="shell" aria-label="Main">
     <div class="nav">
       <a href="#top" class="brand" aria-label="Cambridge Digital Minds — home">
         <img class="logo-on-photo" src="assets/img/CDM-Logo-Negative.svg" alt="Cambridge Digital Minds" width="387" height="59">
@@ -42,7 +43,7 @@
     </div>
   </nav>
   <div class="mobile-nav" id="mobile-nav">
-    <div class="container">
+    <div class="shell">
       <a href="#our-work">Our work</a>
       <a href="#research">Research</a>
       <a href="#programmes">Programs</a>
@@ -55,45 +56,42 @@
 <main>
   <section class="opening" id="hero">
     <div class="opening-media">
-      <img class="is-shown" src="assets/img/hero/cdm-hero-01.webp" width="1920" height="1280" alt="The fellowship group outside a brick college building.">
+      <img class="is-shown" src="assets/img/hero/cdm-hero-05.webp" width="1920" height="1280" alt="Participants seated in a circle at the Digital Minds Strategy Workshop.">
       <img src="assets/img/hero/cdm-hero-02.webp" width="1920" height="1280" alt="" aria-hidden="true">
       <img src="assets/img/hero/cdm-hero-03.webp" width="1920" height="1280" alt="" aria-hidden="true">
       <img src="assets/img/hero/cdm-hero-04.webp" width="1920" height="1280" alt="" aria-hidden="true">
     </div>
     <div class="opening-scrim" aria-hidden="true"></div>
+    <div class="shell opening-layout">
     <div class="opening-copy">
       <h1>Preparing for<br>digital minds</h1>
       <p class="stand">A Cambridge research initiative.</p>
-      <p class="opening-fact"><span class="dot" aria-hidden="true"></span>August 2026</p>
     </div>
     <div class="opening-cards">
-      <a class="corner-card" href="fellowship.html">
-        <img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-015.jpg" width="3000" height="2000" alt="The fellowship group outside Jesus College">
-        <span class="corner-card-bar">Fellowship <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
-      <a class="corner-card" href="workshop.html">
-        <img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-100.jpg" width="3000" height="2000" alt="A speaker presenting to the strategy workshop">
-        <span class="corner-card-bar">Workshop <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-      </a>
+      <a class="hero-btn" href="fellowship.html">Fellowship <span aria-hidden="true">→</span></a>
+      <a class="hero-btn" href="workshop.html">Workshop <span aria-hidden="true">→</span></a>
+    </div>
     </div>
   </section>
 
   <section class="essay" id="our-work">
+    <div class="shell">
     <h2>Our work</h2>
     <div class="essay-flow">
       <p><span class="who">Cambridge Digital Minds</span> studies whether AI systems could one day have <span class="mark ink">minds with feelings</span> and a capacity for welfare that warrants moral consideration. <span class="mark hot">Experts are divided</span>, and a growing number of people will come to believe they do. Whatever the truth, these perceptions will have profound implications for society and policy.</p>
       <p><span class="mark ink">Research</span> here is interdisciplinary and rigorous, aimed at anticipating societal responses to potential digital minds and at developing governance strategies. Capacity building strengthens the field through <span class="mark hot">fellowships</span>, training programs, and an online course anchored in academic rigour. Engagement builds expert coordination with <span class="mark ink">policymakers</span>, industry, and the public, to reduce confusion and polarisation before high-stakes conflicts emerge.</p>
       <a class="essay-next" href="#research">We address these challenges so the public debate is well informed.</a>
     </div>
+    </div>
   </section>
 
   <section class="papers" id="research">
+    <div class="shell">
     <h2>Recent writing<br>on digital minds</h2>
     <div class="papers-layout">
       <div class="papers-photo">
         <img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-030.jpg" width="2000" height="3000" alt="Three people talking between sessions at the fellowship" loading="lazy">
       </div>
-      <p class="papers-name">Papers</p>
       <div class="papers-rows">
         <article class="paper">
           <a class="paper-row" href="https://osf.io/preprints/psyarxiv/sntva" target="_blank" rel="noopener">
@@ -131,11 +129,10 @@
         <p class="papers-more"><a href="research.html">Browse research</a></p>
       </div>
     </div>
+    </div>
   </section>
 
-  <div class="container page">
-
-    <div class="sections">
+  <div class="shell sections">
 
       <!-- ===== Programs ===== -->
       <section class="split" id="programmes">
@@ -353,7 +350,6 @@
         </div>
       </section>
 
-    </div>
   </div>
 </main>
 
@@ -378,11 +374,11 @@
       <div>
         <h4>Navigate</h4>
         <ul class="nav-list">
-          <li><a href="#our-work">Our work</a></li>
+          <li><a href="index.html#our-work">Our work</a></li>
           <li><a href="research.html">Research</a></li>
           <li><a href="fellowship.html">Fellowship</a></li>
           <li><a href="workshop.html">Workshop</a></li>
-          <li><a href="#course">Online course</a></li>
+          <li><a href="index.html#course">Online course</a></li>
           <li><a href="newsletter.html">Newsletter</a></li>
         </ul>
       </div>

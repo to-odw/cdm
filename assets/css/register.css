@@ -190,15 +190,6 @@
 .more a:hover,
 .entry summary:hover { color: var(--ink); }
 
-.close { padding: 3.5rem var(--margin) 3.5rem; }
-
-.close p {
-  font-size: clamp(2.5rem, 5vw, 4.25rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 0.96;
-}
-
 @media (max-width: 56.25rem) {
   .register { --margin: 1rem; font-size: 1.2rem; }
 

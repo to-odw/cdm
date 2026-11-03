@@ -27,7 +27,6 @@
 
 .field h1,
 .field h2,
-.close p,
 .work-link .name {
   font-family: var(--serif);
   font-weight: 300;
@@ -156,8 +155,7 @@
 .work { padding: 6.5rem var(--margin) 5rem; }
 
 .work h2,
-.research h2,
-.close p {
+.research h2 {
   font-size: clamp(2.4rem, 4vw, 3.5rem);
   font-weight: 300;
   letter-spacing: -0.02em;
@@ -252,8 +250,6 @@
 
 .more a:hover,
 .entry summary:hover { color: var(--ink); }
-
-.close { background: var(--below); padding: 4rem var(--margin) 3.5rem; }
 
 @media (max-width: 56.25rem) {
   .field { --margin: 1rem; }

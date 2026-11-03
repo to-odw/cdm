@@ -345,18 +345,6 @@
 
 .more a:hover { color: var(--ink); }
 
-.close {
-  background: #ebe9e4;
-  padding: 4rem var(--margin) 3.5rem;
-}
-
-.close p {
-  font-size: clamp(2.6rem, 6vw, 5rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-}
-
 @media (max-width: 56.25rem) {
   .prospectus { --margin: 1rem; }
 
