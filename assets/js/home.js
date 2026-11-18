@@ -85,12 +85,12 @@
     for (i = 0; i < n; i++) {
       threads.push({
         off: (n > 1 ? i / (n - 1) - 0.5 : 0) * F.thick * 2,
-        amp: F.h * range(r, 0.004, 0.008),
+        amp: F.h * range(r, 0.011, 0.02),
         k1: TAU / (F.w * range(r, 0.9, 1.5)),
-        w1: range(r, 0.04, 0.08),
+        w1: range(r, 0.09, 0.16),
         p1: r() * TAU,
         k2: TAU / (F.w * range(r, 0.55, 0.95)),
-        w2: range(r, 0.025, 0.05),
+        w2: range(r, 0.055, 0.1),
         p2: r() * TAU,
         alpha: range(r, 0.42, 0.58),
         lead: 0.01 + i * 0.028,
@@ -99,7 +99,7 @@
     }
     return {
       r: r,
-      tw: { k: TAU / (F.w * range(r, 0.85, 1.35)), w: range(r, 0.025, 0.05), ph: r() * TAU },
+      tw: { k: TAU / (F.w * range(r, 0.85, 1.35)), w: range(r, 0.06, 0.11), ph: r() * TAU },
       threads: threads,
       pulses: []
     };
@@ -107,7 +107,9 @@
 
   function yAt(th, F, x, s) {
     var spread = 0.55 + 0.45 * (0.5 + 0.5 * Math.cos(S.tw.k * x + S.tw.w * s + S.tw.ph));
-    return F.center(x) + th.off * spread +
+    var along = smoothstep(0.25, 0.9, x / F.w);
+    var sway = Math.sin(s * 0.45 + along * 1.2) * F.h * 0.018 * along;
+    return F.center(x) + sway + th.off * spread +
       th.amp * Math.sin(th.k1 * x + th.w1 * s + th.p1) +
       0.45 * th.amp * Math.sin(th.k2 * x - th.w2 * s + th.p2);
   }
@@ -193,6 +195,15 @@
       ctx.fill();
     });
     ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = "destination-in";
+    var band = Math.max(170, F.h * 0.26);
+    var veil = ctx.createLinearGradient(0, 0, 0, band);
+    veil.addColorStop(0, "rgba(0, 0, 0, 0)");
+    veil.addColorStop(0.5, "rgba(0, 0, 0, 0.16)");
+    veil.addColorStop(1, "rgba(0, 0, 0, 1)");
+    ctx.fillStyle = veil;
+    ctx.fillRect(0, 0, F.w, F.h);
+    ctx.globalCompositeOperation = "source-over";
   }
 
   function rebuild() {
@@ -235,4 +246,47 @@
     }).observe(canvas.parentElement);
   }
   document.addEventListener("visibilitychange", start);
+})();
+
+/* Programme cards rise in from the left once scrolling brings them up. */
+(function () {
+  var band = document.querySelector(".programmes-band");
+  if (!band) return;
+  var cards = Array.prototype.slice.call(band.querySelectorAll(".programme-card"));
+  if (!cards.length) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  function reveal() {
+    cards.forEach(function (card) { card.classList.add("is-in"); });
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    reveal();
+    return;
+  }
+
+  var done = false;
+  function finish() {
+    if (done) return;
+    done = true;
+    reveal();
+    io.disconnect();
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting || window.scrollY < 24) return;
+      finish();
+    });
+  }, { threshold: 0.34 });
+
+  io.observe(band);
+
+  if (window.scrollY > 24) {
+    var rect = band.getBoundingClientRect();
+    var visible = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+    if (visible > 0) finish();
+  }
+
+  band.addEventListener("focusin", finish);
 })();

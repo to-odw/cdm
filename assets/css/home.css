@@ -168,7 +168,7 @@
 /* ===== Opening photograph ===== */
 
 .opening {
-  --hero-h: 92svh;
+  --hero-h: 100vh;
   position: relative;
   min-height: var(--hero-h);
   color: var(--ink);
@@ -583,6 +583,25 @@
   .opening-media img { transition: opacity 1.6s ease; }
   .hero-btn,
   .nav-action { transition: background-color 0.2s ease, color 0.2s ease; }
+
+  .js .programme-card {
+    opacity: 0;
+    transform: translateY(2.25rem);
+  }
+
+  .js .programme-card.is-in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .js .programme-card:nth-child(2).is-in { transition-delay: 0.14s; }
+  .js .programme-card:nth-child(3).is-in { transition-delay: 0.28s; }
+
+  .js .programme-card:focus-visible {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
