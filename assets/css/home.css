@@ -31,18 +31,20 @@
 
 .home main { padding-top: 0; }
 
+.home .notice {
+  border: 0;
+  padding-left: 0;
+}
+
 .home .label h2 {
-  font-size: 1.5rem;
-  line-height: 1.25;
+  font-size: clamp(2rem, 1.55rem + 1.2vw, 2.6rem);
+  line-height: 1.12;
   letter-spacing: -0.02em;
 }
 
-.home .media-card .thumb { aspect-ratio: 2 / 1; }
-
-.home .media-card h3 {
-  font-size: clamp(1.5rem, 1.15rem + 0.9vw, 1.85rem);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+@media (min-width: 48rem) {
+  .home .split > .label { grid-column: span 4; }
+  .home .split > .body { grid-column: span 8; }
 }
 
 .home :focus-visible {
@@ -405,10 +407,25 @@
   line-height: 1.35;
 }
 
-.programme-card h2 {
+.programme-card :is(h2, h3) {
   font-size: clamp(1.35rem, 1.1rem + 0.7vw, 1.65rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.feature-grid .programme-card { border: 1px solid rgb(16 42 42 / 0.12); }
+.feature-grid .programme-body { flex: 1; }
+.feature-grid .programme-more { margin-top: auto; }
+
+@media (max-width: 56.25rem) {
+  .feature-grid { grid-template-columns: 1fr; }
 }
 
 .programme-body p:not(.programme-meta) {
@@ -453,13 +470,15 @@
   padding-bottom: 7.5rem;
 }
 
+.papers h2,
 .essay h2 {
   font-weight: 400;
-  font-size: var(--step-head);
+  font-size: clamp(2.15rem, 1.55rem + 1.8vw, 3rem);
   letter-spacing: -0.02em;
   line-height: 1.08;
-  margin-bottom: 1.75rem;
 }
+
+.essay h2 { margin-bottom: 1.75rem; }
 
 .essay-flow {
   font-size: var(--step-body);
@@ -508,12 +527,6 @@
   margin-bottom: 1.25rem;
 }
 
-.papers h2 {
-  font-weight: 400;
-  font-size: clamp(2rem, 1.4rem + 1.6vw, 2.75rem);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
 
 .papers-all {
   flex: none;
@@ -584,21 +597,21 @@
   .hero-btn,
   .nav-action { transition: background-color 0.2s ease, color 0.2s ease; }
 
-  .js .programme-card {
+  .js .programmes-band .programme-card {
     opacity: 0;
     transform: translateY(2.25rem);
   }
 
-  .js .programme-card.is-in {
+  .js .programmes-band .programme-card.is-in {
     opacity: 1;
     transform: none;
     transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .js .programme-card:nth-child(2).is-in { transition-delay: 0.14s; }
-  .js .programme-card:nth-child(3).is-in { transition-delay: 0.28s; }
+  .js .programmes-band .programme-card:nth-child(2).is-in { transition-delay: 0.14s; }
+  .js .programmes-band .programme-card:nth-child(3).is-in { transition-delay: 0.28s; }
 
-  .js .programme-card:focus-visible {
+  .js .programmes-band .programme-card:focus-visible {
     opacity: 1;
     transform: none;
   }
