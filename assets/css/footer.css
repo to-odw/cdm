@@ -121,7 +121,7 @@
   gap: var(--space-5) var(--space-6);
 }
 
-.site-footer .footer-logos .cdm { height: auto; width: auto; max-height: var(--space-9); max-width: 100%; }
+.site-footer .footer-logos .cdm { height: 4rem; width: calc(4rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
 
 .site-footer .footer-about p {
   margin: var(--space-8) 0 0;

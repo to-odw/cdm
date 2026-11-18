@@ -43,7 +43,7 @@
   padding: 1.15rem var(--margin) 0.5rem;
 }
 
-.brand img { height: 2.15rem; width: auto; }
+.brand img { height: 4rem; width: calc(4rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
 
 .nav-links {
   display: flex;

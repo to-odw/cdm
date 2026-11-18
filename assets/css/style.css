@@ -119,7 +119,7 @@ a { color: inherit; text-decoration: none; }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) 0; }
 
 .brand { display: flex; align-items: center; min-width: 0; }
-.brand img { height: auto; width: auto; max-height: var(--space-9); max-width: 100%; }
+.brand img { height: 4rem; width: calc(4rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
 @media (max-width: 63.9375rem) { .brand { max-width: calc(100% - 3rem); } }
 
 .nav-links { display: none; align-items: center; gap: var(--space-8); }
