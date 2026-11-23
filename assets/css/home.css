@@ -1,7 +1,8 @@
 /* Homepage opening. Tokens follow the dealt report: graphite ground, paper field, one accent. */
 
 .home {
-  --cdm-bg: #0f4545;
+  --cdm-bg: #041616;
+  --cdm-panel: #0a2c2c;
   --surface: #102a2a;
   --ink: #eff0f1;
   --muted: #9c9ea3;
@@ -9,6 +10,10 @@
   --cdm-press: #e0be2e;
   --field-1: #eff0f1;
   --field-1-ink: #102a2a;
+  --hero-pad: 1.75rem;
+  --hero-gap: 1rem;
+  --logo-photo-h: 6.5rem;
+  --header-h: calc(var(--logo-photo-h) + 0.7rem);
   --face: "Source Serif 4", Palatino, "Palatino Linotype", Georgia, serif;
   --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
   --step-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
@@ -78,7 +83,10 @@
 .home .nav-links { margin-left: auto; }
 
 .home .brand img { height: 4.5rem; width: calc(4.5rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
-.home .brand .logo-on-photo { height: 5rem; width: calc(5rem * 251 / 120); }
+.home .brand .logo-on-photo {
+  height: var(--logo-photo-h);
+  width: calc(var(--logo-photo-h) * 251 / 120);
+}
 
 .home .brand .logo-on-bar { display: none; }
 
@@ -106,7 +114,8 @@
 
 .home .nav-links a {
   color: var(--ink);
-  font-weight: 500;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500 !important;
   font-size: 1.0625rem;
   letter-spacing: 0;
   text-decoration: underline;
@@ -129,6 +138,9 @@
   color: #131109;
   padding: 0.55rem 0.9rem;
   text-decoration: none;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600 !important;
+  border-radius: 0.45rem;
 }
 
 .home .nav-links a.nav-action:hover,
@@ -159,8 +171,9 @@
 
 .home .mobile-nav a {
   color: var(--ink);
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: var(--step-body);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .home .mobile-nav a:hover,
@@ -178,41 +191,36 @@
   .home { --margin: 1rem; }
 }
 
-/* ===== Opening photograph ===== */
+/* ===== Opening: padded frame, green left, photo right ===== */
 
 .opening {
   --hero-h: 100vh;
+  box-sizing: border-box;
   position: relative;
   min-height: var(--hero-h);
+  /* Clear the fixed nav, then inset the frame on the sides and bottom. */
+  padding: var(--header-h) var(--hero-pad) var(--hero-pad);
   color: var(--ink);
-  background: #081c1c;
+  background: var(--cdm-bg);
+}
+
+.opening-frame {
+  position: relative;
+  margin-top: var(--hero-gap);
+  min-height: calc(var(--hero-h) - var(--header-h) - var(--hero-gap) - var(--hero-pad));
   overflow: hidden;
+  background: var(--cdm-panel);
+  border-radius: 0.75rem;
 }
 
-.opening-media,
-.opening-scrim,
-.opening-signal {
+.opening-media {
   position: absolute;
-  inset: 0;
-}
-
-@media (min-width: 1801px) {
-  .opening-media,
-  .opening-scrim,
-  .opening-signal {
-    top: 7.5rem;
-    bottom: 7.5rem;
-    left: 50%;
-    width: 1800px;
-    transform: translateX(-50%);
-    border-radius: 1.5rem;
-    overflow: hidden;
-  }
-
-  .opening-layout {
-    padding-top: 9.5rem;
-    padding-bottom: calc(7.5rem + 6.25rem);
-  }
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  width: min(58%, 46rem);
+  overflow: hidden;
 }
 
 .opening-media img {
@@ -227,70 +235,69 @@
 
 .opening-media img.is-shown { opacity: 1; }
 
+/* Soft dissolve from panel green into the photograph. */
+.opening-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    var(--cdm-panel) 0%,
+    color-mix(in srgb, var(--cdm-panel) 70%, transparent) 14%,
+    color-mix(in srgb, var(--cdm-panel) 22%, transparent) 38%,
+    transparent 58%
+  ); /* taste-skill-ignore blend photo into panel */
+}
+
 .opening-signal {
+  position: absolute;
+  inset: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
   pointer-events: none;
 }
 
-@media (min-width: 1801px) {
-  .opening-signal {
-    width: 1800px;
-    height: calc(var(--hero-h) - 15rem);
-  }
-}
-
-.opening-scrim {
-  background:
-    linear-gradient(to top, rgb(0 0 0 / 0.46) 0%, rgb(0 0 0 / 0.2) 9%, rgb(0 0 0 / 0) 24%),
-    radial-gradient(ellipse 70% 22rem at 100% 0%, rgb(0 0 0 / 0.78) 0%, rgb(0 0 0 / 0.42) 46%, rgb(0 0 0 / 0) 78%),
-    linear-gradient(180deg, rgb(0 0 0 / 0.62) 0%, rgb(0 0 0 / 0.28) 20%, rgb(0 0 0 / 0) 46%),
-    linear-gradient(90deg, rgb(0 0 0 / 0.58) 0%, rgb(0 0 0 / 0.32) 42%, rgb(0 0 0 / 0) 74%); /* taste-skill-ignore neutral scrim under type on a photograph */
-}
-
-.opening-scrim::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(3px); /* taste-skill-ignore soft edge blur, masked so the middle of the photo stays sharp */
-  -webkit-backdrop-filter: blur(3px);
-  mask-image:
-    radial-gradient(ellipse 70% 22rem at 100% 0%, #000 0%, transparent 78%),
-    linear-gradient(90deg, #000 0%, rgb(0 0 0 / 0.7) 22%, transparent 68%);
-  mask-repeat: no-repeat;
-}
-
 .opening-layout {
   position: relative;
   z-index: 2;
-  min-height: var(--hero-h);
+  min-height: calc(var(--hero-h) - var(--header-h) - var(--hero-gap) - var(--hero-pad));
   display: flex;
   flex-direction: column;
-  padding-top: 7rem;
-  padding-bottom: 8.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+  /* Keep copy aligned with page .container despite the frame inset. */
+  width: min(72rem, 100vw);
+  max-width: none;
+  margin-left: calc((100vw - min(72rem, 100vw)) / 2 - var(--hero-pad));
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 .opening-copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: min(42rem, 100%);
+  width: min(48rem, 100%);
+  max-width: 58%;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .opening h1 {
   font-weight: 400;
-  font-size: clamp(3.5rem, 6.4vw, 6.25rem);
+  font-size: clamp(2.75rem, 4.8vw, 4.5rem);
   letter-spacing: -0.02em;
-  line-height: 1.05;
+  line-height: 1.08;
   color: var(--ink);
 }
 
 .opening .stand {
   margin-top: 1.25rem;
-  max-width: 40ch;
+  max-width: 44ch;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: var(--step-body);
   font-weight: 400;
   line-height: 1.45;
@@ -298,26 +305,51 @@
   color: var(--ink);
 }
 
-.opening-cards {
-  position: absolute;
-  z-index: 2;
-  left: var(--space-4);
-  bottom: 2rem;
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.75rem;
+  margin-top: 1.85rem;
 }
 
-@media (min-width: 40rem) {
-  .opening-cards { left: var(--space-6); }
+.hero-cta,
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.25rem;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  border-radius: 0.45rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-@media (min-width: 64rem) {
-  .opening-cards { left: max(var(--space-8), calc((100% - 72rem) / 2 + var(--space-8))); }
+.hero-cta {
+  background: var(--cdm-accent);
+  color: #131109;
+  border: 1.5px solid var(--cdm-accent);
 }
 
-@media (min-width: 1801px) {
-  .opening-cards { bottom: calc(7.5rem + 2.5rem); }
+.hero-cta:hover {
+  background: var(--cdm-press);
+  border-color: var(--cdm-press);
+  color: #131109;
+}
+
+.hero-cta-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgb(255 255 255 / 0.3);
+}
+
+.hero-cta-secondary:hover {
+  background: rgb(255 255 255 / 0.08);
+  border-color: rgb(255 255 255 / 0.5);
+  color: #fff;
 }
 
 .hero-btn {
@@ -342,43 +374,31 @@
 }
 
 @media (max-width: 40rem) {
-  .opening-scrim {
-    background:
-      linear-gradient(180deg, rgb(0 0 0 / 0.45) 0%, rgb(0 0 0 / 0.12) 22%, rgb(0 0 0 / 0) 36%),
-      linear-gradient(180deg, rgb(0 0 0 / 0.12) 0%, rgb(0 0 0 / 0.4) 42%, rgb(0 0 0 / 0.62) 100%); /* taste-skill-ignore neutral scrim */
+  .opening-media {
+    width: min(62%, 100%);
   }
 
   .opening-media img { object-position: center 28%; }
 
-
   .opening-copy {
     width: auto;
-    max-width: none;
-    justify-content: flex-start;
-    margin-top: 28svh;
-    margin-bottom: 2rem;
+    max-width: 58%;
   }
 
-  .opening h1 { font-size: 12vw; }
-
-  .opening-cards {
-    left: var(--space-4);
-    right: var(--space-4);
-    bottom: 1.5rem;
-  }
+  .opening h1 { font-size: 11vw; }
 
   .hero-btn { flex: 1 1 0; min-width: 0; }
 }
 
-/* ===== Programme cards, overlapping the photograph ===== */
+/* ===== Programme cards below the hero ===== */
 
 .programmes-band {
   --photo-h: 13rem;
-  --overlap: 6.25rem;
   position: relative;
   z-index: 3;
-  margin-top: calc(var(--overlap) * -1);
-  background: linear-gradient(to bottom, transparent 0, transparent var(--overlap), var(--field-1) var(--overlap));
+  margin-top: 0;
+  background: var(--field-1);
+  padding-top: 2.5rem;
   padding-bottom: 1.5rem;
 }
 
@@ -394,9 +414,11 @@
   flex-direction: column;
   height: 100%;
   min-width: 0;
+  overflow: hidden;
   background: #fff;
   color: var(--field-1-ink);
   text-decoration: none;
+  border-radius: 0.65rem;
 }
 
 .programme-card img {
@@ -461,21 +483,8 @@
 
 .programme-card:hover .programme-more { text-decoration-color: var(--cdm-accent); }
 
-@media (min-width: 1801px) {
-  .programmes-band {
-    --lift: calc(var(--overlap) + 7.5rem);
-    margin-top: calc(var(--lift) * -1);
-    background: linear-gradient(to bottom, transparent 0, transparent var(--lift), var(--field-1) var(--lift));
-  }
-}
-
 @media (max-width: 56.25rem) {
-  .programmes-band {
-    --photo-h: 11rem;
-    --overlap: 3.25rem;
-    margin-top: calc(var(--overlap) * -1);
-    background: linear-gradient(to bottom, transparent 0, transparent var(--overlap), var(--field-1) var(--overlap));
-  }
+  .programmes-band { --photo-h: 11rem; }
 
   .programmes-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
@@ -626,7 +635,9 @@
 @media (prefers-reduced-motion: no-preference) {
   .opening-media img { transition: opacity 1.6s ease; }
   .hero-btn,
-  .nav-action { transition: background-color 0.2s ease, color 0.2s ease; }
+  .hero-cta,
+  .hero-cta-secondary,
+  .nav-action { transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
 
   .js .programmes-band .programme-card {
     opacity: 0;
@@ -654,7 +665,8 @@
 }
 
 /* The photograph page is set in a serif. Headings and emphasis stay at the regular weight. */
-body.home :is(h1, h2, h3, h4, h5, h6, strong, b, a, button, summary, label) {
+body.home :is(h1, h2, h3, h4, h5, h6, strong, b, button, summary, label),
+body.home main a:not(.hero-cta):not(.hero-cta-secondary):not(.programme-card) {
   font-weight: 400 !important;
 }
 

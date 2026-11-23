@@ -74,16 +74,16 @@
       return {
         w: w, h: h, mobile: true,
         x0: 0, x1: w,
-        center: function (x) { return h * (0.2 - 0.28 * smoothstep(0.35, 1.1, x / w)); },
-        thick: h * 0.04
+        center: function (x) { return h * (0.14 - 0.08 * smoothstep(0.35, 1.1, x / w)); },
+        thick: h * 0.035
       };
     }
-    // Same smoothstep as before. The left stays put; the rise leaves through the top of the photograph.
+    // Threads sit in the upper band, above the hero type.
     return {
       w: w, h: h, mobile: false,
       x0: 0, x1: w,
-      center: function (x) { return h * (0.28 - 0.36 * smoothstep(0.35, 1.1, x / w)); },
-      thick: h * 0.055
+      center: function (x) { return h * (0.16 - 0.06 * smoothstep(0.2, 1, x / w)); },
+      thick: h * 0.045
     };
   }
 
@@ -198,7 +198,7 @@
       if (reduced.matches || t < th.next || S.pulses.length > 1) return;
       S.pulses.push({
         th: th,
-        x: F.w * range(S.r, 0.12, 0.62),
+        x: F.w * range(S.r, 0.08, 0.88),
         d: 0,
         life: range(S.r, 1100, 1900),
         v: range(S.r, 36, 64),
@@ -225,12 +225,13 @@
     });
     ctx.globalAlpha = 1;
     if (!F.split) {
+      // Keep threads in the upper band and fade them out before the headline.
       ctx.globalCompositeOperation = "destination-in";
-      var band = Math.max(170, F.h * 0.26);
+      var band = Math.max(200, F.h * 0.4);
       var veil = ctx.createLinearGradient(0, 0, 0, band);
-      veil.addColorStop(0, "rgba(0, 0, 0, 0)");
-      veil.addColorStop(0.5, "rgba(0, 0, 0, 0.16)");
-      veil.addColorStop(1, "rgba(0, 0, 0, 1)");
+      veil.addColorStop(0, "rgba(0, 0, 0, 1)");
+      veil.addColorStop(0.55, "rgba(0, 0, 0, 1)");
+      veil.addColorStop(1, "rgba(0, 0, 0, 0)");
       ctx.fillStyle = veil;
       ctx.fillRect(0, 0, F.w, F.h);
       ctx.globalCompositeOperation = "source-over";
@@ -306,18 +307,16 @@
 
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (!entry.isIntersecting || window.scrollY < 24) return;
+      if (!entry.isIntersecting) return;
       finish();
     });
-  }, { threshold: 0.34 });
+  }, { threshold: 0.2 });
 
   io.observe(band);
 
-  if (window.scrollY > 24) {
-    var rect = band.getBoundingClientRect();
-    var visible = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
-    if (visible > 0) finish();
-  }
+  var rect = band.getBoundingClientRect();
+  var visible = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+  if (visible > 0) finish();
 
   band.addEventListener("focusin", finish);
 })();
