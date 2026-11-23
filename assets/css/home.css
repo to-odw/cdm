@@ -3,7 +3,7 @@
 .home {
   --ink: #eff0f1;
   --panel: #0a2c2c;
-  --ground: #041616;
+  --ground: #0B3939;
   --field: #eff0f1;
   --field-ink: #102a2a;
   --accent: #F9D844;
@@ -70,7 +70,7 @@
   color: var(--nav-ink-strong);
   text-decoration-color: var(--accent);
 }
-.home .menu-toggle { color: rgb(255 255 255 / 0.85); }
+.home .menu-toggle { margin-left: 0; color: rgb(255 255 255 / 0.85); }
 .home .menu-toggle:hover { background: transparent; color: #fff; }
 .home .mobile-nav { background: #fff; border-top: 0; }
 .home .mobile-nav a:hover,
@@ -124,10 +124,11 @@
   position: relative; z-index: 2;
   min-height: calc(100vh - var(--header-h) - 1rem - var(--pad));
   display: flex; flex-direction: column;
+  width: auto; max-width: none; margin: 0;
   padding-block: 2.5rem 3.5rem;
-  width: min(var(--container), 100vw);
-  margin-left: calc((100vw - min(var(--container), 100vw)) / 2 - var(--pad-x));
-  margin-right: auto;
+  /* Never flush to the frame: inset at least as much as the space around the
+     frame. Where there's room, line the copy up with the logo in the nav. */
+  padding-inline: max(var(--pad-x), calc((100vw - var(--container)) / 2 + 2rem - var(--pad-x))) var(--pad-x);
 }
 .opening-copy {
   display: flex; flex-direction: column; justify-content: center;
@@ -158,11 +159,54 @@
 .hero-cta-secondary { background: transparent; color: #fff; border: 1.5px solid rgb(255 255 255 / 0.3); }
 .hero-cta-secondary:hover { background: rgb(255 255 255 / 0.08); border-color: rgb(255 255 255 / 0.5); }
 
+/* Large desktops: keep the 1440×900 composition and scale it up, instead of
+   pinning the copy to the 72rem column and capping the photo at 46rem.
+   --hero-u is 16px at 1440×900 and grows with whichever of width or height is
+   tighter, so ultrawide screens don't get an oversized headline. */
+@media (min-width: 90rem) {
+  .opening { --hero-u: clamp(16px, min(1.1111vw, 1.7778vh), 30px); }
+  .opening-media { width: 58%; }
+  .opening-layout {
+    width: auto; max-width: none; margin: 0;
+    padding: calc(var(--hero-u) * 2.5) 0 calc(var(--hero-u) * 3.5) 7.5%;
+  }
+  .opening-copy { width: calc(var(--hero-u) * 39); max-width: 46%; }
+  .opening h1 { font-size: calc(var(--hero-u) * 4.3); }
+  .opening .stand { margin-top: calc(var(--hero-u) * 1.25); font-size: calc(var(--hero-u) * 1.1875); }
+  .hero-actions { gap: calc(var(--hero-u) * 0.75); margin-top: calc(var(--hero-u) * 1.85); }
+  .hero-cta,
+  .hero-cta-secondary {
+    font-size: calc(var(--hero-u) * 1.0625);
+    padding: calc(var(--hero-u) * 0.8) calc(var(--hero-u) * 1.25);
+  }
+  /* Line the nav up with the hero copy: frame padding + 7.5% of the frame */
+  .home .site-header .container {
+    max-width: none;
+    padding-inline: calc(var(--pad-x) + (100vw - 2 * var(--pad-x)) * 0.075);
+  }
+}
+
+/* Tablets and phones: a narrower photo and a longer solid fade, so the copy
+   sits on the green rather than over the image. */
+@media (max-width: 63.99rem) {
+  .opening-media { width: 50%; }
+  .opening-media::after {
+    background: linear-gradient(
+      90deg,
+      var(--panel) 0%,
+      var(--panel) 18%,
+      color-mix(in srgb, var(--panel) 70%, transparent) 38%,
+      color-mix(in srgb, var(--panel) 22%, transparent) 62%,
+      transparent 82%
+    );
+  }
+  .opening-copy { max-width: 62%; }
+}
 @media (max-width: 40rem) {
-  .opening-media { width: min(62%, 100%); }
+  .opening-media { width: 44%; }
   .opening-media img { object-position: center 28%; }
-  .opening-copy { width: auto; max-width: 58%; }
-  .opening h1 { font-size: 11vw; }
+  .opening-copy { width: auto; max-width: 76%; }
+  .opening h1 { font-size: 10vw; }
 }
 
 /* Programme cards */

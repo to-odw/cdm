@@ -97,7 +97,10 @@ a { color: inherit; text-decoration: none; }
 .nav-links a:hover,
 .nav-links a.active { text-decoration-color: var(--primary); }
 
-.menu-toggle { background: none; border: 0; padding: 0.5rem; cursor: pointer; color: var(--nav-ink-strong); }
+/* margin-left:auto keeps the toggle on the right when .nav-links is hidden
+   (interior pages below 64rem). The homepage keeps .nav-links visible, so it
+   resets this in home.css. */
+.menu-toggle { margin-left: auto; background: none; border: 0; padding: 0.5rem; cursor: pointer; color: var(--nav-ink-strong); }
 .menu-toggle:hover { background: var(--zinc-100); }
 .menu-toggle svg { width: 1.5rem; height: 1.5rem; display: block; }
 .menu-toggle .icon-close { display: none; }
