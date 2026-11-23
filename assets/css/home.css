@@ -5,8 +5,8 @@
   --surface: #102a2a;
   --ink: #eff0f1;
   --muted: #9c9ea3;
-  --cdm-accent: #d42820;
-  --cdm-press: #b51e16;
+  --cdm-accent: #F9D844;
+  --cdm-press: #e0be2e;
   --field-1: #eff0f1;
   --field-1-ink: #102a2a;
   --face: "Source Serif 4", Palatino, "Palatino Linotype", Georgia, serif;
@@ -100,7 +100,8 @@
 .home .site-header.scrolled .nav-links a.active,
 .home .site-header.menu-open .nav-links a:hover,
 .home .site-header.menu-open .nav-links a.active {
-  color: var(--cdm-accent);
+  color: #33302c;
+  text-decoration-color: var(--cdm-accent);
 }
 
 .home .nav-links a {
@@ -108,17 +109,26 @@
   font-weight: 500;
   font-size: 1.0625rem;
   letter-spacing: 0;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.22em;
+  transition: text-decoration-color 0.25s ease;
 }
 
 .home .nav-links a::after { content: none; }
 
 .home .nav-links a:hover,
-.home .nav-links a.active { color: var(--cdm-accent); }
+.home .nav-links a.active {
+  color: var(--ink);
+  text-decoration-color: var(--cdm-accent);
+}
 
 .home .nav-links a.nav-action {
   background: var(--cdm-accent);
-  color: #fff;
+  color: #131109;
   padding: 0.55rem 0.9rem;
+  text-decoration: none;
 }
 
 .home .nav-links a.nav-action:hover,
@@ -130,7 +140,8 @@
 .home .site-header.menu-open .nav-links a.nav-action:hover,
 .home .site-header.menu-open .nav-links a.nav-action.active {
   background: var(--cdm-press);
-  color: #fff;
+  color: #131109;
+  text-decoration: none;
 }
 
 .home .site-header.scrolled .nav-links a.nav-action,
@@ -441,9 +452,14 @@
   padding-top: 0.45rem;
   color: #0f4545;
   font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.25s ease;
 }
 
-.programme-card:hover .programme-more { color: var(--cdm-accent); }
+.programme-card:hover .programme-more { text-decoration-color: var(--cdm-accent); }
 
 @media (min-width: 1801px) {
   .programmes-band {
@@ -535,9 +551,14 @@
   flex: none;
   color: #0f4545;
   font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.25s ease;
 }
 
-.papers-all:hover { color: var(--cdm-accent); }
+.papers-all:hover { text-decoration-color: var(--cdm-accent); }
 
 .writing-row {
   display: grid;
@@ -568,9 +589,16 @@
   letter-spacing: -0.02em;
 }
 
-.writing-main h3 a { color: inherit; text-decoration: none; }
+.writing-main h3 a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+  transition: text-decoration-color 0.25s ease;
+}
 
-.writing-main h3 a:hover { color: var(--cdm-accent); }
+.writing-main h3 a:hover { text-decoration-color: var(--cdm-accent); }
 
 .writing-main p {
   margin-top: 0.45rem;
@@ -665,9 +693,14 @@ body.home :is(h1, h2, h3, h4, h5, h6, strong, b, a, button, summary, label) {
 .home.home-split .nav-links a:hover,
 .home.home-split .nav-links a.active,
 .home.home-split .site-header.scrolled .nav-links a:hover,
-.home.home-split .site-header.scrolled .nav-links a.active,
+.home.home-split .site-header.scrolled .nav-links a.active {
+  color: #102a2a;
+  text-decoration-color: var(--cdm-accent);
+  background: transparent;
+}
+
 .home.home-split .menu-toggle:hover {
-  color: var(--cdm-accent);
+  color: #102a2a;
   background: transparent;
 }
 

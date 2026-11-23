@@ -19,7 +19,7 @@
   --text-2xl: 1.5rem;
   --font-sans: "Inter", "Helvetica Neue", sans-serif;
   --zinc-900: #18181b;
-  --footer-bg: color-mix(in srgb, #1a635f 32%, #0a0b0b);
+  --footer-bg: color-mix(in srgb, #F9D844 32%, #0a0b0b);
   --footer-line: rgb(255 255 255 / .1);
   --footer-muted: rgb(255 255 255 / .62);
   --footer-faint: rgb(255 255 255 / .45);

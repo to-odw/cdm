@@ -1,12 +1,12 @@
 /* Cambridge Digital Minds — design language adapted from casp.ac/about */
 
 :root {
-  --primary: #1a635f;
+  --primary: #F9D844;
   --primary-soft: color-mix(in srgb, var(--primary) 6%, transparent);
   --accent: #e07a5f;
-  /* Buttons follow the primary colour. Deep teal overrides this to the accent. */
+  /* Buttons follow the primary colour. Light yellow needs dark ink. */
   --btn: var(--primary);
-  --btn-ink: #fff;
+  --btn-ink: #131109;
 
   --zinc-50: #fafafa;
   --zinc-100: #f4f4f5;
@@ -148,7 +148,7 @@ a { color: inherit; text-decoration: none; }
 .mobile-nav .container { display: flex; flex-direction: column; gap: var(--space-1); padding-top: var(--space-4); padding-bottom: var(--space-4); }
 .mobile-nav a { font-size: var(--text-base); padding: var(--space-3) var(--space-4); color: var(--zinc-600); }
 .mobile-nav a:hover { background: var(--zinc-50); }
-.mobile-nav a.active { color: var(--primary); background: var(--primary-soft); }
+.mobile-nav a.active { color: var(--zinc-950); background: var(--primary-soft); }
 
 @media (min-width: 64rem) {
   .nav-links { display: flex; }
@@ -213,18 +213,26 @@ main { padding-top: var(--header-h); }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
   padding: var(--space-3) var(--space-6); font-size: var(--text-md); font-weight: 500;
-  border: var(--line) solid var(--btn); color: var(--btn); background: transparent;
+  border: var(--line) solid var(--btn); color: var(--btn-ink); background: transparent;
   transition: background-color .2s, color .2s, border-color .2s; cursor: pointer; font-family: var(--font-sans);
 }
 .btn:hover { background: var(--btn); color: var(--btn-ink); }
 .btn-solid { background: var(--btn); color: var(--btn-ink); border-color: var(--btn); }
-.btn-solid:hover { background: color-mix(in srgb, var(--btn) 85%, #000); border-color: color-mix(in srgb, var(--btn) 85%, #000); }
+.btn-solid:hover {
+  background: color-mix(in srgb, var(--btn) 85%, #000);
+  border-color: color-mix(in srgb, var(--btn) 85%, #000);
+  color: var(--btn-ink);
+}
 
 .text-link {
   display: inline-flex; align-items: center; gap: var(--space-1);
-  font-size: var(--text-md); font-weight: 500; color: var(--primary);
+  font-size: var(--text-md); font-weight: 500; color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: var(--line-lg);
+  transition: text-decoration-color .25s ease;
 }
-.text-link:hover { text-decoration: underline; }
+.text-link:hover { text-decoration-color: var(--primary); }
 .arrow { width: var(--space-3); height: var(--space-3); flex-shrink: 0; }
 
 /* ---------- Sections ---------- */
@@ -252,8 +260,13 @@ main { padding-top: var(--header-h); }
 .prose { font-size: var(--text-body); line-height: 1.625; color: var(--zinc-800); font-weight: 300; max-width: 46rem; }
 .prose > * + * { margin-top: var(--space-6); }
 .prose strong { font-weight: 500; color: var(--zinc-900); }
-.prose :is(p, li):not(.title) > a:not(.btn):not(.text-link):not(.entry) { text-decoration: underline; text-decoration-color: var(--zinc-300); text-underline-offset: var(--line-lg); }
-.prose :is(p, li):not(.title) > a:not(.btn):not(.text-link):not(.entry):hover { color: var(--primary); text-decoration-color: var(--primary); }
+.prose :is(p, li):not(.title) > a:not(.btn):not(.text-link):not(.entry) {
+  text-decoration: underline;
+  text-decoration-color: var(--zinc-300);
+  text-underline-offset: var(--line-lg);
+  transition: text-decoration-color .25s ease;
+}
+.prose :is(p, li):not(.title) > a:not(.btn):not(.text-link):not(.entry):hover { text-decoration-color: var(--primary); }
 
 .subhead {
   font-family: var(--font-sans); font-size: var(--text-md); font-weight: 600;
@@ -303,7 +316,13 @@ main { padding-top: var(--header-h); }
 .media-card .inner { display: flex; flex-direction: column; flex-grow: 1; padding: var(--space-7) var(--space-8) var(--space-8); }
 .media-card .kicker { color: var(--primary); font-weight: 500; }
 .media-card h3 { margin-bottom: var(--space-4); }
-.media-card h3 a:hover { color: var(--primary); }
+.media-card h3 a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: var(--line-lg);
+  transition: text-decoration-color .25s ease;
+}
+.media-card h3 a:hover { text-decoration-color: var(--primary); }
 .media-card .text-link { margin-top: var(--space-6); }
 
 /* ---------- Entry list (CASP publications list) ---------- */
@@ -315,12 +334,17 @@ main { padding-top: var(--header-h); }
 .entry-main { flex: 1; min-width: 0; }
 .entry .type { font-size: var(--text-sm); font-weight: 600; color: var(--primary); margin-bottom: var(--space-1); }
 .entry .title { font-family: var(--font-serif); font-size: var(--text-xl); line-height: 1.375; color: var(--zinc-950); letter-spacing: .01em; }
-.entry .title a { transition: color .2s; }
-.entry .title a:hover { color: var(--primary); }
+.entry .title a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: var(--line-lg);
+  transition: text-decoration-color .25s ease;
+}
+.entry .title a:hover { text-decoration-color: var(--primary); }
 .entry .byline { font-size: var(--text-sm); color: var(--zinc-600); margin-top: var(--space-2); font-weight: 400; }
 .entry .summary { font-size: var(--text-md); color: var(--zinc-700); margin-top: var(--space-3); line-height: 1.6; font-weight: 300; }
 .entry > .arrow { width: var(--space-4); height: var(--space-4); color: var(--zinc-400); margin-top: var(--space-2); transition: color .2s; }
-.entry:hover > .arrow { color: var(--primary); }
+.entry:hover > .arrow { color: var(--zinc-900); }
 
 .entry-thumb { width: var(--space-28); flex-shrink: 0; aspect-ratio: 4 / 3; overflow: hidden; background: var(--zinc-100); }
 .entry-thumb img { width: 100%; height: 100%; object-fit: cover; }
@@ -368,15 +392,25 @@ main { padding-top: var(--header-h); }
 }
 @media (min-width: 48rem) { .page-head h1 { font-size: var(--text-6xl); } }
 .page-head p { margin-top: var(--space-4); font-size: var(--text-body); line-height: 1.625; color: var(--zinc-700); font-weight: 300; }
-.page-head a { text-decoration: underline; text-decoration-color: var(--zinc-300); text-underline-offset: var(--line-lg); }
-.page-head a:hover { color: var(--primary); text-decoration-color: var(--primary); }
+.page-head a {
+  text-decoration: underline;
+  text-decoration-color: var(--zinc-300);
+  text-underline-offset: var(--line-lg);
+  transition: text-decoration-color .25s ease;
+}
+.page-head a:hover { text-decoration-color: var(--primary); }
 
 .paper-meta { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-4); }
 .paper-type { font-size: var(--text-sm); font-weight: 600; color: var(--primary); }
 .paper-year { font-size: var(--text-sm); color: var(--zinc-500); flex-shrink: 0; white-space: nowrap; }
 .paper-title { font-family: var(--font-serif); font-weight: 400; letter-spacing: .01em; color: var(--zinc-950); line-height: 1.25; }
-.paper-title a { transition: color .2s; }
-.paper-title a:hover { color: var(--primary); }
+.paper-title a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: var(--line-lg);
+  transition: text-decoration-color .25s ease;
+}
+.paper-title a:hover { text-decoration-color: var(--primary); }
 .paper-byline { margin-top: var(--space-3); font-size: var(--text-sm); color: var(--zinc-600); }
 .paper-summary { margin-top: var(--space-4); font-size: var(--text-body); line-height: 1.625; color: var(--zinc-700); font-weight: 300; }
 .paper-link { margin-top: var(--space-6); }
@@ -430,7 +464,7 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
   font: inherit; font-size: var(--text-sm); font-weight: 600; line-height: 1; cursor: pointer;
   box-shadow: 0 var(--space-2) var(--space-6) rgb(0 0 0 / .18);
 }
-.art-panel-toggle:hover { background: var(--primary); border-color: var(--primary); }
+.art-panel-toggle:hover { background: var(--primary); border-color: var(--primary); color: var(--btn-ink); }
 .art-panel-body {
   display: none; margin-bottom: var(--space-2); max-height: calc(100svh - var(--space-28)); overflow-y: auto;
   background: #fff; border: var(--line) solid var(--zinc-200); border-top: var(--line-lg) solid var(--primary);
@@ -497,7 +531,7 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
   border: 0; background: rgb(255 255 255 / .92); color: var(--zinc-900); cursor: pointer;
 }
 .slider-btn svg { width: var(--space-5); height: var(--space-5); }
-.slider-btn:hover { background: #fff; color: var(--primary); }
+.slider-btn:hover { background: #fff; color: var(--zinc-900); }
 .slider-prev { left: var(--space-3); }
 .slider-next { right: var(--space-3); }
 .slider-meta {
@@ -505,8 +539,15 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
   margin-top: var(--space-4);
 }
 .slider-caption { font-size: var(--text-sm); color: var(--zinc-600); }
-.slider-caption a { color: var(--primary); font-weight: 600; }
-.slider-caption a:hover { text-decoration: underline; }
+.slider-caption a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: var(--line-lg);
+  transition: text-decoration-color .25s ease;
+}
+.slider-caption a:hover { text-decoration-color: var(--primary); }
 .slider-dots { display: flex; gap: var(--space-2); }
 .slider-dots button {
   width: var(--space-2); height: var(--space-2); padding: 0; border: 0; border-radius: 50%;
@@ -543,8 +584,13 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
   color: var(--zinc-700);
   font-weight: 300;
 }
-.cohort-lead a { text-decoration: underline; text-decoration-color: var(--zinc-300); text-underline-offset: var(--line-lg); }
-.cohort-lead a:hover { color: var(--primary); text-decoration-color: var(--primary); }
+.cohort-lead a {
+  text-decoration: underline;
+  text-decoration-color: var(--zinc-300);
+  text-underline-offset: var(--line-lg);
+  transition: text-decoration-color .25s ease;
+}
+.cohort-lead a:hover { text-decoration-color: var(--primary); }
 .people {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
