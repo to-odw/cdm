@@ -1,4 +1,5 @@
-/* Register. One spread: the argument on the left, the papers on the right, one captioned photograph. */
+/* Register. One spread: the argument on the left, the papers on the right, one captioned photograph.
+   Nav comes from style.css; this file is page content only. */
 
 .register {
   --paper: #f3f3f1;
@@ -16,16 +17,12 @@
   line-height: 1.5;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
-
-.register { margin: 0; }
-
 .register h1,
 .register h2,
 .register p,
 .register figure { margin: 0; }
 
-.register a { color: inherit; text-decoration: none; }
+.register main a { color: inherit; text-decoration: none; }
 
 .register img { display: block; max-width: 100%; }
 
@@ -34,60 +31,14 @@
   outline-offset: 3px;
 }
 
-.site-header { background: var(--paper); }
-
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  max-width: 72rem;
-  margin-inline: auto;
-  padding: 0.35rem var(--margin) 0.35rem;
-}
-
-.brand img { height: 4.5rem; width: calc(4.5rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.35rem;
-  margin-left: auto;
-  font-size: 1.25rem;
-}
-
-.nav-links a:hover,
-.mobile-nav a:hover { color: var(--link); }
-
-.menu-toggle {
-  display: none;
-  margin-left: auto;
-  padding: 0.4rem;
-  border: 0;
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-}
-
-.menu-toggle svg { width: 1.5rem; height: 1.5rem; display: block; }
-.menu-toggle .icon-close { display: none; }
-.menu-open .menu-toggle .icon-close { display: block; }
-.menu-open .menu-toggle .icon-open { display: none; }
-
-.mobile-nav { display: none; padding: 0.5rem var(--margin) 1.25rem; }
-.mobile-nav a { display: block; padding: 0.65rem 0; font-size: 1.35rem; }
-
-@media (max-width: 63.99rem) {
-  .nav-links { display: none; }
-  .menu-toggle { display: block; }
-  .menu-open .mobile-nav { display: block; }
-}
+.register .site-header { background: var(--paper); }
 
 .spread {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 4.5rem;
   align-items: start;
-  max-width: 72rem;
+  max-width: var(--container-max, 72rem);
   margin-inline: auto;
   padding: 2.5rem var(--margin) 2.5rem;
 }
@@ -121,7 +72,7 @@
 .letter p + p { margin-top: 1.15rem; }
 
 .plate {
-  max-width: 72rem;
+  max-width: var(--container-max, 72rem);
   margin: 1rem auto 0;
   padding: 0 var(--margin);
 }
@@ -205,7 +156,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .register a,
+  .register main a,
   .entry summary { transition: color 160ms linear; }
 
   .more a:active,

@@ -8,37 +8,43 @@
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/register.css?v=5">
-  <link rel="stylesheet" href="assets/css/footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/footer.css?v=2">
+  <link rel="stylesheet" href="assets/css/register.css?v=6">
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body class="register">
+<body class="register" data-nav="register.html">
 
-<header class="site-header">
-  <nav class="nav" aria-label="Main">
-    <a href="index.html" class="brand" aria-label="Cambridge Digital Minds — home">
-      <img src="assets/img/CDM-Square-Logo-Positive.svg" alt="Cambridge Digital Minds" width="251" height="120">
-    </a>
-    <div class="nav-links">
+<header class="site-header" id="top">
+  <nav class="container" aria-label="Main">
+    <div class="nav">
+      <a href="index.html" class="brand" aria-label="Cambridge Digital Minds — home">
+        <img src="assets/img/CDM-Square-Logo-Positive.svg" alt="Cambridge Digital Minds" width="251" height="120">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#our-work">Our work</a>
+        <a href="index.html#programmes">Programs</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="register.html" class="nav-action active">Express interest</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="container">
       <a href="index.html#our-work">Our work</a>
       <a href="index.html#programmes">Programs</a>
       <a href="newsletter.html">Newsletter</a>
       <a href="about.html">About</a>
       <a href="research.html">Research</a>
-      <a href="register.html">Express interest</a>
+      <a href="register.html" class="nav-action active">Express interest</a>
     </div>
-    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
-      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-    </button>
-  </nav>
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="index.html#our-work">Our work</a>
-    <a href="index.html#programmes">Programs</a>
-    <a href="newsletter.html">Newsletter</a>
-    <a href="about.html">About</a>
-    <a href="research.html">Research</a>
-    <a href="register.html">Express interest</a>
   </div>
 </header>
 
@@ -143,21 +149,5 @@
   </div>
 </footer>
 
-<script>
-(function () {
-  var header = document.querySelector(".site-header");
-  var toggle = document.querySelector(".menu-toggle");
-  toggle.addEventListener("click", function () {
-    var open = header.classList.toggle("menu-open");
-    toggle.setAttribute("aria-expanded", String(open));
-  });
-  document.querySelectorAll(".mobile-nav a").forEach(function (a) {
-    a.addEventListener("click", function () {
-      header.classList.remove("menu-open");
-      toggle.setAttribute("aria-expanded", "false");
-    });
-  });
-})();
-</script>
 </body>
 </html>
