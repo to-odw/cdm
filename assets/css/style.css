@@ -148,14 +148,14 @@ main { padding-top: var(--header-h); }
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
   padding: 0.8rem 1.25rem;
   font: 600 1.0625rem/1.5 var(--sans);
-  border: 1.5px solid var(--btn);
+  border: 1.5px solid var(--zinc-300);
   color: var(--btn-ink);
   background: transparent;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background-color .2s, color .2s, border-color .2s;
 }
-.btn:hover { background: var(--btn); }
+.btn:hover { background: var(--zinc-100); }
 
 .text-link {
   display: inline-flex; align-items: center; gap: 0.25rem;
@@ -230,6 +230,11 @@ main { padding-top: var(--header-h); }
   color: var(--zinc-900);
   margin-bottom: 0.75rem;
 }
+
+/* Titled short lists ("Tracks:", "Highlights:"): keep title and items tight */
+.prose > div > .subhead { margin-bottom: 0.375rem; }
+.prose > div > .subhead + .dash-list li + li { margin-top: 0.25rem; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
 .dash-list li { position: relative; padding-left: 1.5rem; }
 .dash-list li + li { margin-top: 0.5rem; }
