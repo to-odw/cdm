@@ -368,6 +368,8 @@ main { padding-top: var(--header-h); }
 }
 @media (min-width: 48rem) { .page-head h1 { font-size: var(--text-6xl); } }
 .page-head p { margin-top: var(--space-4); font-size: var(--text-body); line-height: 1.625; color: var(--zinc-700); font-weight: 300; }
+.page-head a { text-decoration: underline; text-decoration-color: var(--zinc-300); text-underline-offset: var(--line-lg); }
+.page-head a:hover { color: var(--primary); text-decoration-color: var(--primary); }
 
 .paper-meta { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); margin-bottom: var(--space-4); }
 .paper-type { font-size: var(--text-sm); font-weight: 600; color: var(--primary); }
@@ -520,6 +522,74 @@ mark.hit { background: color-mix(in srgb, var(--accent) 45%, #fff); color: inher
 .gallery figure { background: var(--zinc-100); }
 .gallery img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .gallery figcaption { padding: var(--space-3) 0; font-size: var(--text-sm); color: var(--zinc-600); }
+
+/* Roster of people. Fellows now; the same grid is for mentors later. */
+.cohort { margin-top: var(--space-12); }
+.page-head + .cohort { margin-top: var(--space-4); }
+.cohort-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 1.35rem + 1.6vw, 2.75rem);
+  letter-spacing: 0.015em;
+  line-height: 1.15;
+  margin-bottom: var(--space-8);
+}
+.cohort-lead {
+  max-width: 40rem;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-10);
+  font-size: var(--text-body);
+  line-height: 1.625;
+  color: var(--zinc-700);
+  font-weight: 300;
+}
+.cohort-lead a { text-decoration: underline; text-decoration-color: var(--zinc-300); text-underline-offset: var(--line-lg); }
+.cohort-lead a:hover { color: var(--primary); text-decoration-color: var(--primary); }
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8) var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 48rem) {
+  .people { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-10) var(--space-6); }
+}
+@media (min-width: 64rem) {
+  .people { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.person-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 18%;
+  background: var(--zinc-100);
+}
+.person-frame.is-open {
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-4);
+  background: var(--zinc-100);
+  color: var(--zinc-500);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+.person-name {
+  margin-top: var(--space-3);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: var(--zinc-950);
+}
+.person-affil {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--zinc-600);
+}
 
 /* Light and dark from the customize menu cover the whole page. */
 html[data-tone="dark"] {

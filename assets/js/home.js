@@ -61,6 +61,15 @@
 
   function field(w, h) {
     var mobile = w <= 768;
+    if (document.body.classList.contains("home-split")) {
+      return {
+        w: w, h: h, mobile: mobile, split: true,
+        x0: 0,
+        x1: w,
+        center: function (x) { return h * (0.2 - 0.12 * smoothstep(0.32, 0.92, x / w)); },
+        thick: h * 0.1
+      };
+    }
     if (mobile) {
       return {
         w: w, h: h, mobile: true,
@@ -130,7 +139,21 @@
     ctx.stroke();
   }
 
+  function splitInk() {
+    var ink = ctx.createLinearGradient(0, 0, F.w, 0);
+    ink.addColorStop(0, INK);
+    ink.addColorStop(0.42, INK);
+    ink.addColorStop(0.62, "rgba(247, 244, 238, 0.78)");
+    ink.addColorStop(1, "rgba(247, 244, 238, 0.35)");
+    return ink;
+  }
+
   function stroke(th, F, s, x0, x1) {
+    if (F.split) {
+      ctx.strokeStyle = splitInk();
+      trace(th, F, s, x0, x1);
+      return;
+    }
     var a = F.w * th.lead;
     var b = F.w * (th.lead + 0.16);
     var ink = ctx.createLinearGradient(a, 0, b, 0);
@@ -142,6 +165,11 @@
   }
 
   function strokeTrail(th, F, s, x0, x1) {
+    if (F.split) {
+      ctx.strokeStyle = splitInk();
+      trace(th, F, s, x0, x1);
+      return;
+    }
     var ink = ctx.createLinearGradient(x0, 0, x1, 0);
     ink.addColorStop(0, "rgba(247, 244, 238, 0)");
     ink.addColorStop(0.32, "rgba(247, 244, 238, 0.45)");
@@ -185,6 +213,7 @@
       if (x > F.x1) return;
       var a = smoothstep(0, 0.2, q.d / q.life) * (1 - smoothstep(0.72, 1, q.d / q.life));
       a *= enterAt(q.th, F, x);
+      if (F.split) a *= 1 - smoothstep(0.72, 0.98, x / F.w);
       ctx.globalAlpha = a * 0.85;
       ctx.lineWidth = 1.15;
       strokeTrail(q.th, F, s, Math.max(F.x0, x - q.len), x);
@@ -195,15 +224,17 @@
       ctx.fill();
     });
     ctx.globalAlpha = 1;
-    ctx.globalCompositeOperation = "destination-in";
-    var band = Math.max(170, F.h * 0.26);
-    var veil = ctx.createLinearGradient(0, 0, 0, band);
-    veil.addColorStop(0, "rgba(0, 0, 0, 0)");
-    veil.addColorStop(0.5, "rgba(0, 0, 0, 0.16)");
-    veil.addColorStop(1, "rgba(0, 0, 0, 1)");
-    ctx.fillStyle = veil;
-    ctx.fillRect(0, 0, F.w, F.h);
-    ctx.globalCompositeOperation = "source-over";
+    if (!F.split) {
+      ctx.globalCompositeOperation = "destination-in";
+      var band = Math.max(170, F.h * 0.26);
+      var veil = ctx.createLinearGradient(0, 0, 0, band);
+      veil.addColorStop(0, "rgba(0, 0, 0, 0)");
+      veil.addColorStop(0.5, "rgba(0, 0, 0, 0.16)");
+      veil.addColorStop(1, "rgba(0, 0, 0, 1)");
+      ctx.fillStyle = veil;
+      ctx.fillRect(0, 0, F.w, F.h);
+      ctx.globalCompositeOperation = "source-over";
+    }
   }
 
   function rebuild() {

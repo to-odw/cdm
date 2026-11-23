@@ -15,12 +15,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/footer.css">
-  <link rel="stylesheet" href="assets/css/home.css?v=55">
+  <link rel="stylesheet" href="assets/css/home.css?v=58">
   <script>document.documentElement.classList.add("js")</script>
   <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/home.js?v=14" defer></script>
+  <script src="assets/js/home.js?v=16" defer></script>
 </head>
-<body class="home">
+<body class="home home-split">
 
 <header class="site-header" id="top">
   <nav class="container" aria-label="Main">
@@ -54,20 +54,16 @@
 </header>
 
 <main>
-  <section class="opening" id="hero">
-    <div class="opening-media">
-      <img class="is-shown" src="assets/img/hero/art-cambridge-university-college.jpg" width="4961" height="3307" alt="A college court at the University of Cambridge.">
-      <img src="assets/img/hero/cdm-hero-03.webp" width="1920" height="1280" alt="" aria-hidden="true">
-      <img src="assets/img/hero/cdm-hero-04.webp" width="1920" height="1280" alt="" aria-hidden="true">
-      <img src="assets/img/hero/cambridge-city-skyline-cityscape-england.jpg" width="3500" height="2333" alt="" aria-hidden="true">
-    </div>
-    <div class="opening-scrim" aria-hidden="true"></div>
-    <canvas class="opening-signal" aria-hidden="true"></canvas>
-    <div class="container opening-layout">
-    <div class="opening-copy">
-      <h1>Preparing for<br>digital minds</h1>
-      <p class="stand">A Cambridge research initiative.</p>
-    </div>
+  <section class="opening" id="hero" data-hero="tree">
+    <div class="split-hero">
+      <div class="split-copy">
+        <h1>Preparing for<br>digital minds</h1>
+        <p class="stand">A Cambridge research initiative.</p>
+      </div>
+      <div class="split-photo">
+        <img src="assets/img/hero/art-cambridge-university-college.jpg" width="4961" height="3307" alt="A college court at Cambridge, with a tree standing on the lawn.">
+      </div>
+      <canvas class="opening-signal" aria-hidden="true"></canvas>
     </div>
   </section>
 
@@ -389,6 +385,7 @@
           <li><a href="index.html#our-work">Our work</a></li>
           <li><a href="research.html">Research</a></li>
           <li><a href="fellowship.html">Fellowship</a></li>
+          <li><a href="fellows.html">Fellows</a></li>
           <li><a href="workshop.html">Workshop</a></li>
           <li><a href="index.html#course">Online course</a></li>
           <li><a href="newsletter.html">Newsletter</a></li>
