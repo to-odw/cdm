@@ -40,10 +40,12 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1.15rem var(--margin) 0.5rem;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 0.35rem var(--margin) 0.35rem;
 }
 
-.brand img { height: 4rem; width: calc(4rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
+.brand img { height: 4.5rem; width: calc(4.5rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
 
 .nav-links {
   display: flex;
@@ -85,6 +87,8 @@
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 4.5rem;
   align-items: start;
+  max-width: 72rem;
+  margin-inline: auto;
   padding: 2.5rem var(--margin) 2.5rem;
 }
 
@@ -117,7 +121,9 @@
 .letter p + p { margin-top: 1.15rem; }
 
 .plate {
-  margin: 1rem var(--margin) 0;
+  max-width: 72rem;
+  margin: 1rem auto 0;
+  padding: 0 var(--margin);
 }
 
 .plate img {

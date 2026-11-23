@@ -51,10 +51,12 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1.15rem var(--margin) 0.85rem;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 0.35rem var(--margin) 0.35rem;
 }
 
-.brand img { height: 4rem; width: calc(4rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
+.brand img { height: 4.5rem; width: calc(4.5rem * 251 / 120); max-width: none; aspect-ratio: 251 / 120; }
 
 .nav-links {
   display: flex;
@@ -97,7 +99,7 @@
 .stage {
   position: relative;
   min-height: 100svh;
-  padding: 8rem var(--margin) 4rem;
+  padding: 8rem max(var(--margin), calc((100vw - 72rem) / 2 + var(--margin))) 4rem;
   background: linear-gradient(180deg, var(--ground) 0%, var(--green) 100%); /* taste-skill-ignore the requested ground, dark teal into teal */
 }
 
@@ -152,7 +154,9 @@
 .work,
 .research { background: var(--below); }
 
-.work { padding: 6.5rem var(--margin) 5rem; }
+.work {
+  padding: 6.5rem max(var(--margin), calc((100vw - 72rem) / 2 + var(--margin))) 5rem;
+}
 
 .work h2,
 .research h2 {
@@ -170,7 +174,9 @@
 
 .prose p + p { margin-top: 1.2rem; }
 
-.research { padding: 5.5rem var(--margin) 2.5rem; }
+.research {
+  padding: 5.5rem max(var(--margin), calc((100vw - 72rem) / 2 + var(--margin))) 2.5rem;
+}
 
 .research h2 { margin-bottom: 2.75rem; }
 
