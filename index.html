@@ -15,12 +15,12 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Cambridge Digital Minds: Preparing society for the possibility of digital minds">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="icon" href="assets/img/cdm-favicon.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=8">
+  <link rel="stylesheet" href="assets/css/site.css?v=13">
   <script>document.documentElement.classList.add("js")</script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/signal.js?v=1" defer></script>
@@ -32,14 +32,22 @@
   <nav class="container" aria-label="Main">
     <div class="nav">
       <a href="#top" class="brand" aria-label="Cambridge Digital Minds — home">
-        <img src="assets/img/CDM-Square-Logo-Positive.svg" alt="Cambridge Digital Minds" width="251" height="120">
+        <img src="assets/img/cdm-logo.svg" alt="Cambridge Digital Minds" width="251" height="120">
       </a>
       <div class="nav-links">
-        <a href="programs.html">Programs</a>
-        <a href="newsletter.html">Newsletter</a>
-        <a href="about.html">About</a>
+        <div class="nav-item">
+          <a href="programs.html">Programmes<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="nav-menu">
+            <a href="fellowship-2027.html">Fellowship</a>
+            <a href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a>
+            <a href="workshop-2027.html">Workshop</a>
+            <a href="course.html">Online Course</a>
+          </div>
+        </div>
         <a href="research.html">Research</a>
-        <a class="nav-action" href="register.html">Express interest</a>
+        <a href="about.html">About</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a class="nav-action" href="https://airtable.com/app6FgGbJRFThTnCW/pag30m9vpyrV1dnVQ/form" target="_blank" rel="noopener">Express interest</a>
       </div>
       <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -49,11 +57,15 @@
   </nav>
   <div class="mobile-nav" id="mobile-nav">
     <div class="container">
-      <a href="programs.html">Programs</a>
-      <a href="newsletter.html">Newsletter</a>
-      <a href="about.html">About</a>
+      <a href="programs.html">Programmes</a>
+      <a class="sub" href="fellowship-2027.html">Fellowship</a>
+      <a class="sub" href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a>
+      <a class="sub" href="workshop-2027.html">Workshop</a>
+      <a class="sub" href="course.html">Online Course</a>
       <a href="research.html">Research</a>
-      <a class="nav-action" href="register.html">Express interest</a>
+      <a href="about.html">About</a>
+      <a href="newsletter.html">Newsletter</a>
+      <a class="nav-action" href="https://airtable.com/app6FgGbJRFThTnCW/pag30m9vpyrV1dnVQ/form" target="_blank" rel="noopener">Express interest</a>
     </div>
   </div>
 </header>
@@ -62,7 +74,7 @@
   <section class="opening" id="hero">
     <div class="opening-frame">
       <div class="opening-media">
-        <img class="is-shown" src="assets/img/hero/art-cambridge-university-college.jpg" width="4961" height="3307" alt="A college court at the University of Cambridge.">
+        <img class="is-shown" src="assets/img/hero/cambridge-college-arches.webp" width="2400" height="1600" alt="A college chapel at the University of Cambridge, seen through the arches of a colonnade.">
       </div>
       <canvas class="opening-signal" aria-hidden="true"></canvas>
       <div class="opening-layout">
@@ -70,8 +82,8 @@
           <h1>Preparing society for the possibility of digital minds</h1>
           <p class="stand">Could AI systems have goals, agency or even feelings of their own? We study what that would mean for ethics, policy and society.</p>
           <div class="actions">
-            <a class="btn btn-solid" href="register.html">Express interest</a>
-            <a class="btn" href="about.html">About us</a>
+            <a class="btn btn-solid" href="fellowship-2027.html">Fellowship 2027</a>
+            <a class="btn" href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a>
           </div>
         </div>
       </div>
@@ -82,7 +94,7 @@
     <div class="container">
       <div class="programmes-grid">
         <a class="programme-card" href="fellowship-2027.html">
-          <img src="assets/img/heroes/digital-minds-strategy-workshop-2026-127.jpg" width="1600" height="1067" alt="Fellows working together around a table in a college library">
+          <img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-015_websize.jpg" width="1600" height="1067" alt="The 2026 fellows outside a brick building at Jesus College, Cambridge">
           <div class="programme-body">
             <p class="programme-meta">17 May – 9 August 2027 · Apply by 31 January</p>
             <h2>Fellowship 2027</h2>
@@ -93,18 +105,18 @@
         <a class="programme-card" href="inter-ai-morality-prize.html">
           <img src="assets/img/heroes/digital-minds-strategy-workshop-2026-123.jpg" width="1600" height="1067" alt="Researchers working on laptops around a seminar table">
           <div class="programme-body">
-            <p class="programme-meta">Opens December 2026 · $20,000 first prize</p>
+            <p class="programme-meta">Deadline: 1 May 2027 · $20,000 first prize</p>
             <h2>Inter-AI Morality Prize</h2>
             <p>A prize for research on how AI systems treat one another, from pairs of agents to whole AI societies. Open to any discipline.</p>
             <span class="programme-more">Learn more</span>
           </div>
         </a>
-        <a class="programme-card" href="workshop-2027.html">
-          <img src="assets/img/heroes/digital-minds-strategy-workshop-2026-310.jpg" width="1600" height="1067" alt="A panel seated in front of a slide reading Digital Minds Strategy Workshop">
+        <a class="programme-card" href="course.html">
+          <img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-100.jpg" width="2000" height="1333" alt="A speaker presenting to a seated audience">
           <div class="programme-body">
-            <p class="programme-meta">7–8 August 2027 · Cambridge</p>
-            <h2>CDM Workshop 2027</h2>
-            <p>A weekend with leading researchers in the field, focused this year on inter-AI morality. Fellows and prize finalists are invited.</p>
+            <p class="programme-meta">8 weeks · Free and fully online</p>
+            <h2>Online Course</h2>
+            <p>Introduction to Digital Minds: a free, facilitated course on AI consciousness and its ethical and societal implications.</p>
             <span class="programme-more">Learn more</span>
           </div>
         </a>
@@ -172,7 +184,7 @@
     <h2>Our work</h2>
     <div class="essay-flow">
       <p><span class="who">Cambridge Digital Minds</span> studies whether AI systems could one day have <span class="mark ink">minds with feelings</span> and a capacity for welfare that warrants moral consideration. <span class="mark hot">Experts are divided</span>, and a growing number of people will come to believe they do. Whatever the truth, these perceptions will have profound implications for society and policy.</p>
-      <p><span class="mark ink">Research</span> here is interdisciplinary and rigorous, aimed at anticipating societal responses to potential digital minds and at developing governance strategies. Capacity building strengthens the field through <span class="mark hot">fellowships</span>, training programs, and an online course anchored in academic rigour. Engagement builds expert coordination with <span class="mark ink">policymakers</span>, industry, and the public, to reduce confusion and polarisation before high-stakes conflicts emerge.</p>
+      <p><span class="mark ink">Research</span> here is interdisciplinary and rigorous, aimed at anticipating societal responses to potential digital minds and at developing governance strategies. Capacity building strengthens the field through <span class="mark hot">fellowships</span>, training programmes, and an online course anchored in academic rigour. Engagement builds <span class="mark ink">expert coordination</span> with policymakers, industry, and the public, to reduce confusion and polarisation before high-stakes conflicts emerge.</p>
     </div>
     </div>
   </section>
@@ -180,7 +192,7 @@
   <div class="container page">
     <div class="sections">
 
-      <!-- ===== Programs ===== -->
+      <!-- ===== Programmes ===== -->
       <section class="split event" id="programmes">
         <div class="label">
           <h2>Cambridge Digital Minds Fellowship 2027</h2>
@@ -191,7 +203,7 @@
           </div>
         </div>
         <div class="body prose">
-          <figure class="split-figure"><a href="fellowship-2027.html"><img src="assets/img/heroes/digital-minds-strategy-workshop-2026-127.jpg" alt="Fellows working together around a table in a college library" loading="lazy"></a></figure>
+          <figure class="split-figure"><a href="fellowship-2027.html"><img src="assets/img/events/fellowship/digital-minds-strategy-workshop-2026-015_websize.jpg" alt="The 2026 fellows outside a brick building at Jesus College, Cambridge" loading="lazy"></a></figure>
           <p>Spend twelve weeks on some of the most pressing questions in digital minds, with mentorship from leading researchers. Fellows receive a £1,000 a week stipend, research management, and a co-working office in Cambridge. <strong>Applications are open.</strong></p>
           <p><a class="btn" href="fellowship-2027.html">Learn more and apply</a></p>
         </div>
@@ -201,7 +213,7 @@
         <div class="label">
           <h2>Inter-AI Morality Prize</h2>
           <div class="meta">
-            <p class="meta-k">Call opens early December 2026</p>
+            <p class="meta-k">Call for submissions</p>
             <p class="meta-v">Deadline 1 May 2027</p>
             <p class="meta-v">$20,000 first prize</p>
           </div>
@@ -210,6 +222,21 @@
           <figure class="split-figure"><a href="inter-ai-morality-prize.html"><img src="assets/img/heroes/digital-minds-strategy-workshop-2026-123.jpg" alt="Researchers working on laptops around a seminar table" loading="lazy"></a></figure>
           <p>How will AI systems treat one another, and how should they? A prize for concrete contributions to inter-AI morality, from any discipline. Five finalists are invited to the CDM Workshop 2027, and promising entrants can apply for follow-on funding of $10,000 to $300,000.</p>
           <p><a class="btn" href="inter-ai-morality-prize.html">Learn more</a></p>
+        </div>
+      </section>
+
+      <section class="split event" id="course">
+        <div class="label">
+          <h2>Online Course</h2>
+          <div class="meta">
+            <p class="meta-k">Next cohort to be announced</p>
+            <p class="meta-v">8 weeks · Free and fully online</p>
+          </div>
+        </div>
+        <div class="body prose">
+          <figure class="split-figure"><a href="course.html"><img src="assets/img/events/workshop/digital-minds-strategy-workshop-2026-100.jpg" alt="A speaker presenting to a seated audience" loading="lazy"></a></figure>
+          <p>Introduction to Digital Minds is a free, eight-week facilitated course on AI consciousness and its ethical and societal implications. Course materials for all eight units are open to everyone.</p>
+          <p><a class="btn" href="course.html">Learn more</a></p>
         </div>
       </section>
 
@@ -223,7 +250,7 @@
         </div>
         <div class="body prose">
           <figure class="split-figure"><a href="workshop-2027.html"><img src="assets/img/heroes/digital-minds-strategy-workshop-2026-310.jpg" alt="A panel seated in front of a slide reading Digital Minds Strategy Workshop" loading="lazy"></a></figure>
-          <p>A weekend in Cambridge with many of the leading researchers in the field, focused this year on inter-AI morality. All fellows and prize finalists are invited.</p>
+          <p>Two days in Cambridge bringing world-leading thinkers on digital minds together for intensive discussion of concrete questions designed to inform research and policy. All fellows and prize finalists are invited.</p>
           <p><a class="btn" href="workshop-2027.html">Learn more</a></p>
         </div>
       </section>
@@ -332,7 +359,7 @@
   <div class="container footer-main">
     <div class="footer-about">
       <div class="footer-logos">
-        <img class="cdm" src="assets/img/CDM-Square-Logo-Positive.svg" alt="Cambridge Digital Minds" width="251" height="120">
+        <img class="cdm" src="assets/img/cdm-logo.svg" alt="Cambridge Digital Minds" width="251" height="120">
       </div>
       <p>Cambridge Digital Minds is a research initiative at the University of Cambridge focused on societal preparedness for digital minds, whether perceived or real. It is housed within the Leverhulme Centre for the Future of Intelligence at the Institute for Technology and Humanity.</p>
     </div>
@@ -340,7 +367,7 @@
       <div>
         <h4>Navigate</h4>
         <ul class="nav-list">
-          <li><a href="programs.html">Programs</a></li>
+          <li><a href="programs.html">Programmes</a></li>
           <li><a href="fellowship-2027.html">Fellowship 2027</a></li>
           <li><a href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a></li>
           <li><a href="workshop-2027.html">Workshop 2027</a></li>

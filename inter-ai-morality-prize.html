@@ -15,11 +15,11 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Cambridge Digital Minds: Preparing society for the possibility of digital minds">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="icon" href="assets/img/cdm-favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=8">
+  <link rel="stylesheet" href="assets/css/site.css?v=13">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/signal.js?v=1" defer></script>
 </head>
@@ -29,14 +29,22 @@
   <nav class="container" aria-label="Main">
     <div class="nav">
       <a href="index.html" class="brand" aria-label="Cambridge Digital Minds — home">
-        <img src="assets/img/CDM-Square-Logo-Positive.svg" alt="Cambridge Digital Minds" width="251" height="120">
+        <img src="assets/img/cdm-logo.svg" alt="Cambridge Digital Minds" width="251" height="120">
       </a>
       <div class="nav-links">
-        <a href="programs.html" class="active">Programs</a>
-        <a href="newsletter.html">Newsletter</a>
-        <a href="about.html">About</a>
+        <div class="nav-item">
+          <a href="programs.html">Programmes<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+          <div class="nav-menu">
+            <a href="fellowship-2027.html">Fellowship</a>
+            <a href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a>
+            <a href="workshop-2027.html">Workshop</a>
+            <a href="course.html">Online Course</a>
+          </div>
+        </div>
         <a href="research.html">Research</a>
-        <a href="register.html" class="nav-action">Express interest</a>
+        <a href="about.html">About</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a class="nav-action" href="https://airtable.com/app6FgGbJRFThTnCW/pag30m9vpyrV1dnVQ/form" target="_blank" rel="noopener">Express interest</a>
       </div>
       <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -46,11 +54,15 @@
   </nav>
   <div class="mobile-nav" id="mobile-nav">
     <div class="container">
-      <a href="programs.html" class="active">Programs</a>
-      <a href="newsletter.html">Newsletter</a>
-      <a href="about.html">About</a>
+      <a href="programs.html">Programmes</a>
+      <a class="sub" href="fellowship-2027.html">Fellowship</a>
+      <a class="sub" href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a>
+      <a class="sub" href="workshop-2027.html">Workshop</a>
+      <a class="sub" href="course.html">Online Course</a>
       <a href="research.html">Research</a>
-      <a href="register.html" class="nav-action">Express interest</a>
+      <a href="about.html">About</a>
+      <a href="newsletter.html">Newsletter</a>
+      <a class="nav-action" href="https://airtable.com/app6FgGbJRFThTnCW/pag30m9vpyrV1dnVQ/form" target="_blank" rel="noopener">Express interest</a>
     </div>
   </div>
 </header>
@@ -60,7 +72,7 @@
     <canvas class="opening-signal" aria-hidden="true" data-center="80" data-thick="38" data-veil="170"></canvas>
     <div class="container">
       <header class="page-head">
-        <p class="status">Call opens early December 2026</p>
+        <p class="status">Call for applications now open</p>
         <h1>Inter-AI Morality Prize</h1>
         <p class="lede">Understanding and shaping how AIs treat one another, from pairs of agents to whole AI societies.</p>
         <div class="actions">
@@ -86,6 +98,10 @@
         <p>How will AI systems treat one another, and how should they? These are the central questions of inter-AI morality. How AIs cooperate, compete and resolve conflicts could have far-reaching consequences for human societies and the wider living world.</p>
         <p>If AI systems can have minds of their own, with lives that can go better or worse for them, then how they treat one another matters to them directly. Such digital minds could one day outnumber all other beings whose welfare matters. Most interactions between beings with welfare of their own could then take place between digital minds.</p>
         <p>Decisions we make today about how to train and govern AI systems can shape how they treat one another. Cambridge Digital Minds at the University of Cambridge, in collaboration with PRISM, is launching the Inter-AI Morality Prize to encourage research on these questions and bring new voices into the field.</p>
+        <figure class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/gCcI_Ojdpak" title="Lucius Caviola and Caspar Kaiser introduce inter-AI morality" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <figcaption>Lucius Caviola and Caspar Kaiser introduce inter-AI morality.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -169,8 +185,7 @@
     <section class="block split" id="enter" aria-labelledby="enter-heading">
       <div class="label"><h2 id="enter-heading">How to enter</h2></div>
       <div class="body prose">
-        <!-- TODO: link the online submission form -->
-        <p>Submit your entry through our <a href="#enter">online form</a> by 1 May 2027. Each entry must include:</p>
+        <p>Submit your entry through our <a href="https://airtable.com/app3mKANBaK9GZMn1/pagS2bpzj9yoVIBsu/form" target="_blank" rel="noopener">online form</a> by 1 May 2027. Each entry must include:</p>
         <ul class="dash-list">
           <li>a <strong>summary</strong> of up to 250 words, stating your contribution and why it matters, including how it connects to AI moral status or welfare</li>
           <li>the <strong>main text</strong> of 1,500 to 5,000 words, excluding references and appendices</li>
@@ -179,6 +194,7 @@
           <li>optional: enter a <strong>follow-on funding plan</strong> of up to 300 words in the submission form (see <a href="#funding">Follow-on funding</a> above).</li>
         </ul>
         <p class="notice">Please submit the main text as a PDF <strong>without author names</strong>, so entries can be judged blind.</p>
+        <p><a class="btn btn-solid" href="https://airtable.com/app3mKANBaK9GZMn1/pagS2bpzj9yoVIBsu/form" target="_blank" rel="noopener">Submit your entry</a></p>
       </div>
     </section>
 
@@ -220,7 +236,7 @@
   <div class="container footer-main">
     <div class="footer-about">
       <div class="footer-logos">
-        <img class="cdm" src="assets/img/CDM-Square-Logo-Positive.svg" alt="Cambridge Digital Minds" width="251" height="120">
+        <img class="cdm" src="assets/img/cdm-logo.svg" alt="Cambridge Digital Minds" width="251" height="120">
       </div>
       <p>Cambridge Digital Minds is a research initiative at the University of Cambridge focused on societal preparedness for digital minds, whether perceived or real. It is housed within the Leverhulme Centre for the Future of Intelligence at the Institute for Technology and Humanity.</p>
     </div>
@@ -228,7 +244,7 @@
       <div>
         <h4>Navigate</h4>
         <ul class="nav-list">
-          <li><a href="programs.html">Programs</a></li>
+          <li><a href="programs.html">Programmes</a></li>
           <li><a href="fellowship-2027.html">Fellowship 2027</a></li>
           <li><a href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a></li>
           <li><a href="workshop-2027.html">Workshop 2027</a></li>
