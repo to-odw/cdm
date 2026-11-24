@@ -9,11 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=19">
-  <link rel="stylesheet" href="assets/css/programme.css?v=7">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/signal.js?v=1" defer></script>
 </head>
-<body data-nav="programs.html">
+<body class="has-top" data-nav="programs.html">
 
 <header class="site-header" id="top">
   <nav class="container" aria-label="Main">
@@ -46,21 +46,25 @@
 </header>
 
 <main>
+  <section class="page-top">
+    <canvas class="opening-signal" aria-hidden="true" data-center="80" data-thick="38" data-veil="170"></canvas>
+    <div class="container">
+      <header class="page-head">
+        <h1>Programs</h1>
+        <p>Fellowships, prizes, workshops and courses that bring new people into the study of digital minds and help the field coordinate.</p>
+      </header>
+    </div>
+  </section>
   <div class="container page">
-    <header class="page-head">
-      <h1>Programs</h1>
-      <p>Fellowships, prizes, workshops and courses that bring new people into the study of digital minds and help the field coordinate.</p>
-    </header>
 
     <section class="group" id="upcoming" aria-labelledby="upcoming-heading">
       <div class="group-head">
-        <h2 id="upcoming-heading">Upcoming</h2>
-        <p>2027 programs</p>
+        <h2 id="upcoming-heading">Upcoming 2027 Programs</h2>
       </div>
       <div class="sections">
         <section class="split event" id="fellowship-2027">
           <div class="label">
-            <h3 class="h2-like">Cambridge Digital Minds Fellowship 2027</h3>
+            <h3>Cambridge Digital Minds Fellowship 2027</h3>
             <div class="meta">
               <p class="meta-k">17 May – 9 August 2027</p>
               <p class="meta-v">Cambridge · 12 weeks</p>
@@ -86,7 +90,7 @@
 
         <section class="split event" id="prize">
           <div class="label">
-            <h3 class="h2-like">Inter-AI Morality Prize</h3>
+            <h3>Inter-AI Morality Prize</h3>
             <div class="meta">
               <p class="meta-k">Call opens early December 2026</p>
               <p class="meta-v">Deadline 1 May 2027</p>
@@ -102,9 +106,9 @@
 
         <section class="split event" id="workshop-2027">
           <div class="label">
-            <h3 class="h2-like">Cambridge Digital Minds Workshop 2027</h3>
+            <h3>Cambridge Digital Minds Workshop 2027</h3>
             <div class="meta">
-              <p class="meta-k">Summer 2027</p>
+              <p class="meta-k">7–8 August 2027</p>
               <p class="meta-v">Cambridge</p>
             </div>
           </div>
@@ -117,7 +121,7 @@
 
         <section class="split event" id="course">
           <div class="label">
-            <h3 class="h2-like">Online course</h3>
+            <h3>Online course</h3>
             <div class="meta">
               <p class="meta-k">Next cohort to be announced</p>
               <p class="meta-v">8 weeks · Free and fully online</p>
@@ -133,13 +137,12 @@
 
     <section class="group" id="past" aria-labelledby="past-heading">
       <div class="group-head">
-        <h2 id="past-heading">Past events</h2>
-        <p>2026</p>
+        <h2 id="past-heading">Past Events</h2>
       </div>
       <div class="sections">
         <section class="split event" id="past-fellowship">
           <div class="label">
-            <h3 class="h2-like">Digital Minds Fellowship 2026</h3>
+            <h3>Digital Minds Fellowship 2026</h3>
             <div class="meta">
               <p class="meta-k">3–9 August 2026</p>
               <p class="meta-v">Jesus College, Cambridge · 15 Fellows</p>
@@ -190,7 +193,7 @@
 
         <section class="split event" id="past-workshop">
           <div class="label">
-            <h3 class="h2-like">Strategy Workshop 2026</h3>
+            <h3>Strategy Workshop 2026</h3>
             <div class="meta">
               <p class="meta-k">8–9 August 2026</p>
               <p class="meta-v">Jesus College, Cambridge</p>
@@ -241,7 +244,7 @@
 
         <section class="split event" id="past-course">
           <div class="label">
-            <h3 class="h2-like">Online course, Autumn/Winter 2026</h3>
+            <h3>Online course, Autumn/Winter 2026</h3>
             <div class="meta">
               <p class="meta-k">12 October – 11 December 2026</p>
               <p class="meta-v">8 weeks · Free and fully online</p>
@@ -262,10 +265,7 @@
   <div class="band">
     <div class="container subscribe">
       <h3>Subscribe to the Digital Minds newsletter for the latest news and research.</h3>
-      <form action="https://digitalminds.substack.com/subscribe" method="get" target="_blank">
-        <input id="sub-email" aria-label="Email address" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <a class="subscribe-btn" href="https://digitalminds.substack.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
     </div>
   </div>
   <div class="container footer-main">

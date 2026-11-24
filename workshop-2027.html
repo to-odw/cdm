@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cambridge Digital Minds Workshop 2027</title>
-  <meta name="description" content="A weekend in Cambridge with leading researchers in digital minds. This year's focus is inter-AI morality.">
+  <meta name="description" content="7–8 August 2027: a weekend in Cambridge with leading researchers in digital minds. This year's focus is inter-AI morality.">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=19">
-  <link rel="stylesheet" href="assets/css/programme.css?v=7">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/signal.js?v=1" defer></script>
 </head>
-<body data-nav="programs.html">
+<body class="has-top" data-nav="programs.html">
 
 <header class="site-header" id="top">
   <nav class="container" aria-label="Main">
@@ -46,23 +46,24 @@
 </header>
 
 <main>
-  <figure class="page-hero">
-    <img src="assets/img/heroes/digital-minds-strategy-workshop-2026-310.jpg" alt="A panel seated in front of a slide reading Digital Minds Strategy Workshop">
-  </figure>
+  <section class="page-top">
+    <canvas class="opening-signal" aria-hidden="true" data-center="80" data-thick="38" data-veil="170"></canvas>
+    <div class="container">
+      <header class="page-head">
+        <p class="status is-muted">7–8 August 2027 · Cambridge</p>
+        <h1>Cambridge Digital Minds Workshop 2027</h1>
+        <p class="lede">A weekend in Cambridge with many of the leading researchers in digital minds. This year’s focus is inter-AI morality: how AI systems treat one another, and how they should.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="mailto:info@digitalminds.cam?subject=CDM%20Workshop%202027">Express interest</a>
+          <a class="btn" href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a>
+        </div>
+      </header>
+    </div>
+  </section>
   <div class="container page">
-    <header class="page-head">
-      <p class="status is-muted">Summer 2027 · Dates to be confirmed</p>
-      <h1>Cambridge Digital Minds Workshop 2027</h1>
-      <p class="lede">A weekend in Cambridge with many of the leading researchers in digital minds. This year’s focus is inter-AI morality: how AI systems treat one another, and how they should.</p>
-      <div class="actions">
-        <a class="btn btn-solid" href="mailto:info@digitalminds.cam?subject=CDM%20Workshop%202027">Express interest</a>
-        <a class="btn" href="inter-ai-morality-prize.html">Inter-AI Morality Prize</a>
-      </div>
-    </header>
 
-    <!-- TODO: confirm workshop dates. The prize brief says 23–25 July 2027; the fellowship copy says the workshop closes the fellows' final week, 2–8 August 2027. -->
     <dl class="facts">
-      <div><dt>When</dt><dd>Summer 2027</dd></div>
+      <div><dt>When</dt><dd>7–8 August 2027</dd></div>
       <div><dt>Where</dt><dd>Cambridge, United Kingdom</dd></div>
       <div><dt>Focus</dt><dd>Inter-AI morality</dd></div>
       <div><dt>Format</dt><dd>A weekend of structured sessions</dd></div>
@@ -145,10 +146,7 @@
   <div class="band">
     <div class="container subscribe">
       <h3>Subscribe to the Digital Minds newsletter for the latest news and research.</h3>
-      <form action="https://digitalminds.substack.com/subscribe" method="get" target="_blank">
-        <input id="sub-email" aria-label="Email address" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <a class="subscribe-btn" href="https://digitalminds.substack.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
     </div>
   </div>
   <div class="container footer-main">

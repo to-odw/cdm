@@ -9,10 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=19">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/signal.js?v=1" defer></script>
 </head>
-<body data-nav="programs.html">
+<body class="has-top" data-nav="programs.html">
 
 <header class="site-header" id="top">
   <nav class="container" aria-label="Main">
@@ -45,11 +46,16 @@
 </header>
 
 <main>
+  <section class="page-top">
+    <canvas class="opening-signal" aria-hidden="true" data-center="80" data-thick="38" data-veil="170"></canvas>
+    <div class="container">
+      <header class="page-head">
+        <h1>Digital Minds Fellowship</h1>
+        <p>3–9 August 2026 · Jesus College, Cambridge · 15 Fellows</p>
+      </header>
+    </div>
+  </section>
   <div class="container page">
-    <header class="page-head">
-      <h1>Digital Minds Fellowship</h1>
-      <p>3–9 August 2026 · Jesus College, Cambridge · 15 Fellows</p>
-    </header>
 
     <div class="prose">
       <p class="notice">Applications are now closed.</p>
@@ -151,10 +157,7 @@
   <div class="band">
     <div class="container subscribe">
       <h3>Subscribe to the Digital Minds newsletter for the latest news and research.</h3>
-      <form action="https://digitalminds.substack.com/subscribe" method="get" target="_blank">
-        <input id="sub-email" aria-label="Email address" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <a class="subscribe-btn" href="https://digitalminds.substack.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
     </div>
   </div>
   <div class="container footer-main">

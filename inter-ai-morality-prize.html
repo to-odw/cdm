@@ -9,11 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=19">
-  <link rel="stylesheet" href="assets/css/programme.css?v=7">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/signal.js?v=1" defer></script>
 </head>
-<body data-nav="programs.html">
+<body class="has-top" data-nav="programs.html">
 
 <header class="site-header" id="top">
   <nav class="container" aria-label="Main">
@@ -46,19 +46,21 @@
 </header>
 
 <main>
-  <figure class="page-hero">
-    <img src="assets/img/heroes/digital-minds-strategy-workshop-2026-123.jpg" alt="Researchers working on laptops around a seminar table">
-  </figure>
+  <section class="page-top">
+    <canvas class="opening-signal" aria-hidden="true" data-center="80" data-thick="38" data-veil="170"></canvas>
+    <div class="container">
+      <header class="page-head">
+        <p class="status">Call opens early December 2026</p>
+        <h1>Inter-AI Morality Prize</h1>
+        <p class="lede">Understanding and shaping how AIs treat one another, from pairs of agents to whole AI societies.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#enter">How to enter</a>
+          <a class="btn" href="https://digitalminds.cam/inter-ai-morality.pdf" target="_blank" rel="noopener">Read the background paper</a>
+        </div>
+      </header>
+    </div>
+  </section>
   <div class="container page">
-    <header class="page-head">
-      <p class="status">Call opens early December 2026</p>
-      <h1>Inter-AI Morality Prize</h1>
-      <p class="lede">Understanding and shaping how AIs treat one another, from pairs of agents to whole AI societies.</p>
-      <div class="actions">
-        <a class="btn btn-solid" href="#enter">How to enter</a>
-        <a class="btn" href="https://digitalminds.cam/inter-ai-morality.pdf" target="_blank" rel="noopener">Read the background paper</a>
-      </div>
-    </header>
 
     <!-- TODO: dates below were marked as provisional in the brief; confirm before launch -->
     <dl class="facts">
@@ -107,7 +109,7 @@
             <tr><th scope="row">3rd to 5th</th><td>$1,000 each</td></tr>
           </tbody>
         </table>
-        <p>The five finalists are invited to the <a href="workshop-2027.html"><strong>CDM Workshop 2027</strong></a> in Cambridge, UK (late July 2027). We will cover economy travel and accommodation for up to two authors per prize winning entry. The first-prize winner will present their work at the workshop. We may award fewer or more prizes, depending on the quality of entries.</p>
+        <p>The five finalists are invited to the <a href="workshop-2027.html"><strong>CDM Workshop 2027</strong></a> in Cambridge, UK (7–8 August 2027). We will cover economy travel and accommodation for up to two authors per prize winning entry. The first-prize winner will present their work at the workshop. We may award fewer or more prizes, depending on the quality of entries.</p>
       </div>
     </section>
 
@@ -148,7 +150,7 @@
             <tr><th scope="row">Early December 2026</th><td>Call opens</td></tr>
             <tr><th scope="row">1 May 2027</th><td>Submission deadline</td></tr>
             <tr><th scope="row">Mid-June 2027</th><td>Finalists notified</td></tr>
-            <tr><th scope="row">23 to 25 July 2027</th><td><a href="workshop-2027.html">CDM Workshop 2027</a>. Winners announced.</td></tr>
+            <tr><th scope="row">7–8 August 2027</th><td><a href="workshop-2027.html">CDM Workshop 2027</a>. Winners announced.</td></tr>
           </tbody>
         </table>
       </div>
@@ -202,10 +204,7 @@
   <div class="band">
     <div class="container subscribe">
       <h3>Subscribe to the Digital Minds newsletter for the latest news and research.</h3>
-      <form action="https://digitalminds.substack.com/subscribe" method="get" target="_blank">
-        <input id="sub-email" aria-label="Email address" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <a class="subscribe-btn" href="https://digitalminds.substack.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
     </div>
   </div>
   <div class="container footer-main">

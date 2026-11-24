@@ -9,11 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=19">
-  <link rel="stylesheet" href="assets/css/programme.css?v=7">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/signal.js?v=1" defer></script>
 </head>
-<body data-nav="programs.html">
+<body class="has-top" data-nav="programs.html">
 
 <header class="site-header" id="top">
   <nav class="container" aria-label="Main">
@@ -46,20 +46,22 @@
 </header>
 
 <main>
-  <figure class="page-hero">
-    <img src="assets/img/heroes/digital-minds-strategy-workshop-2026-127.jpg" alt="Fellows working together around a table in a college library">
-  </figure>
+  <section class="page-top">
+    <canvas class="opening-signal" aria-hidden="true" data-center="80" data-thick="38" data-veil="170"></canvas>
+    <div class="container">
+      <header class="page-head">
+        <p class="status">Applications open</p>
+        <h1>Cambridge Digital Minds Fellowship 2027</h1>
+        <p class="lede">Help prepare society for AI systems with real or perceived minds: spend twelve weeks on some of the most pressing questions in digital minds, with mentorship from leading researchers.</p>
+        <div class="actions">
+          <!-- TODO: replace with the application form URL -->
+          <a class="btn btn-solid" href="#apply">Apply now</a>
+          <a class="btn" href="#phases">See the programme phases</a>
+        </div>
+      </header>
+    </div>
+  </section>
   <div class="container page">
-    <header class="page-head">
-      <p class="status">Applications open</p>
-      <h1>Cambridge Digital Minds Fellowship 2027</h1>
-      <p class="lede">Help prepare society for AI systems with real or perceived minds: spend twelve weeks on some of the most pressing questions in digital minds, with mentorship from leading researchers.</p>
-      <div class="actions">
-        <!-- TODO: replace with the application form URL -->
-        <a class="btn btn-solid" href="#apply">Apply now</a>
-        <a class="btn" href="#phases">See the programme phases</a>
-      </div>
-    </header>
 
     <dl class="facts">
       <div><dt>Duration</dt><dd>12 weeks, 17 May to 9 August 2027</dd></div>
@@ -306,10 +308,7 @@
   <div class="band">
     <div class="container subscribe">
       <h3>Subscribe to the Digital Minds newsletter for the latest news and research.</h3>
-      <form action="https://digitalminds.substack.com/subscribe" method="get" target="_blank">
-        <input id="sub-email" aria-label="Email address" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <a class="subscribe-btn" href="https://digitalminds.substack.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
     </div>
   </div>
   <div class="container footer-main">

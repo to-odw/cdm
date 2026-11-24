@@ -9,10 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=19">
+  <link rel="stylesheet" href="assets/css/site.css?v=7">
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/signal.js?v=1" defer></script>
 </head>
-<body data-nav="newsletter.html">
+<body class="has-top" data-nav="newsletter.html">
 
 <header class="site-header" id="top">
   <nav class="container" aria-label="Main">
@@ -45,18 +46,19 @@
 </header>
 
 <main>
-  <figure class="page-hero">
-    <img src="assets/img/heroes/digital-minds-strategy-workshop-2026-127.jpg" alt="A discussion in the Jesus College library">
-  </figure>
+  <section class="page-top">
+    <canvas class="opening-signal" aria-hidden="true" data-center="80" data-thick="38" data-veil="170"></canvas>
+    <div class="container">
+      <header class="page-head">
+        <h1>Newsletter</h1>
+        <p>The latest news and research on AI consciousness, moral status, and digital minds.</p>
+      </header>
+    </div>
+  </section>
   <div class="container page">
-    <header class="page-head">
-      <h1>Newsletter</h1>
-      <p>The latest news and research on AI consciousness, moral status, and digital minds.</p>
-    </header>
 
     <ul class="entries">
       <li><a class="entry" href="https://www.digitalminds.news/p/functional-emotions-and-the-popes" target="_blank" rel="noopener">
-        <div class="entry-thumb"><img src="https://substackcdn.com/image/fetch/w_600,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc2de22d6-441c-4701-8ce8-a9876fa269f7_1024x683.png" alt="" loading="lazy"></div>
         <div class="entry-main">
           <p class="type">Latest post · June 19, 2026</p>
           <p class="title">Functional Emotions and The Pope's Encyclical on AI</p>
@@ -64,7 +66,6 @@
         </div>
       </a></li>
       <li><a class="entry" href="https://www.digitalminds.news/p/the-vatican-ai-legal-personhood-and" target="_blank" rel="noopener">
-        <div class="entry-thumb"><img src="https://substack-post-media.s3.amazonaws.com/public/images/64a1fe0a-d289-4b17-8317-f5922cae8d4d_1024x576.png" alt="" loading="lazy"></div>
         <div class="entry-main">
           <p class="type">March 10, 2026</p>
           <p class="title">The Vatican, AI Legal Personhood, and Claude's Constitution</p>
@@ -72,7 +73,6 @@
         </div>
       </a></li>
       <li><a class="entry" href="https://digitalminds.substack.com/p/digital-minds-in-2025-a-year-in-review" target="_blank" rel="noopener">
-        <div class="entry-thumb"><img src="https://substackcdn.com/image/fetch/w_600,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F399549af-6e8e-4fa6-a3a3-6ac7153bc04c_2304x1264.png" alt="" loading="lazy"></div>
         <div class="entry-main">
           <p class="type">December 18, 2025</p>
           <p class="title">Digital Minds in 2025: A Year in Review</p>
@@ -88,10 +88,7 @@
   <div class="band">
     <div class="container subscribe">
       <h3>Subscribe to the Digital Minds newsletter for the latest news and research.</h3>
-      <form action="https://digitalminds.substack.com/subscribe" method="get" target="_blank">
-        <input id="sub-email" aria-label="Email address" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+      <a class="subscribe-btn" href="https://digitalminds.substack.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
     </div>
   </div>
   <div class="container footer-main">
